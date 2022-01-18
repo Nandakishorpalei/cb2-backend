@@ -1,0 +1,28 @@
+{
+  "name": "cb2-backend",
+  "version": "1.0.0",
+  "description": "unit 4 construct - team 55",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nandakishorpalei/cb2-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nandakishorpalei/cb2-backend/issues"
+  },
+  "homepage": "https://github.com/Nandakishorpalei/cb2-backend#readme",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "find-config": "^1.0.0",
+    "gitignore": "^0.7.0",
+    "mongoose": "^6.1.7"
+  }
+}
