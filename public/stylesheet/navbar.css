@@ -1,0 +1,320 @@
+body {
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+  }
+  #navBar {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    margin-top: -12px;
+  }
+  #discountBar {
+    padding: 28px 0 0 0;
+    height: 54px;
+    background-color: #222222;
+    color: white;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #discountBar p {
+    font-size: 13px;
+    color: white;
+  }
+  #discountBar > p:nth-child(2),
+  #discountBar > p:nth-child(9) {
+    font-size: 11px;
+  }
+  #mainNav {
+    height: 124px;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #menusearch {
+    height: 32px;
+    width: 25%;
+    display: flex;
+  }
+  #menusearch div:nth-child(1) {
+    width: 10%;
+  }
+  #searchbox {
+    display: flex;
+    margin-left: 5%;
+  }
+  
+  #searchbox input {
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid grey;
+    position: relative;
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    padding-left: 25px;
+  }
+  #searchbox input:focus {
+    width: 300px;
+    border-bottom: 2px solid grey;
+  }
+  #searchbox span {
+    margin-right: -10px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 7px;
+  }
+  #searchbox img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  #menuicon {
+    font-size: 35px;
+    cursor: pointer;
+  }
+  
+  #cb2logo {
+    height: 65px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+  }
+  #options {
+    height: 32px;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+  }
+  #options span {
+    width: 30%;
+    height: 100%;
+    /* border: 1px solid red */
+  }
+  #options img {
+    width: 30%;
+    /* border-bottom: 3px solid black; */
+  }
+  
+  #sidebar {
+    position: absolute;
+    width: 260px;
+    height: 90%;
+    background-color: white;
+    z-index: 11;
+    /* top: 160px; */
+    left: -300px;
+    transition: 0.3s;
+    padding-right: 10px;
+    /* color: rgb(73, 73, 73); */
+  }
+  
+  #sidebarList {
+    padding-top: 6%;
+    padding-left: 20%;
+    padding-right: 6%;
+    padding-bottom: 25%;
+    height: 100%;
+    display: inline-flex;
+    align-items: left;
+    flex-direction: column;
+    box-sizing: border-box;
+    font-size: 14px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+  }
+  #sidebarList p {
+    margin-top: 20px;
+    color: black;
+  }
+  #sidebarList p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  #sidebarList a {
+    color: black;
+    text-decoration: none;
+  }
+  #sidebarList p:nth-child(12) {
+    color: red;
+  }
+  #sidebarList p:nth-child(15),
+  #sidebarList p:nth-child(16),
+  #sidebarList p:nth-child(17),
+  #sidebarList p:nth-child(18) {
+    color: grey;
+  }
+  
+  #accDetails {
+    border: 1px solid grey;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 260px;
+    height: 25%;
+    width: 13%;
+    background-color: white;
+    z-index: 11;
+    top: 108px;
+    margin-left: 78%;
+    transition: 0.3s;
+    padding-right: 10px;
+    font-size: 11px;
+    padding: 1%;
+    box-sizing: border-box;
+  }
+  #accDetails p:nth-child(1) {
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  #accDetails p:nth-child(2),
+  #accDetails p:nth-child(3),
+  #accDetails p:nth-child(4) {
+    margin-top: 14px;
+    cursor: pointer;
+  }
+  
+  #accDetails a {
+    color: black;
+    text-decoration: none;
+  }
+  
+  #cartDetails {
+    border: 1px solid grey;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 350px;
+    height: 25%;
+    width: 22%;
+    max-height: 80%;
+    background-color: white;
+    z-index: 11;
+    top: 108px;
+    margin-left: 75%;
+    transition: 0.3s;
+    padding-right: 10px;
+    font-size: 12px;
+    padding: 2%;
+    box-sizing: border-box;
+  }
+  
+  #cartDetails div {
+    width: 100%;
+    height: 45%;
+  }
+  #itemDiv p {
+    font-weight: 600;
+    font-size: 14px;
+  }
+  #gotoCart {
+    margin-top: 2%;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #gotoCart a {
+    text-decoration: none;
+  }
+  #gotoCart p {
+    margin-top: 34px;
+    color: white;
+    font-size: 16px;
+  }
+  
+  #sidebar ::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  #sidebar ::-webkit-scrollbar-track {
+    background: white;
+  }
+  
+  /* Handle */
+  #sidebar ::-webkit-scrollbar-thumb {
+    background: darkgray;
+  }
+  #cartIndicator {
+    display: flex;
+    position: absolute;
+    font-size: 12px;
+    height: 20px;
+    width: 20px;
+    margin-top: -7px;
+    margin-left: 2px;
+    justify-content: center;
+  }
+  
+  #options #cartBtn {
+    filter: saturate(250%);
+    width: 35%;
+  }
+  #phoneNav {
+    display: none;
+  }
+  
+  @media screen and (max-width: 400px) {
+    #phoneNav {
+      display: block;
+      width: 95.8vw;
+    }
+  
+    #mainNavPhone {
+      display: flex;
+      justify-content: space-between;
+      height: 40px;
+      padding: 20px 0;
+      margin-bottom: 25px;
+    }
+    #mainNavPhone > div {
+      width: 30px;
+    }
+    #mainNavPhone img {
+      height: 25px;
+      width: 25px;
+    }
+    #mainNavPhone #cb2logoPhone img {
+      height: 45px;
+      width: 60px;
+    }
+    .paddingTop {
+      margin-top: 10px;
+    }
+    #phoneDiscountBar {
+      padding-top: 15px;
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+  
+    #navBar {
+      display: none;
+    }
+    #sidebar {
+      display: none;
+    }
+    #accDetails {
+      display: none;
+    }
+    #wishDetails {
+      display: none;
+    }
+    #cartDetails {
+      display: none;
+    }
+  }
+  

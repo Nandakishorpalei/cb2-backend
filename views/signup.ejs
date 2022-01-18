@@ -1,0 +1,58 @@
+<%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/signup.css"})-%>
+
+<body>
+    <div id="navbarDiv"></div>
+    <div id="signupContainer">
+        <h2>create an account</h2>
+
+        <div id="context">
+           <p>Create an account now and your information will be on file to save you time, next time. Create an account quickly through Google.</p>
+           <button id="googleButton"><img id="googleIcon" src="landingImages/google_image.png" alt=""><p>CREATE USING GOOGLE</p> </button>
+        </div>
+
+        <form id="inputDiv">
+            <label for="fullName">Full Name <span>required</span></label><br>
+            <input type="text" id="fullName" required><br>
+            <label for="username">Username <span>required</span></label><br>
+            <input type="text" id="username" required><br>
+            <label for="phone">Phone Number <span>required</span></label><br>
+            <input type="tel" pattern="[0-9]{10}" id="phone" required><br>
+            <label for="email">Email Address <span>required</span></label><br>
+            <input type="email" id="email" required><br>
+            <label for="password">Create Password <span>required</span></label><br>
+            <input type="password" id="password" required><br>
+            <input id="submitButton" type="submit" value="CREATE ACCOUNT">
+        </form>
+        <div id="belowSubmit">
+            <p>By creating an account you are agreeing to our Terms of Use and Privacy Policy.</p>
+        </div>
+    </div>
+
+    <div id="footerDiv"></div>
+
+   
+</body>
+</html>
+<script type="module">
+
+// import footer & append 
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
+// add below line in head section for footer style
+{/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
+</script>
+
+<script src="javascript/signup.js" ></script>

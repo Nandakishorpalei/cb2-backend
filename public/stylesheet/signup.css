@@ -1,0 +1,93 @@
+#signupContainer{
+    height:770px;
+    width:360px;
+    padding:2px;
+    margin-left:20%;
+}
+#context{
+    margin-top:30px;
+}
+h2{
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+}
+p{
+    margin: 0 0 20px 0;
+    padding: 0 0 12px;
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgb(58, 58, 58);
+    opacity:0.9;
+}
+#googleButton{
+    padding: 10px 44px;
+    margin: 0;
+    color: #222;
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    line-height: 16px;
+    width: 97%;
+    height: 40px;
+    text-transform: uppercase;
+    background-color: transparent;
+    display: flex;
+    border:1px solid grey;
+}
+#googleButton:hover{
+    opacity:0.8;
+}
+#googleIcon{
+    position:relative;
+    height:20px;
+    width:20px;
+    padding-right:20px;
+}
+#googleButton span{
+    margin-top:-15px;
+}
+#inputDiv{
+    width:100%;
+    margin-top:20px;
+    font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
+}
+#inputDiv input{
+    width:95%;
+    height:36px;
+    margin-bottom:10px;
+    margin-top:8px;
+}
+#inputDiv span{
+    color:grey;
+    font-size:12px;
+}
+#submitButton{
+    color:white;
+    background-color:black;
+    height:40px;
+    width:106%;
+}
+#submitButton:hover{
+    opacity:0.8;
+}
+#belowSubmit p{
+font-size:12px;
+}
+
+@media screen and (max-width: 400px) {
+    #signupContainer{
+        width:350px;
+        padding:2px;
+        margin-left:0;
+    }
+    #googleButton p{
+        font-size:12px;
+    }
+}

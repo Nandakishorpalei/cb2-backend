@@ -1,0 +1,399 @@
+#MainStore{
+    width: 75%;
+    margin: auto;
+    color:rgb(34, 34, 34);
+    font-family:"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#MainStore_H1{
+    margin: auto;
+    text-align: center;
+    font-size:38px;
+    line-height:36px;
+    letter-spacing:3.8px;
+    font-weight:500;
+    margin-bottom: 5%;
+}
+#MainStore_Select{
+    text-align: right;
+    padding: 2%;
+    font-size:20px;
+    line-height:24px;
+    font-weight:300;
+    height: 20%;
+    margin-bottom:30px;
+}
+.MainStore_Select_Your{
+    font-size:20px;
+    line-height:24px;
+    font-weight:300;
+}
+#MainStore_Address_And_Image{
+    display: flex;
+    margin-bottom: 5%;
+}
+#MainStore_Address{
+    width: 30%;
+}
+#MainStore_Address h1{
+    font-size:20px;
+    line-height:24px;
+    font-weight:500;
+}
+#MainStore_Address h3{
+    font-size:15px;
+    line-height:19px;
+    font-weight:300;
+}
+#MainStore_Address a{
+    color:rgb(34, 34, 34);
+    font-size:13px;
+    line-height:20px;
+    font-weight:300;
+}
+#MainStore_Address>p>span{
+    font-size:14px;
+    line-height:20px;
+    font-weight:700;
+    margin-right: 3%;
+}
+#MainStore_Address>p{
+    font-size:12px;
+    line-height:20px;
+    font-weight:100;
+    width: 80%;
+}
+#MainStore_Address>button{
+    width: 100%;
+    background-color: white;
+    height: 35px;
+}
+#MainStore_Images{
+    width: 70%;
+
+}
+#MainStore_Images img{
+    width: 100%;
+    height: 80%;
+}
+#Mainstore_Nearest_flex{
+    display: flex;
+    gap: 12%;
+    margin-bottom: 6%;
+}
+#Mainstore_Nearest_flex div{
+    width: auto;
+}
+#Mainstore_Nearest_flex>div>h2{
+    font-size:18px;
+    line-height:32px;
+    font-weight:500;
+}
+#Mainstore_Nearest_flex p{
+    font-size:11px;
+    line-height:18px;
+    font-weight:100;
+}
+#Mainstore_Nearest_flex button{
+    width: 100%;
+    background-color: white;
+    height: 35px;
+}
+#Mainstore_Nearest_flex a{
+    color:rgb(34, 34, 34);
+    font-size:13px;
+    line-height:20px;
+    font-weight:300;
+}
+#Mainstore_Nearest_flex span{
+    font-size:14px;
+    line-height:20px;
+    font-weight:300;
+    margin-right: 3%;
+}
+#Mainstore_Blackbox{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    cursor: pointer;
+    margin-bottom: 2%;
+}
+#Mainstore_Blackbox p{
+    font-size:16px;
+    line-height:20px;
+    font-weight:250;
+    letter-spacing:1.6px;
+}
+#Mainstore_Blackbox h2{
+    font-size:26px;
+    line-height:30px;
+    font-weight:500;
+    letter-spacing:1.6px;
+}
+#Mainstore_Blackbox a{
+    font-size:16px;
+    line-height:20px;
+    font-weight:250;
+    letter-spacing:1.6px;
+    color:white
+}
+#Mainstore_Whitebox{
+    width: 100%;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    cursor: pointer;
+    margin-bottom: 10%;
+    border: 3PX SOLID BLACK;
+}
+#Mainstore_Whitebox h2{
+    font-size:28px;
+    line-height:30px;
+    font-weight:500;
+    letter-spacing:4.2px;
+}
+#Mainstore_Whitebox p{
+    font-size:16px;
+    line-height:20.8px;
+    font-weight:300;
+}
+#Mainstore_Whitebox a{
+    font-size:16px;
+    line-height:20px;
+    font-weight:300;
+    color: black;
+}
+#Mainstore_Para_read{
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+#Mainstore_Para_read h2{
+    font-size:16px;
+    line-height:20px;
+    font-weight:500;
+}
+#Mainstore_Para_read li{
+    font-size:13px;
+    line-height:22px;
+    font-weight:50;
+}
+#Mainstore_Para_read p{
+    font-size:11px;
+    line-height:10px;
+    font-weight:300;
+    width: 100%;
+}
+.Mainstore_Para_read_li{
+    margin-left: 4%;
+}
+#Mainstore_Para_read a{
+    font-size:12px;
+    line-height:20px;
+    font-weight:200;
+    color: black;
+}
+
+
+
+
+/* footer csss starts here ----------------------------------- */
+
+
+
+#Main_Footer{
+    width: 100%;
+    height: 570px;
+    background-color: rgb(247,247,247);
+    font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
+}
+#Footer_up{
+    width: 95%;
+    height: 63%;
+    padding:3% 3% 3% 3% ;
+    display: flex;
+    gap: 5%;
+}
+.fa-envelope{
+   font-size: 25px;
+}
+#footer_col1 #h3{
+   color:rgb(34, 34, 34);
+   font-weight:500;
+   font-size:18px;
+}
+#footer_col1 #foo_in{
+     border-top-style: hidden;
+   border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid; 
+  background-color: rgb(247,247,247);
+  width: 80%;
+  margin-top: 9%;
+  color:#222222;
+  font-weight:300;
+   font-size:14px;
+   margin-left: 3%;
+}
+#footer_col1 #foo_read{
+   line-height:20px;
+   color:#222222;
+  font-weight:300;
+   font-size:18px;
+   margin-top: 15%;
+}
+#footer_col1 #foo_read span{
+    text-decoration: underline;
+}
+#foo_fonts{
+    display: flex;
+    gap: 5%;
+    margin-top: 8%;
+    font-size: 16px;
+}
+#footer_col2 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col2 p{
+   color:#222222;
+  font-weight:250;
+   font-size:14px;
+   line-height:30px;
+}
+#footer_col2 p:hover{
+    text-decoration: underline;
+}
+#footer_col3{
+    width: 15%;
+}
+#footer_col3 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col3 p{
+   color:#222222;
+  font-weight:250;
+   font-size:14px;
+   line-height:25px;
+}
+#footer_col3 p:hover{
+    text-decoration: underline;
+}
+#footer_col4 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col4 p{
+   color:#222222;
+  font-weight:250;
+   font-size:14px;
+   line-height:20px;
+}
+#footer_col4 p:hover{
+    text-decoration: underline;
+}
+#footer_col5 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col5 p{
+   color:#222222;
+  font-weight:400;
+   font-size:16px;
+   line-height:30px;
+
+}
+.fa-flag-usa{
+    color: red;
+}
+#Footer_down{
+    text-align: center;
+}
+#Footer_down>span{
+   color:#222222;
+  font-weight:400;
+   font-size:15px;
+   line-height:30px;
+}
+#Footer_down>p{
+   color:#222222;
+  font-weight:300;
+   font-size:12px;
+   line-height:30px;
+}
+#Footer_down>p>span{
+   color:#222222;
+  font-weight:400;
+   font-size:15px;
+   line-height:30px;
+}
+
+/* navbar special */
+#discountBar {
+    height: 36px;
+    background-color: #222222;
+    color: white;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    padding-left: 3%;
+    padding-right: 3%;
+    align-items: top;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #discountBar p{
+     margin-top:-14px;
+     padding-bottom:4px;
+  }
+
+
+
+  #accDetails  p{
+      line-height: 38px;
+  }
+  #navbarDiv #cartDetails {
+    border: 1px solid grey;
+    position: absolute;
+    /* display: none; */
+    flex-direction: column;
+    width: 350px;
+    height: 24%;
+    width: 22%;
+    max-height: 24%;
+    z-index: 11;
+    top: 108px;
+    margin-left: 75%;
+    transition: 0.3s;
+    padding-right: 10px;
+    font-size: 12px;
+    padding: 2%;
+    box-sizing: border-box;
+  }
+ #gotoCart p {
+  padding-bottom: 40px;
+  }
+ 
+
+@media screen and (max-width: 768px) {
+   #Main_Footer{
+       background-color: red;
+   }
+}

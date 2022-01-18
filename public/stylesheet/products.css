@@ -1,0 +1,349 @@
+#wholeContainer {
+    margin-left: 280px;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    margin-top: 20px;
+    width: 80%;
+    padding-right: 20px;
+    position: absolute;
+  }
+  /* //header */
+  #textHeader {
+    text-align: left;
+  }
+  #textHeader p {
+    font-size: 11px;
+  }
+  #textHeader h3 {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: "Open Sans", sans-serif;
+  }
+  #dropDownDiv{
+    margin-left:3%;
+  }
+  
+  .sticky {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-left: -14px;
+  }
+  
+  #filterButton {
+    height: 18.4px;
+    width: 80px;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  #filterIcon {
+    height: 16px;
+    width: 16px;
+  }
+  #sortBox {
+    display: flex;
+    width: 250px;
+  }
+  #sortBox p {
+    color: #222222;
+  }
+  
+  #containerSortButton {
+    background-color: transparent;
+    border: none;
+    margin-left: 25px;
+    text-transform: uppercase;
+  }
+  #dropdownList {
+    margin: 10px 0 0 -10px;
+    display: none;
+    z-index: 15;
+    background-color: white;
+    width: 200px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  /* Hide the browser's default radio button */
+  .li input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  ul li:hover .check {
+    border: 5px solid #ffffff;
+  }
+  
+  ul li .check::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+  }
+  
+  input[type="radio"]:checked ~ .check {
+    font-weight: bold;
+  }
+  
+  input[type="radio"]:checked ~ .check::before {
+    font-weight: bold;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    font-weight: bold;
+  }
+  input[type="radio"]:checked ~ .check::before {
+    font-weight: bold;
+  }
+  
+  /* //product part */
+  #productContainer {
+    height: auto;
+    width: 78%;
+    position: absolute;
+    margin-left: 18%;
+    margin-right: 4%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2%;
+    margin-top: 14%;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    z-index: -3;
+  }
+  
+  #productContainer div {
+    height: 359px;
+    width: 280px;
+  }
+  #productContainer img {
+    width: 100%;
+    height: 280px;
+  }
+  #bottomDiv {
+    margin-top: 20px;
+    color: #222222;
+  }
+  #productName,
+  #productCategory,
+  #productPrice,
+  #productShip {
+    text-transform: uppercase;
+    line-height: 12px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+  #productCategory {
+    margin-top: -6px;
+  }
+  #productCategory,
+  #productPrice,
+  #productShip {
+    text-transform: uppercase;
+    line-height: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 100;
+  }
+  #addToWishlist {
+    margin-top: -5px;
+    transition: all 0.5s;
+    z-index: 20;
+  }
+  #priceHeart{
+    display: flex;
+    justify-content: space-between;
+    height:0;
+  }
+  
+  /* additional page */
+  
+  #adContainerSortButton {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0 0 0;
+    margin-left: 0;
+    width: 130%;
+  }
+  #adDropdownList {
+    margin: 10px 0 0 -10px;
+    /* display: none; */
+    z-index: 15;
+    background-color: white;
+    width: 200px;
+  }
+  
+  li {
+    list-style: none;
+    font-size: 11px;
+  }
+  /* Hide the browser's default radio button */
+  .li input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  ul li:hover .check {
+    border: 5px solid #ffffff;
+  }
+  
+  ul li .check::before {
+    display: block;
+    position: absolute;
+    content: "";
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+    left: 5px;
+    margin: auto;
+  }
+  
+  input[type="radio"]:checked ~ .check {
+    font-weight: bold;
+  }
+  
+  input[type="radio"]:checked ~ .check::before {
+    font-weight: bold;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    font-weight: bold;
+  }
+  input[type="radio"]:checked ~ .check::before {
+    font-weight: bold;
+  }
+  
+  /* additional page */
+  #additionalPageDiv {
+    display: flex;
+    position: absolute;
+    justify-content: right;
+    width: 100%;
+    font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    text-transform: uppercase;
+    color: #222222;
+    display: none;
+    top:0;
+  }
+  #AdditionalPage {
+    background-color: white;
+    z-index: 5;
+    position: fixed;
+  }
+  #AdditionalPage hr {
+    height: 1px;
+    background-color: black;
+    margin-top: 30px;
+  }
+  #AdditionalPage {
+    width: 424px;
+  }
+  #closeAdditionalPage {
+    height: 30px;
+    width: 30px;
+    margin-left: 90%;
+  }
+  #heading {
+    text-align: center;
+  }
+  #adFilterList {
+    width: 324px;
+    min-height: 100px;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  .textOnLeft {
+    justify-self: flex-start;
+  }
+  .listItems {
+    /* background-color:green; */
+    width: 100%;
+    padding: 15px 0 0 0;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+  }
+  .checkboxDiv {
+    display: flex;
+  }
+  .checkboxDiv input {
+    width: 30px;
+  }
+  span {
+    color: grey;
+    font-size: 12px;
+  }
+  
+  #adDropdownListcategory,
+  #adDropdownListcolor,
+  #adDropdownListmaterial,
+  #adDropdownListprice,
+  #adDropdownListtype,
+  #adDropdownListdesign,
+  #adDropdownListFabric {
+    display: none;
+  }
+  #additionalButton {
+    display: flex;
+    width: 360px;
+    margin: 45px 0;
+    margin-left: 40px;
+  }
+  #additionalButton button {
+    border: none;
+    padding: 15px 0;
+    width: 48%;
+  }
+  #clearAll {
+    background-color: rgb(204, 202, 202);
+    margin-right: 4%;
+  }
+  #apply {
+    background-color: black;
+    color: white;
+  }
+  .textOnLeft {
+    padding-top: 16px;
+  }
+  #categorySort {
+    width: 100%;
+    background-color: orange;
+  }
+  #adDropdownList {
+    display: none;
+  }
+  
+  #additionalPageDiv .checkboxDiv {
+    text-transform: lowercase;
+  }
+  
+  #pageFooter{
+      position: -webkit-sticky; 
+      position: sticky;
+      bottom: 0;
+      left:0;
+  }
+  
+  #footerDiv{
+    bottom:0;
+  }

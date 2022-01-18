@@ -1,3 +1,292 @@
-body{
-    color:blue;
+
+*{
+    margin:0;
+}
+#landingContainer{
+    width:98.8vw;
+    height:auto;
+    overflow: hidden;
+}
+#landingContainer::-webkit-scrollbar {
+    display: none;
+}
+#bodySection{
+    width:98.8vw;
+}
+#bodySection div{
+    width:100%;
+}
+#bodySection .landing1stDesign > img{
+    width:98.8vw;
+}
+#bodySection .landing2ndDesign > img{
+    width:98.8vw;
+}
+#bodySection div img{
+    width:100%;
+}
+#bodySection .landing1stDesign{
+    height:20%;
+    margin-bottom: 4px;
+    z-index: -3;
+}
+#bodySection .landing2ndDesign{
+    height:10%;
+    margin-bottom: 4px;
+    width:100%;
+}
+#accDetails p:nth-child(1) {
+    margin-top: 10px;
+    line-height:18px;
+    cursor: pointer;
+  }
+ #accDetails p:nth-child(2),
+  #accDetails p:nth-child(3),
+  #accDetails p:nth-child(4) {
+    line-height: 18px;
+    margin-top:18px;
+    cursor: pointer;
+  }
+.options a{
+    color:white;
+    font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
+    font-weight:200;
+    letter-spacing: 1px;
+    border-left: 1px solid white;
+    padding:0 8px;
+    text-decoration: none;
+
+}
+.options span{
+    border-bottom: 1px solid white;
+}
+.options a:first-child{
+    border:none;
+}
+#bodySection .options{
+    margin:auto;
+    width:70%;
+    margin-top:3%;
+}
+#bodySection #homeGiftText{
+    position:absolute;
+    z-index:3;
+    width:41%;
+    height:8%;
+    margin-left:30%;
+    margin-top:35%;
+    filter:contrast(140%);
+}
+#bodySection #homeDecemberText{
+    position:absolute;
+    z-index:3;
+    width:40%;
+    margin-left:33%;
+    margin-top:20%;
+}
+#bodySection #homeEgift{
+    position:absolute;
+    z-index:3;
+    width:48%;
+    height:14%;
+    margin-left:30%;
+    margin-top:6%;
+    filter:contrast(140%) saturate(150%) brightness(150%);
+}
+#bodySection #homeHoliday{
+    position:absolute;
+    z-index:3;
+    width:41%;
+    height:9%;
+    margin-left:31.7%;
+    margin-top:19%;
+}
+#bodySection #curbsiteDiv{
+    width:100%;
+}
+#bodySection #homeCurbsideText{
+    position:absolute;
+    z-index:3;
+    width:95%;
+    margin:1.7%;
+    margin-left:2%;
+    color: white;
+    border:5px solid white;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom:4%;
+}
+#homeCurbsideText h2{
+    margin-top:60px;
+    font-size:42px;
+    line-height: 70px;   
+}
+#homeCurbsideText p{
+    width:60%;
+    margin: auto;
+    line-height: 21px;
+    font-weight:500;
+}
+#homeCurbsideText .options{
+    margin-left: 20%;
+}
+#landingContainer .homeEGift{
+    margin-left: 30%;
+}
+.phone{
+    display: none;
+}
+
+
+/* navbar special */
+#navbarDiv #accDetails {
+    border: 1px solid grey;
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 260px;
+    height: 200px;
+    width: 13%;
+    background-color: white;
+    z-index: 11;
+    top: 108px;
+    margin-left: 78%;
+    transition: 0.3s;
+    padding-right: 10px;
+    font-size: 11px;
+    padding: 1%;
+    box-sizing: border-box;
+  }
+
+  #navbarDiv #cartDetails {
+    border: 1px solid grey;
+    position: absolute;
+    /* display: none; */
+    flex-direction: column;
+    width: 350px;
+    height: 180px;
+    width: 22%;
+    max-height: 180px;
+    background-color: white;
+    z-index: 11;
+    top: 108px;
+    margin-left: 75%;
+    transition: 0.3s;
+    padding-right: 10px;
+    font-size: 12px;
+    padding: 2%;
+    box-sizing: border-box;
+  }
+  #gotoCart p {
+  padding-bottom: 30px;
+  }
+
+@media screen and (max-width: 1300px) {
+   
+    #bodySection #homeEgift{
+        width:40%;
+        height:16%;
+    }
+    #bodySection #homeCurbsideText{
+        width:95%;
+        height:34%;
+        margin:1.3%;
+        margin-left:2%;
+    }
+    #homeCurbsideText .options{
+        margin-left: 16%;
+    }
+
+
+}
+
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+    #bodySection #homeCurbsideText{
+        width:95%;
+        height:36%;
+        margin:1.3%;
+        margin-left:1.6%;
+    }
+     #homeCurbsideText h2{
+        margin-top:40px;
+        font-size:32px;
+        line-height: 50px;   
+    }
+   #homeCurbsideText p{
+        width:625px;
+        margin: auto;
+        line-height: 21px;
+        font-weight:500;
+        font-size:16px;
+    }
+    #homeCurbsideText .options{
+        margin-left: 14%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+    #landingContainer{
+        width:100vw;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    #bodySection .landing1stDesign{
+        height:371px;
+        width:100%;
+        margin-bottom: 4px;
+        z-index: -3;
+    }
+    #bodySection .landing2ndDesign{
+        width:360px;
+        height:100%;
+        margin-bottom: 4px;
+    }
+    #bodySection .landing1stDesign > img{
+    width:100%;
+    height:360px;
+    }
+    #bodySection .landing2ndDesign > img{
+        width:90%;
+        height:319px;
+    }
+    .phone{
+        display:block;
+        
+    }
+    .bigScreen{
+        display:none;
+    }
+    #bodySection #homeCurbsideText{
+        position:absolute;
+        z-index:3;
+        width:86%;
+        height:auto;
+        margin:2.5%;
+        margin-left:4%;
+        color: white;
+        border:4px solid white;
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        padding-bottom: 30px;
+    }
+    #homeCurbsideText h2{
+        margin-top:30px;
+        font-size:22px;
+        line-height: 22px;   
+    }
+    #homeCurbsideText p{
+        width:60%;
+        margin: auto;
+        line-height: 21px;
+        font-weight:500;
+        font-size:11px;
+    }
+    #bodySection .options{
+        margin-left:-50px;
+    }
+    #bodySection #curbsiteDiv{
+        width:120%
+    }
 }

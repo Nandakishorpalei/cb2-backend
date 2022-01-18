@@ -1,0 +1,78 @@
+<%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/login.css"})-%>
+
+
+<body>
+    <div id="navbarDiv"></div>
+    <div id="wholeContainer">
+    <div id="signinContainerLeft">
+        <h2>SIGN IN</h2>
+
+        <form id="inputDiv">
+            <label for="firstName">Username <span>required</span></label><br>
+            <input type="text" id="username" required><br>
+            <label for="password"> Password <span>required</span></label><br>
+            <input type="password" id="password" required><br>
+            <div id="checkboxDiv">
+                <input type="checkbox" name="Remember" id="remember" >
+                <span style="margin:16px 0 0 5px;">Remember me</span>
+            </div>
+            
+            <input id="submitButton" type="submit" value="SIGN IN">
+        </form>
+
+        <span style="margin:5% 0 0 48%;font-size:18px;">or</span>
+
+        <button id="googleButton"><img id="googleIcon" src="landingImages/google_image.png" alt=""><p>SIGN IN WITH GOOGLE</p> </button>
+        <div id="belowSubmit">
+            <p>By signing in, you are agreeing to our Terms of Use and Privacy Policy.</p>
+        </div>
+    </div>
+
+
+    <div id="signinContainerRight">
+        <h2>create an account</h2>
+        <ul id="points">
+            <li>Option to save payments to view in-store orders</li>
+            <li>Easily redeem rewards</li>
+            <li>Speedy checkout</li>
+            <li>Easily track orders and view order history</li>
+        </ul>
+            <button id="createButton"><a href="signup.html" style="text-decoration: none;color:white;">CREATE ACCOUNT</a></button>
+        
+        <div id="createbelowSubmit">
+            <p>Don't have an account? Track/Schedule Order</p>
+        </div>
+    </div>
+
+</div>
+<div id="footerDiv"></div>
+
+</body>
+</html>
+
+<script type="module">
+
+//user authentication
+// import footer & append 
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
+// add below line in head section for footer style
+{/* <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"> */}
+
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
+// navbar import section end
+
+
+</script>
+<script src="javascript/login.js"></script>
