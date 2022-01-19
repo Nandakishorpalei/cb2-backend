@@ -18,6 +18,9 @@ app.use("/favourites",wishlistController);
 const cartController = require('./controller/cartController');
 app.use("/cart",cartController);
 
+const productDescriptionController = require('./controller/productDescriptionController');
+app.use("/productDescription",productDescriptionController);
+
 app.get("/", async(req,res)=>{
     try{
        res.render("home")
