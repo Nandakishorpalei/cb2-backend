@@ -1,21 +1,22 @@
 const express = require('express');
 const router = express.Router();
 
-const Product = require('../models/productModel');
+const Cart = require('../models/cartModel');
 
 router.get("", async (req, res) => {
-  try{
-    const products = await Product.find().lean().exec();
-
-    res.render("products",{products:products})
- }catch(e){
-     res.status(500).send(e.message)
- }
-})
+    try{
+      const cart = await Cart.find().lean().exec();
+  
+      res.render("cart",{cart})
+   }catch(e){
+       res.status(500).send(e.message)
+   }
+  })
+  
 
   router.post("", async (req, res) => {
     try {
-      const product = await Product.create(req.body);
+      const product = await Cart.create(req.body);
   
       return res.status(201).send(product);
     } catch (err) {

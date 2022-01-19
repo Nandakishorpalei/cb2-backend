@@ -10,8 +10,13 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static("public"));
 
 const productController = require('./controller/productController');
-const Product = require('./models/productModel');
-app.use("/productData",productController);
+app.use("/products",productController);
+
+const wishlistController = require('./controller/favouriteController');
+app.use("/favourites",wishlistController);
+
+const cartController = require('./controller/cartController');
+app.use("/cart",cartController);
 
 app.get("/", async(req,res)=>{
     try{
@@ -47,15 +52,6 @@ app.get("/signup", async(req,res)=>{
 });
 
 
-app.get("/products", async(req,res)=>{
-    try{
-
-       const products = await Product.find().lean().exec();
-       res.render("products",{products:products})
-    }catch(e){
-        res.status(500).send(e.message)
-    }
-})
 
 
 

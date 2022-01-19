@@ -1,0 +1,250 @@
+#Favorite_main{
+    font-family:"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif ;
+    color:rgb(34, 34, 34);
+    width: 70%;
+    margin: auto;
+    
+}
+#Favorite_upper{
+    display: flex;
+    gap: 41%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#Favorite_upper_1{
+    font-size:24px;
+    line-height:34px;
+    letter-spacing:2px;
+    font-weight:500;
+  
+}
+#Favorite_upper_2{
+   
+    display: flex;
+    width: 40%;
+    gap: 10%;
+   justify-content: left;
+   font-size:14px;
+   line-height:15px;
+   letter-spacing:0.84px;
+   font-weight:300;
+   text-align:left;
+}
+#Favorite_upper_2>a{
+    margin-top: 3%;
+    color:rgb(34, 34, 34);
+}
+
+#Favorite_products_div{
+    display: flex;
+    gap: 18%;
+    width: 100%;
+    padding-top: 3%;
+    
+}
+#Favorite_products_div_1{
+    width: 60%;
+    justify-content: left;
+    display: flex;
+    gap: 5%;
+    /* border : 1px solid black; */
+    height: 300px;
+}
+#Favorite_products_div_1 p{
+  margin-bottom: 30%;
+}
+#Favorite_products_div_1 a{
+    margin-top: 60%;
+    color:rgb(34, 34, 34);
+    font-size:14px;
+    line-height:16px;
+    font-weight:200;
+}
+
+#Favorite_products_div_1 img{
+     height: 55%;
+     width: 85%;
+}
+
+#Favorite_products_div_2{
+    justify-content: right;
+    text-align: right;
+    width: 20%;
+    height: auto;
+}
+#Favorite_products_div_2 p{
+  margin-left: 40%;
+}
+#button_remove{
+    border: none;
+   background-color: white;
+    margin-bottom: 30%;
+   text-decoration: underline;
+   cursor: pointer;
+}
+#button_addtocart{
+     height: 15%;
+     width: 90%;
+     margin-bottom: 30%;
+     color: white;
+     background-color: black;
+     cursor: pointer;
+}
+#Favorite_products_div_2>a{
+    color:rgb(34, 34, 34);
+    font-size:14px;
+    line-height:16px;
+    font-weight:200;
+}
+#favourite_p_name{
+    font-size:16px;
+    line-height:25.6px;
+    font-weight:500;
+
+}
+#Favorite_products_div_1 p:hover{
+    text-decoration: underline;
+}
+
+
+
+/* footer csss starts here ----------------------------------- */
+#Main_Footer{
+    width: 100%;
+    height: 570px;
+    background-color: rgb(247,247,247);
+    font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
+}
+#Footer_up{
+    width: 95%;
+    height: 63%;
+    padding:3% 3% 3% 3% ;
+    display: flex;
+    gap: 5%;
+}
+.fa-envelope{
+   font-size: 25px;
+}
+#footer_col1 #h3{
+   color:rgb(34, 34, 34);
+   font-weight:500;
+   font-size:18px;
+}
+#footer_col1 #foo_in{
+     border-top-style: hidden;
+   border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid; 
+  background-color: rgb(247,247,247);
+  width: 80%;
+  margin-top: 9%;
+  color:#222222;
+  font-weight:300;
+   font-size:14px;
+   margin-left: 3%;
+}
+#footer_col1 #foo_read{
+   line-height:20px;
+   color:#222222;
+  font-weight:300;
+   font-size:18px;
+   margin-top: 15%;
+}
+#footer_col1 #foo_read span{
+    text-decoration: underline;
+}
+#foo_fonts{
+    display: flex;
+    gap: 5%;
+    margin-top: 8%;
+    font-size: 16px;
+}
+#footer_col2 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col2 p{
+   color:#222222;
+  font-weight:250;
+   font-size:14px;
+   line-height:30px;
+}
+#footer_col2 p:hover{
+    text-decoration: underline;
+}
+#footer_col3{
+    width: 15%;
+}
+#footer_col3 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col3 p{
+   color:#222222;
+  font-weight:250;
+   font-size:14px;
+   line-height:25px;
+}
+#footer_col3 p:hover{
+    text-decoration: underline;
+}
+#footer_col4 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col4 p{
+   color:#222222;
+  font-weight:250;
+   font-size:14px;
+   line-height:20px;
+}
+#footer_col4 p:hover{
+    text-decoration: underline;
+}
+#footer_col5 span{
+   color:#222222;
+  font-weight:500;
+   font-size:16px;
+   line-height:30px;
+
+}
+#footer_col5 p{
+   color:#222222;
+  font-weight:800;
+   font-size:16px;
+   line-height:30px;
+
+}
+.fa-flag-usa{
+    color: red;
+}
+#Footer_down{
+    text-align: center;
+}
+#Footer_down>span{
+   color:#222222;
+  font-weight:400;
+   font-size:15px;
+   line-height:30px;
+}
+#Footer_down>p{
+   color:#222222;
+  font-weight:300;
+   font-size:12px;
+   line-height:30px;
+}
+#Footer_down>p>span{
+   color:#222222;
+  font-weight:400;
+   font-size:15px;
+   line-height:30px;
+}
