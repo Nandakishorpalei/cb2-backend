@@ -1,0 +1,574 @@
+body{
+    background-color: #f4f4f4;
+    font-family : "Lineto Brown Sub" ,"Lineto Brown Light Sub", Verdana, sans-serif;
+}
+#payMain{
+    display: flex;
+    flex-direction: row;
+}
+#payLeft{
+    background-color: white;
+    /* height: 1833px; */
+    width: 70%;
+    /* margin: auto; */
+}
+
+#payLeft .shipping_cb2logo{
+    border: 6px solid black;
+    width: 12%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+#payLeft .shipping_cb2logo_check{
+    padding: 1%;
+    text-align: center;
+    margin: auto;
+    font-size:20px;
+    line-height:28px;
+    font-weight:300;
+
+}
+
+
+#payRight{
+    /* height: 1833px; */
+    width: 30%;
+}
+#shipping_left_number{
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+#shipping_left_number .span1{
+    height: 20%;
+    width: 3%;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#shipping_left_number>div{
+    height: 20%;
+    width: 3%;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+}
+#shipping_left_tag{
+    width: 60%;
+  display: flex;
+  gap: 25%;
+  margin: auto;
+  margin-top: 1%;
+}
+#shipping_left_tag div{
+    height: 10%;
+    width: 15%;
+    text-align: center;
+    font-size:14px;
+    line-height:18px;
+    font-weight:300;
+}
+
+#shipping_left_tag div:nth-child(1){
+    margin-left: -4%;
+}
+
+#shipping_left_tag div:nth-child(2){
+    margin-left: 10%;
+}
+
+#shipping_left_tag div:nth-child(3){
+    margin-left: 8%;
+}
+
+#Checkout_payement_under{
+    width: 70%;
+    padding-left: 25%;
+}
+
+#Checkout_payement_under h2{
+    font-size:20px;
+    line-height:24px;
+    font-weight:300;
+}
+#Checkout_payement_under p{
+    font-size:13px;
+    line-height:10px;
+    font-weight:300;
+}
+#Checkout_payement_under a{
+    font-size:13px;
+    line-height:16px;
+    font-weight:300;
+    color: black;
+}
+#Checkout_payement_address{
+    border: 1px solid black;
+    padding: 1%;
+}
+#Checkout_payement_Button a{
+    display: flex;
+    justify-content: flex-end;
+}
+#Checkout_Button{
+    padding: 0.5%;
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 50%;
+    font-size: 16px;
+    margin-left:50%;
+    
+}
+
+
+/* right box */
+
+#payRight{
+    display: flex;
+    background-color: rgb(244,244,244);
+    width: 30%;
+}
+#shipping_right_total{
+    background-color: white;
+    margin: 2%;
+    padding: 0.5%;
+    margin-top: 3%; 
+    width: 18%; 
+    position: fixed;
+}
+#main_shipping_right_only{
+    display: flex;
+    gap: 9%;
+   
+}
+#main_shipping_right_only a{
+  color:rgb(102, 102, 102);
+}
+#main_shipping_right_only .Sipping_Merchandice{
+  color:rgb(102, 102, 102);
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+} 
+#Shipping_Order_last{
+    display: flex;
+    gap: 35%;
+}
+.Shipping_Discount {
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+  color: red;
+}
+#Shipping_Href_Cart{
+    margin-top: 5%;
+}
+#Shipping_Order_last{
+    font-size:100%;
+    line-height:26px;
+    font-weight:500;
+}
+#card_details{
+    width: 50%;
+    height: 500px;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+#card_details1{
+    width: 100%;
+    height: 12%;
+    line-height: 10px;
+    padding-left: 5%;
+    box-sizing: border-box;
+}
+#card_details1 > p:nth-child(1){
+    font-size: 20px;
+}
+
+#card_details1 > p:nth-child(2){
+    font-size: 14px;
+}
+
+#card_details_form{
+    background-color: #f4f4f4;
+    height: 80%;
+    width: 100%;
+    border-top: 2px solid black;
+    padding: 4%;
+    box-sizing: border-box;
+}
+
+#card_details_form div{
+    height: 20%;
+}
+#credit_number{
+    height: 23px;
+    border: 2px solid black;
+    width: 99%;  
+}
+#card_details_form div:nth-child(2){
+    height: 30%;
+}
+#card_details_form div:nth-child(3){
+    line-height: 0;
+}
+#dropdown{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#dropdown select{
+    width: 45%;
+    height: 100%;
+    border: 2px solid black;
+}
+#cvv{
+    border: 2px solid black;
+    height: 23px;
+    width: 45%;
+}
+#savecard{
+    height: 35px;
+    background-color: black;
+    color: white;
+    width: 40%;
+    margin-top: 4%;
+    margin-left: 3%;
+}
+
+
+/* css for order placed */
+
+#order_placed{
+    width: 50%;
+    height: 30%;
+    margin-left: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#order_placed img{
+    height: 40%;
+    width: 30%;
+    margin-top: 5%;
+}
+
+#order_placed p:nth-child(1){
+    font-size: 14px;
+}
+
+#order_placed p:nth-child(2){
+    font-size: 18px;
+    color: green;
+}
+#order_placed a{
+    color: tomato;
+}
+
+
+
+
+
+/* ---------------------------------------------------------- */
+#main_shipping{
+    width: 100%;
+    font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    color:rgb(34, 34, 34);
+    display: flex;
+}
+#main_shipping_left{
+    width: 70%;
+}
+#main_shipping_left .shipping_cb2logo{
+    border: 6px solid black;
+    width: 12%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+#main_shipping_left .shipping_cb2logo_check{
+  padding: 1%;
+    text-align: center;
+    margin: auto;
+    font-size:20px;
+    line-height:28px;
+    font-weight:300;
+
+}
+#shipping_left_number{
+    width: 60%;
+ margin: auto;
+  display: flex;
+}
+#shipping_left_number .span1{
+ height: 20%;
+ width: 3%;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#shipping_left_number>div{
+  height: 20%;
+ width: 3%;
+ border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+}
+#shipping_left_tag{
+    width: 60%;
+  display: flex;
+  gap: 25%;
+  margin: auto;
+  margin-top: 1%;
+}
+#shipping_left_tag>div{
+    height: 10%;
+    width: 15%;
+    text-align: center;
+    font-size:14px;
+    line-height:18px;
+    font-weight:300;
+
+}
+#shipping_shipto{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    gap: 60%;
+    font-size:20px;
+    line-height:24px;
+    font-weight:300;
+}
+#shipping_shipto a{
+  color:rgb(34, 34, 34);
+  font-size:12px;
+    line-height:14px;
+    font-weight:300;
+}
+.shipping_name{
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+.shipping_name p{
+    width: 100%;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+}
+.shipping_name span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+.shipping_input_name{ 
+  width: 60%;
+    margin: auto;
+    display: flex;
+    gap: 4%;
+}
+.shipping_input_name input{
+  width: 45%;
+  height: 28px;
+}
+form input{
+  margin-bottom:10px;
+}
+#shipping_street{
+  width: 60%;
+    margin: auto;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+}
+#shipping_street span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_street a{
+  color:rgb(34, 34, 34);
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_street input{
+    width: 95%;
+    height: 28px;
+}
+#shipping_selectform{
+  width: 60%;
+    margin: auto;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+}
+#shipping_selectform span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_selectform select{
+    width: 95%;
+    height: 28px;
+}
+#shipping_phoneno{
+  width: 60%;
+    margin: auto;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+    margin-top:10px;
+}
+#shipping_phoneno span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_phoneno input{
+  width: 95%;
+  height: 28px;
+}
+#shipping_checkbox{
+  width: 60%;
+    margin: auto;
+}
+#shipping_checkbox input{ 
+     background-color: black;
+    color: white;
+}
+#shipping_checkbox span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_button_next{
+  width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+#shipping_button_next input{
+  background-color: black;
+    color: white;
+    width: 50%;
+    height: 50px;
+   margin-left: 46%;
+}
+#tolearnmore{
+  font-size:12px;
+  line-height:15.6px;
+  font-weight:300;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+#tolearnmore a{
+  color:rgb(34, 34, 34);
+}
+#shipping_safeandsecure{
+    display: flex;
+    gap: 5%;
+    width: 20%;
+    font-size:14px;
+  line-height:15.6px;
+  font-weight:300;
+  margin-left: 5%;
+  align-items: center;
+}
+#shipping_safeandsecure i{
+  font-size:18px;
+}
+#shipping_safeandsecure a{
+  color:rgb(34, 34, 34);
+}
+#shipping_bottom_page{
+    padding: 3%;
+    display: flex;
+    gap: 80%;
+    font-size:12px;
+  line-height:15.6px;
+  font-weight:300;
+}
+#shipping_bottom_page div{
+   width: 15%;
+}
+
+/* now right fixed div starts */
+
+#main_shipping_right{
+    display: inline-block;
+    background-color: rgb(244,244,244);
+    width: 30%;
+}
+#shipping_right_total{
+  background-color: white;
+     margin: 2%;
+    padding: 0.5%;
+    margin-top: 3%; 
+     width: 20%; 
+    position: fixed;
+}
+#main_shipping_right_only{
+    display: flex;
+    gap: 9%;
+   
+}
+#main_shipping_right_only a{
+  color:rgb(102, 102, 102);
+}
+#main_shipping_right_only .Sipping_Merchandice{
+  color:rgb(102, 102, 102);
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+} 
+#Shipping_Order_last{
+    display: flex;
+    gap: 35%;
+}
+.Shipping_Discount {
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+  color: red;
+ }
+ #Shipping_Href_Cart{
+     margin-top: 5%;
+ }
+ #Shipping_Order_last{
+  font-size:100%;
+  line-height:26px;
+  font-weight:500;
+ }
+
+
+
+
+
+ /* ---------------------------------------------------------------------------------- */
+
+
+
+ .btn-outline-success{
+    background-color: transparent;
+    border-radius: 5%;
+    padding:4px 10px;
+    margin-bottom:60px;
+}
+.btn-outline-success:hover{
+    transition: all 1s;
+    background-color: green;
+    color:white;
+    border:1px solid white;
+    padding:6px 13px;
+}
