@@ -1,0 +1,274 @@
+#main_shipping{
+    width: 100%;
+    font-family :"Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+    color:rgb(34, 34, 34);
+    display: flex;
+}
+#main_shipping_left{
+    width: 70%;
+}
+#main_shipping_left .shipping_cb2logo{
+    border: 6px solid black;
+    width: 12%;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+}
+#main_shipping_left .shipping_cb2logo_check{
+  padding: 1%;
+    text-align: center;
+    margin: auto;
+    font-size:20px;
+    line-height:28px;
+    font-weight:300;
+
+}
+#shipping_left_number{
+    width: 60%;
+ margin: auto;
+  display: flex;
+}
+#shipping_left_number .span1{
+ height: 20%;
+ width: 3%;
+    border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+#shipping_left_number>div{
+  height: 20%;
+ width: 3%;
+ border: 1px solid black;
+    border-radius: 50%;
+    text-align: center;
+}
+#shipping_left_tag{
+    width: 60%;
+  display: flex;
+  gap: 25%;
+  margin: auto;
+  margin-top: 1%;
+}
+#shipping_left_tag>div{
+    height: 10%;
+    width: 15%;
+    text-align: center;
+    font-size:14px;
+    line-height:18px;
+    font-weight:300;
+
+}
+#shipping_shipto{
+    display: flex;
+    width: 60%;
+    margin: auto;
+    margin-top: 6%;
+    margin-bottom: 3%;
+    gap: 60%;
+    font-size:20px;
+    line-height:24px;
+    font-weight:300;
+}
+#shipping_shipto a{
+  color:rgb(34, 34, 34);
+  font-size:12px;
+    line-height:14px;
+    font-weight:300;
+}
+.shipping_name{
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+.shipping_name p{
+    width: 100%;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+}
+.shipping_name span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+.shipping_input_name{ 
+  width: 60%;
+    margin: auto;
+    display: flex;
+    gap: 4%;
+}
+.shipping_input_name input{
+  width: 45%;
+  height: 28px;
+}
+form input{
+  margin-bottom:10px;
+}
+#shipping_street{
+  width: 60%;
+    margin: auto;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+}
+#shipping_street span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_street a{
+  color:rgb(34, 34, 34);
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_street input{
+    width: 95%;
+    height: 28px;
+}
+#shipping_selectform{
+  width: 60%;
+    margin: auto;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+}
+#shipping_selectform span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_selectform select{
+    width: 95%;
+    height: 28px;
+}
+#shipping_phoneno{
+  width: 60%;
+    margin: auto;
+    font-size:17px;
+    line-height:20px;
+    font-weight:500;
+    margin-top:10px;
+}
+#shipping_phoneno span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_phoneno input{
+  width: 95%;
+  height: 28px;
+}
+#shipping_checkbox{
+  width: 60%;
+    margin: auto;
+}
+#shipping_checkbox input{ 
+     background-color: black;
+    color: white;
+}
+#shipping_checkbox span{
+  font-size:10px;
+    line-height:20px;
+    font-weight:300;
+}
+#shipping_button_next{
+  width: 60%;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+}
+#shipping_button_next input{
+  background-color: black;
+    color: white;
+    width: 50%;
+    height: 50px;
+   margin-left: 46%;
+}
+#tolearnmore{
+  font-size:12px;
+  line-height:15.6px;
+  font-weight:300;
+  margin-bottom: 2%;
+  margin-left: 5%;
+}
+#tolearnmore a{
+  color:rgb(34, 34, 34);
+}
+#shipping_safeandsecure{
+    display: flex;
+    gap: 5%;
+    width: 20%;
+    font-size:14px;
+  line-height:15.6px;
+  font-weight:300;
+  margin-left: 5%;
+  align-items: center;
+}
+#shipping_safeandsecure i{
+  font-size:18px;
+}
+#shipping_safeandsecure a{
+  color:rgb(34, 34, 34);
+}
+#shipping_bottom_page{
+    padding: 3%;
+    display: flex;
+    gap: 80%;
+    font-size:12px;
+  line-height:15.6px;
+  font-weight:300;
+}
+#shipping_bottom_page div{
+   width: 15%;
+}
+
+/* now right fixed div starts */
+
+#main_shipping_right{
+    display: inline-block;
+    background-color: rgb(244,244,244);
+    width: 30%;
+}
+#shipping_right_total{
+  background-color: white;
+     margin: 2%;
+    padding: 0.5%;
+    margin-top: 3%; 
+     width: 20%; 
+    position: fixed;
+}
+#main_shipping_right_only{
+    display: flex;
+    gap: 9%;
+   
+}
+#main_shipping_right_only a{
+  color:rgb(102, 102, 102);
+}
+#main_shipping_right_only .Sipping_Merchandice{
+  color:rgb(102, 102, 102);
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+} 
+#Shipping_Order_last{
+    display: flex;
+    gap: 35%;
+}
+.Shipping_Discount {
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+  color: red;
+ }
+ #Shipping_Href_Cart{
+     margin-top: 5%;
+ }
+ #Shipping_Order_last{
+  font-size:100%;
+  line-height:26px;
+  font-weight:500;
+ }
