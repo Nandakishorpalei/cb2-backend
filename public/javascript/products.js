@@ -1,14 +1,30 @@
 
 //product add section
 
+// async function trying(){
+//     try{
+//         let responce = await fetch("http://localhost:3456/productData")
+         
+//         let data = await responce.json();
 
-// let productData = JSON.parse(localStorage.getItem("cbProductData")) || [];
-
-// if(data.length > productData.length){
-//     data.forEach(element=>{
-//         productData.push(element);
-//     })
+//         console.log(data);
+    
+//        }
+//        catch(err) {
+//            console.log(err);
+//        }
 // }
+// trying();
+
+
+
+let productData = JSON.parse(localStorage.getItem("cbProductData")) || [];
+
+if(data.length > productData.length){
+    data.forEach(element=>{
+        productData.push(element);
+    })
+}
 
 localStorage.setItem("cbProductData",JSON.stringify(productData))
 displayItem(productData);
