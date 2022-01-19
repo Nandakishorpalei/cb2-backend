@@ -1,0 +1,513 @@
+<%- include('header',{title:"CB2 wishlist",stylesheet:"stylesheet/ProductDescription.css"}) -%>
+
+<body onload="allProduct('<%= JSON.stringify(products) %>')">
+    <header id="navbarDiv"></header>
+    <main>
+      <div class="headItemName">
+        <p>PILLOWS & THROWS / PILLOWS</p>
+      </div>
+      <div id="productContainer">
+        <div id="leftBox"></div>
+        <div id="middleBox"></div>
+        <div id="rightBox">
+          <div id="rightBoxContent">
+            <div>
+              <h2 id="name"></h2>
+              <h2 id="category"></h2>
+              <h4 id="price"></h4>
+              <p style="font-size: 10px">
+                SKU: 273844 <span class="horizontalLine"></span> CB2 Exclusive
+              </p>
+            </div>
+            <div>
+              <p id="type"><strong>MATERIAL:</strong> unknown</p>
+              <div id="materialBtn">
+                <div id="first">Down-alternative insert</div>
+                <div id="second">feather-down insert</div>
+              </div>
+            </div>
+            <div id="checkBoxes">
+              <div>
+                <input
+                  class="roundInputs"
+                  type="checkbox"
+                  name="rewardcheck"
+                  id="onlyOne"
+                />
+                <label for="">ship</label>
+                <p class="red">
+                  Purchase now and we'll ship when it's available. Estimated in
+                  late February
+                </p>
+                <p><a class="red" href="#">ship free</a></p>
+              </div>
+
+              <div>
+                <input
+                  class="roundInputs"
+                  type="checkbox"
+                  name="rewardcheck"
+                  id="onlyOne"
+                />
+                <label for="">FREE CURBSIDE PICKUP AT STORE</label>
+                <p><a style="color: black" href="#">select store</a></p>
+              </div>
+              <div>
+                <p>
+                  Earn $15 in reward dollars.
+                  <a class="black" href="#"> CB2 CREDIT CARD</a>
+                </p>
+              </div>
+              <div id="addProduct">
+                <button class="btn minus-btn disabled" type="button">-</button>
+                <input type="text" id="quantity" value="1" />
+                <button class="btn plus-btn disabled" type="button">+</button>
+              </div>
+            </div>
+            <button id="addToCartBtn">Add to cart</button>
+            <p><a class="black" href="#">add to registery</a></p>
+            <div class="shopRunner">
+              <p class="smallFont">
+                <span
+                  ><img
+                    style="
+                      height: 18px;
+                      background: white;
+                      vertical-align: text-top;
+                      margin-right: 1%;
+                    "
+                    src="https://content.shoprunner.com/assets/pik_images/v4/_sr_logo.svg"
+                    alt="" /></span
+                >Get free 2-day shipping & returns on this item.
+              </p>
+
+              <p class="questionMarkLine">
+                <span style="margin-right: 1%"
+                  ><i class="far fa-question-circle"></i></span
+                ><a class="black smallFont" href="signup.html">sign up free </a
+                ><span class="horizontalLine smallFont"></span
+                ><a class="black smallFont" href="login.html"> sign in</a>
+              </p>
+            </div>
+
+            <div id="dragBoxes">
+              <div class="flex topBottomBorder">
+                <p class="mediumFont pointer" onclick="showBtn()">details</p>
+                <button onclick="hiddenBtn()">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+              <div id="hiddenBox1">
+                <p class="noTextTransform boxText">
+                  Turkish silk threads are handloomed into a rich, velvet-like
+                  texture to create one of the most sumptuous, luxurious pillows
+                  we've ever seen. Because the silk is collected from different
+                  areas, there will be slight differences in color, as well as
+                  variations in the weave due to the handcrafted nature of the
+                  process. Knife edge with a hidden zipper closure, black and
+                  white pillow flips to a solid neutral fine linen back. CB2
+                  pillows include a pillow insert in your choice of feather-down
+                  or down alternative. CB2 exclusive.
+                </p>
+                <p id="dragTitle" class="bolder">hello</p>
+                <ul>
+                  <li class="noTextTransform mediumFont">
+                    Front: Silk/cotton blend
+                  </li>
+                  <li class="noTextTransform mediumFont">
+                    Back: Linen/cotton blend
+                  </li>
+                  <li class="noTextTransform mediumFont">
+                    Each is unique due to natural characteristics of silk
+                  </li>
+                  <li class="noTextTransform mediumFont">
+                    Feather-down insert: 95% white duck feather, 5% white down
+                    fill (made in Thailand)
+                  </li>
+                  <li class="noTextTransform mediumFont">
+                    Down-alternative insert: 100% polyester fill (imported)
+                  </li>
+                  <li class="noTextTransform mediumFont">
+                    Hidden zipper closure
+                  </li>
+                  <li class="noTextTransform mediumFont">Dry-clean only</li>
+                  <li class="noTextTransform mediumFont">Made in Turkey</li>
+                </ul>
+              </div>
+              <div class="flex topBottomBorder">
+                <p class="mediumFont pointer" onclick="showBtn2()">
+                  Dimentions
+                </p>
+                <button onclick="hiddenBtn2()">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+              <div id="hiddenBox2">
+                <p class="noTextTransform boxText">
+                  OVERALL DIMENSIONS <br />
+                  Width: 20" <br />
+                  Height: 20"
+                </p>
+              </div>
+              <div class="flex topBottomBorder">
+                <p class="mediumFont pointer" onclick="showBtn3()">reviews</p>
+                <button onclick="hiddenBtn3()">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+              <div id="hiddenBox3">
+                <p style="margin: 2% 0%" class="noTextTransform">
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="fas fa-star"></i></span>
+                  <span><i class="far fa-star"></i></span>
+                </p>
+                <p style="margin: 4% 0%" class="noTextTransform smallFont">
+                  <span
+                    ><i
+                      style="
+                        font-size: 15px;
+                        vertical-align: middle;
+                        margin-right: 1%;
+                      "
+                      class="fas fa-check-circle"
+                    ></i
+                  ></span>
+                  Reviews are verified for authenticity
+                  <a class="black" href="#">LEARN MORE</a>
+                </p>
+                <button
+                  style="
+                    width: 100%;
+                    border: 1px solid black;
+                    padding: 3%;
+                    margin-top: 2%;
+                    font-size: 18px;
+                    letter-spacing: 0.1em;
+                  "
+                >
+                  Review
+                </button>
+                <div
+                  style="
+                    border-bottom: 1px solid black;
+                    width: 100%;
+                    margin-top: 14%;
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </main>
+
+    <div id="sliderTitle">
+      <h2 style="font-size: 22px">complete the look</h2>
+    </div>
+    <div id="sliderContainer">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide margin smallFont"
+        data-interval="false"
+      >
+        <div class="carousel-item active">
+          <div class="w-100 cards">
+            <div>
+              <img
+                src="https://content.stylitics.com/images/items/5527429?size=large"
+                alt="First slide"
+              />
+              <p>BISQUE PLASTER SIDE TABLE</p>
+              <p>$299</p>
+            </div>
+            <div>
+              <img
+                src="https://content.stylitics.com/images/items/5527839?size=large"
+                alt="First slide"
+              />
+              <p>MAVERICK IVORY/GREY HANDLOOMED RUG 5'X8'</p>
+              <p>$539</p>
+            </div>
+            <div>
+              <img
+                src="https://content.stylitics.com/images/items/5610781?size=large"
+                alt="First slide"
+              />
+              <p>FAUX FUR TAUPE THROW</p>
+              <p>$99.95</p>
+            </div>
+            <div>
+              <img
+                src="https://content.stylitics.com/images/items/5610943?size=large"
+                alt="First slide"
+              />
+              <p>
+                20" BALANCE TURKISH SILK PILLOW WITH DOWN-ALTERNATIVE INSERT
+              </p>
+              <p>$149</p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="w-100 cards">
+            <div>
+              <img
+                src="https://content.stylitics.com/images/items/5610977?size=large"
+                alt="First slide"
+              />
+              <p>
+                18"X12" SEQUENCE JERSEY BLACK PILLOW WITH DOWN-ALTERNATIVE
+                INSERT
+              </p>
+              <p>$49.95</p>
+            </div>
+            <div>
+              <img
+                src="https://content.stylitics.com/images/items/5611141?size=large"
+                alt="First slide"
+              />
+              <p>STATURE IVORY BENCH</p>
+              <p>$499</p>
+            </div>
+            <div>
+              <img
+                src="https://content.stylitics.com/images/items/5611352?size=large"
+                alt="First slide"
+              />
+              <p>SEDA GREEN DUPIONI SILK CURTAIN PANEL 48"X120"</p>
+              <p>$219</p>
+            </div>
+            <div>
+              <img
+                src="https://cb2.scene7.com/is/image/CB2/FrescoBlackPlanterSmSHS21/$web_LineItem$&wid=249&hei=249/201208112438/fresco-small-black-planter.jpg"
+                alt="First slide"
+              />
+              <p>FRESCO SMALL BLACK PLANTER</p>
+              <p>$35.97</p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <button aria-hidden="true">
+            <i class="material-icons">arrow_back_ios</i>
+          </button>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <button aria-hidden="true">
+            <i class="material-icons">arrow_forward_ios</i>
+          </button>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
+
+    <div id="relatedCategories">
+      <p>related categories</p>
+      <a href="#">Sheepskin Pillows</a>
+      <a href="#">Linen Pillows</a>
+      <a href="#">Grey Pillows</a>
+      <a href="#">Red Pillows</a>
+      <a href="#">Down Alternative Pillows</a>
+      <a href="#">Silk Pillows</a>
+    </div>
+
+    <div id="cartDiv2" class="mediumFont">
+      <div><i id="remove" class="fas fa-2x fa-times"></i></div>
+      <div id="topDiv">
+        <div id="leftDrag">
+          <div id="leftBox1">
+            <p id="itemAdded" style="margin: 4% 0%">
+              <span><i class="fas fa-check"></i></span> 1 item added to your
+              cart
+            </p>
+          </div>
+          <div id="leftImgBox"></div>
+          <div id="leftBox3">
+            <p class="note">note</p>
+            <p>
+              All items in your cart marked Ships <br />
+              Free will ship FREE
+            </p>
+          </div>
+        </div>
+        <div id="rightDrag">
+          <p id="rightP1">
+            <strong>Your Cart: 1 items</strong>
+          </p>
+          <hr />
+          <div id="summaryDiv">
+            <div>
+              <p>Order Subtotal:</p>
+              <p>Est. Shipping + Handling:</p>
+              <p><strong>subtotal</strong></p>
+            </div>
+            <div>
+              <p id="subTotal1">$233</p>
+              <p>$0.00</p>
+              <p id="subTotal2">
+                <strong>$233</strong>
+              </p>
+            </div>
+          </div>
+          <hr />
+          <div id="dragBtn">
+            <div><a href="cart.html">continue shopping</a></div>
+            <div><a href="cart.html">checkout</a></div>
+          </div>
+        </div>
+      </div>
+      <div id="bottomDiv"></div>
+      <div id="sliderTitle2">
+        <h2 style="font-size: 16px">complete the look</h2>
+      </div>
+      <div id="sliderContainer2">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide margin smallFont"
+          data-interval="false"
+        >
+          <div class="carousel-item active">
+            <div class="w-100 cards2">
+              <div>
+                <img
+                  src="https://content.stylitics.com/images/items/5527429?size=large"
+                  alt="First slide"
+                />
+                <p>BISQUE PLASTER SIDE TABLE</p>
+                <p>$299</p>
+              </div>
+              <div>
+                <img
+                  src="https://content.stylitics.com/images/items/5527839?size=large"
+                  alt="First slide"
+                />
+                <p>MAVERICK IVORY/GREY HANDLOOMED RUG 5'X8'</p>
+                <p>$539</p>
+              </div>
+              <div>
+                <img
+                  src="https://content.stylitics.com/images/items/5610781?size=large"
+                  alt="First slide"
+                />
+                <p>FAUX FUR TAUPE THROW</p>
+                <p>$99.95</p>
+              </div>
+              <div>
+                <img
+                  src="https://content.stylitics.com/images/items/5610943?size=large"
+                  alt="First slide"
+                />
+                <p>
+                  20" BALANCE TURKISH SILK PILLOW WITH DOWN-ALTERNATIVE INSERT
+                </p>
+                <p>$149</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="w-100 cards2">
+              <div>
+                <img
+                  src="https://content.stylitics.com/images/items/5610977?size=large"
+                  alt="First slide"
+                />
+                <p>
+                  18"X12" SEQUENCE JERSEY BLACK PILLOW WITH DOWN-ALTERNATIVE
+                  INSERT
+                </p>
+                <p>$49.95</p>
+              </div>
+              <div>
+                <img
+                  src="https://content.stylitics.com/images/items/5611141?size=large"
+                  alt="First slide"
+                />
+                <p>STATURE IVORY BENCH</p>
+                <p>$499</p>
+              </div>
+              <div>
+                <img
+                  src="https://content.stylitics.com/images/items/5611352?size=large"
+                  alt="First slide"
+                />
+                <p>SEDA GREEN DUPIONI SILK CURTAIN PANEL 48"X120"</p>
+                <p>$219</p>
+              </div>
+              <div>
+                <img
+                  src="https://cb2.scene7.com/is/image/CB2/FrescoBlackPlanterSmSHS21/$web_LineItem$&wid=249&hei=249/201208112438/fresco-small-black-planter.jpg"
+                  alt="First slide"
+                />
+                <p>FRESCO SMALL BLACK PLANTER</p>
+                <p>$35.97</p>
+              </div>
+            </div>
+          </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+            <button aria-hidden="true">
+              <i class="material-icons">arrow_back_ios</i>
+            </button>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <button aria-hidden="true">
+              <i class="material-icons">arrow_forward_ios</i>
+            </button>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer id="footerDiv"></footer>
+</html>
+
+<script type="module">
+    // import footer & append 
+    import footer from "./components/footer.js";
+    let footerDiv = document.getElementById("footerDiv");
+    footerDiv.innerHTML = footer();
+    
+    //navbar Import section start 
+    
+    import navbar from "./components/navbarImport.js";
+    let navbarDiv = document.getElementById("navbarDiv");
+    navbarDiv.innerHTML = navbar();
+    
+    var script = document.createElement('script');         
+    script.src = "navbar.js";    
+     document.head.appendChild(script)
+    
+    // navbar import section end
+</script>
+
+<script src="javascript/productDescription.js">
+
+</script>

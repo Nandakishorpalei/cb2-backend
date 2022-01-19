@@ -1,0 +1,190 @@
+<%- include('header',{title:"CB2 new page",stylesheet:"stylesheet/newPage.css"}) -%>
+
+
+<body>
+    <header id="navbarDiv"></header>
+    <main>
+      <div id="newContainer">
+        <div id="sideBar"></div>
+        <div id="newCategory">
+          <div class="newTitle">
+            <a href="#">DECEMBER ARRIVALS</a>
+            <a href="#">SHOP THE LATEST</a>
+          </div>
+          <div>
+            <p>NEW</p>
+          </div>
+          <div id="newCategoryCards"></div>
+          <div id="newPledgeBox">
+            <h2>we're taking the 15% pledge</h2>
+            <p>
+              We're ensuring that 15% of our products and collaborations are
+              represented by
+              <br />
+              Black businesses, artists, and designers by 2024.
+            </p>
+            <a href="#">learn more</a>
+          </div>
+          <!-- radar section starts -->
+          <div id="radarDiv">
+            <div id="radarTextDiv">
+              <span id="radarText">ON OUR RADAR</span>
+              <hr />
+            </div>
+
+            <div id="radarSection">
+              <div class="radarItem">
+                <img src="landingImages/home_bt_1.jfif" alt="" />
+                <h3>
+                  SO GOOD THEY ALREADY SOLD OUT ONE-DON'T LET THEM GET AWAY
+                  AGAIN
+                </h3>
+                <p><a href="">SHOP BACK IN STOCK</a></p>
+              </div>
+              <div class="radarItem">
+                <img src="landingImages/home_bt_2.jfif" alt="" />
+                <h3>
+                  HOW TO CREATE FANTASTICAL HOLIDAY FLORALS WITH STYLIST DAVID
+                  ANGER
+                </h3>
+                <p><a href="">READ & SHOP</a></p>
+              </div>
+              <div class="radarItem">
+                <img src="landingImages/home_bt_3.jfif" alt="" />
+                <h3>MAKE DESIGN MAGIC HAPPEN WITH OUR FREE DESIGN SERVICES</h3>
+                <p><a href="">LEARN MORE</a></p>
+              </div>
+              <div class="radarItem">
+                <img src="landingImages/home_bt_4.jfif" alt="" />
+                <h3>CB2 IN YOUR SPACE: PHOTO BY @CONVIVALPRODUCTION</h3>
+                <p><a href="">SEE ALL #MYCB2</a></p>
+              </div>
+            </div>
+          </div>
+          <!-- radar section ends -->
+
+          <div class="newEverythingBox">
+            <h2>All New Everything: New Modern Furniture and Decor Inspo</h2>
+            <p>
+              Get inspired. Whether you're furnishing a room or just looking to
+              add a piece of decor, elevate your space with brand new modern
+              furniture and the latest home decor and accessories. Take your
+              lounge game up a level with a new <a href="sofa#">sofa</a>
+              —just in time to stream the next big series with the gang. For a
+              chic look, contrast your sofa's shade with on-trend decorative
+              pillows, poufs and throws. Looking for a surface that makes a
+              statement? The latest accent and side tables provide a solution
+              that's both functional and artistic. Add an upholstered chair or
+              rug in a contemporary print for an eclectic touch. Another option:
+              put the finishing touches on your room with art, prints and vases.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div id="footerDiv"></div>
+  </body>
+</html>
+<script type="module">
+  // Header navbar
+//navbar Import section start 
+
+import navbar from "./components/navbarImport.js";
+let navbarDiv = document.getElementById("navbarDiv");
+navbarDiv.innerHTML = navbar();
+
+var script = document.createElement('script');         
+script.src = "navbar.js";    
+ document.head.appendChild(script)
+
+
+ // import footer & append 
+import footer from "./components/footer.js";
+let footerDiv = document.getElementById("footerDiv");
+footerDiv.innerHTML = footer();
+
+  import sidebar from "./components/sidebar.js";
+  let sideDiv = document.getElementById("sideBar");
+  sideDiv.innerHTML = sidebar();
+
+  // script for NewCategoriesCard
+  let productData = [
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_new_all?wid=1000&qlt=50",
+      name: "VIEW ALL",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_new_furniture?wid=1000&qlt=50",
+      name: "FURNITURE",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_new_holiday?wid=1000&qlt=50",
+      name: "HOLIDAY",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/091721_super_gifts_50?wid=1000&qlt=50",
+      name: "GIFTS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_decor?wid=1000&qlt=50",
+      name: "DECOR & MIRRORS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/072321_super_lighting_table?wid=1000&qlt=50",
+      name: "LIGHTING",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_pillows?wid=1000&qlt=50",
+      name: "PILLOWS & THROWS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_rugs?wid=1000&qlt=50",
+      name: "RUGS",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_dining?wid=1000&qlt=50",
+      name: "KITCHEN & DINING",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/070121_super_new_bed?wid=1000&qlt=50",
+      name: "BED & BATH",
+    },
+    {
+      img: "https://cb2.scene7.com/is/image/CB2/093021_super_new_favorites?wid=1000&qlt=50",
+      name: "OUR FAVORITES",
+    },
+  ];
+
+  let mainBox = document.getElementById("newCategoryCards");
+
+  const getData = (data) => {
+    data.forEach(({ img, name }) => {
+      let cardBox = document.createElement("div");
+      cardBox.setAttribute("class", "tarunCards");
+      cardBox.addEventListener("click", function () {
+        window.location.href = "products.html";
+      });
+
+      let image = document.createElement("img");
+      image.src = img;
+      image.style.width = "100%";
+      image.style.height = "82%";
+
+      let cat = document.createElement("p");
+      cat.innerHTML = name;
+      cat.setAttribute("class", "tarunCardName");
+
+      cardBox.append(image, cat);
+
+      mainBox.append(cardBox);
+    });
+  };
+
+  getData(productData);
+
+
+  document.getElementById("menuicon").style.display="none";
+
+
+</script>

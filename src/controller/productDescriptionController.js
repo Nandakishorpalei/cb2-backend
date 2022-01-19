@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const Product = require('../models/productModel');
+const ProductDescription = require('../models/productDescriptionModel');
 
 router.get("", async (req, res) => {
   try{
-    const products = await Product.find().lean().exec();
+    const products = await ProductDescription.find().lean().exec();
 
-    res.render("products",{products:products})
+    res.render("productDescription",{products:products})
  }catch(e){
      res.status(500).send(e.message)
  }
@@ -15,7 +15,7 @@ router.get("", async (req, res) => {
 
   router.post("", async (req, res) => {
     try {
-      const product = await Product.create(req.body);
+      const product = await ProductDescription.create(req.body);
   
       return res.status(201).send(product);
     } catch (err) {

@@ -45,10 +45,8 @@ p{
     opacity:0.8;
 }
 #googleIcon{
-    position:relative;
-    height:20px;
-    width:20px;
-    padding-right:20px;
+    height:40px;
+    margin-top: -10px;
 }
 #googleButton span{
     margin-top:-15px;

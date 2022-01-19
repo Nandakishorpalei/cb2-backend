@@ -1,33 +1,18 @@
 
 //product add section
 
-// async function trying(){
-//     try{
-//         let responce = await fetch("http://localhost:3456/productData")
-         
-//         let data = await responce.json();
 
-//         console.log(data);
-    
-//        }
-//        catch(err) {
-//            console.log(err);
-//        }
-// }
-// trying();
+let productData;
 
 
-
-let productData = JSON.parse(localStorage.getItem("cbProductData")) || [];
-
-if(data.length > productData.length){
-    data.forEach(element=>{
-        productData.push(element);
-    })
+function allProduct(items){
+   
+    productData = JSON.parse(items);
+    console.log(productData)
+    displayItem(productData);
 }
 
-localStorage.setItem("cbProductData",JSON.stringify(productData))
-displayItem(productData);
+
 
 
 //product sort
@@ -251,7 +236,7 @@ function filterProductsPrice(filterByPriceValue){
 //product display
 
 function displayItem(productData){
-    
+    console.log("here")
     document.getElementById("totalItem").textContent=`${productData.length} ITEMS`;
 
     let productContainer = document.getElementById("productContainer");
@@ -518,4 +503,4 @@ else{
     document.getElementById("productContainer").style.opacity="1";
  });
 
- document.getElementById("menuicon").style.display="none";
+//  document.getElementById("menuicon").style.display="none";

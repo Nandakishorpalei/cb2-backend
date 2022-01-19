@@ -1,0 +1,61 @@
+<%- include('header',{title:"CB2 wishlist",stylesheet:"stylesheet/favourites.css"}) -%>
+
+
+<body onload="allProduct('<%= JSON.stringify(wishlist) %>')">
+    <div id="navbarDiv"></div>
+    <div id="Favorite_main">
+
+        <div id="Favorite_upper">
+
+          <div id="Favorite_upper_1">
+              <p>MY FAVORITES</p>
+          </div>
+          <div id="Favorite_upper_2">
+              <p>ID# 10833078</p>
+              <a href="#">MAKE A COPY</a> 
+              <a href="#">SIGN OUT</a> 
+          </div>
+
+        </div>
+        <hr>
+
+        <!-- --------------here upeer div end and product div starts----------------------------------------- -->
+        
+        <div id="Favorite_products">
+
+        </div>
+
+    </div>
+
+    <!-- footer html starts here----------------------- -->
+
+
+   <div id="footerDiv"></div>
+
+
+</body>
+</html>
+
+<script type="module">
+
+    // import footer & append 
+    import footer from "./components/footer.js";
+    let footerDiv = document.getElementById("footerDiv");
+    footerDiv.innerHTML = footer();
+    
+    //navbar Import section start 
+    
+    import navbar from "./components/navbarImport.js";
+    let navbarDiv = document.getElementById("navbarDiv");
+    navbarDiv.innerHTML = navbar();
+    
+    var script = document.createElement('script');         
+    script.src = "navbar.js";    
+     document.head.appendChild(script)
+    
+    // navbar import section end
+    
+    
+    </script>
+
+<script src="javascript/favourites.js"></script>

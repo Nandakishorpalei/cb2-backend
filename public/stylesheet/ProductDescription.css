@@ -1,0 +1,567 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* main section css==========> */
+main {
+  font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+  width: 92%;
+  margin: auto;
+}
+
+.headItemName > p {
+  padding: 25px 0px;
+  color: #666;
+  font-size: 10px;
+}
+
+#productContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#leftBox {
+  width: 8%;
+  height: fit-content;
+  /* position: fixed; */
+}
+#leftBox img {
+  width: 100%;
+  height: 110%;
+  margin-bottom: 8%;
+}
+
+#middleBox {
+  width: 43%;
+  height: fit-content;
+  position: relative;
+  /* margin-left: 11%; */
+}
+#middleBox img {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+/* rightBox css ============> */
+#rightBox {
+  width: 44%;
+  height: fit-content;
+}
+#rightBoxContent {
+  width: 90%;
+  margin: auto;
+}
+
+#name,
+#category {
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 20px;
+  letter-spacing: 0.08em;
+}
+
+#price {
+  padding: 3% 0%;
+  padding: 3% 0%;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.horizontalLine {
+  width: 0.5px;
+  height: 10px;
+  background-color: gray;
+  border: 1px solid gray;
+  margin: 0px 5px;
+}
+
+#rightBoxContent > div:nth-child(2) {
+  margin: 4% 0%;
+
+  width: 100%;
+}
+#materialBtn {
+  margin: 5% 0%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#materialBtn > div {
+  width: 45%;
+  border: 1px solid rgb(187, 182, 182);
+  text-align: center;
+  align-items: center;
+  height: 50px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* checkbox css */
+
+#checkBoxes > div:nth-child(1) {
+  margin: 5% 0%;
+}
+
+#checkBoxes label {
+  font-size: 0.9em;
+}
+
+.roundInputs {
+  width: 1.3em;
+  height: 1.3em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+#checkBoxes input:checked {
+  background-color: black;
+}
+
+#checkBoxes p {
+  font-size: 0.7em;
+  margin: 2% 4%;
+}
+
+#checkBoxes > div:nth-child(3) {
+  margin: 5% 0%;
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: red;
+}
+
+/* adding product count css========> */
+
+#addProduct {
+  display: flex;
+  justify-content: start;
+  width: 35%;
+}
+
+#addProduct button {
+  width: 59%;
+  height: 100%;
+  font-size: 40px;
+  border: none;
+  background-color: #f7f7f7;
+  z-index: 1;
+  color: #000;
+  /* background: #fff; */
+}
+#addProduct input {
+  width: 105%;
+
+  border: none;
+  border: 1px solid #000;
+
+  text-align: center;
+  font-size: 25px;
+  color: #000;
+  font-weight: 300;
+}
+
+#addProduct button:hover {
+  border: 1px solid rgb(27, 6, 6);
+}
+
+/* Add to cart btn ===========> */
+
+#addToCartBtn {
+  width: 100%;
+  margin: 5% 0%;
+  padding: 3%;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  font-size: 16px;
+  background-color: #000;
+}
+
+#addToCartBtn:hover {
+  background-color: #222;
+}
+
+.shopRunner {
+  margin: 5% 0%;
+}
+
+.questionMarkLine {
+  margin: 1% 0%;
+}
+
+/* dragBoxes css  */
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+#dragBoxes button {
+  width: 20%;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+#dragBoxes i {
+  font-size: 20px;
+}
+
+.topBottomBorder {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 3%;
+}
+
+#hiddenBox1 {
+  display: none;
+  max-height: 0px;
+  transition: all 0.5s ease;
+  backface-visibility: hidden;
+  /* will-change: max-height; */
+}
+
+#hiddenBox1 ul {
+  margin-left: 4%;
+}
+
+#hiddenBox1 ul li {
+  line-height: 157%;
+}
+
+.boxText {
+  font-size: 0.75em;
+  text-align: justify;
+  letter-spacing: 0.08em;
+  word-spacing: 2px;
+  line-height: 21px;
+}
+
+#hiddenBox2 {
+  display: none;
+  max-height: 0px;
+  transition: all 0.5s ease;
+  backface-visibility: hidden;
+  /* will-change: max-height; */
+}
+
+#hiddenBox3 {
+  display: none;
+  max-height: 0px;
+  transition: all 0.5s ease;
+  backface-visibility: hidden;
+  /* will-change: max-height; */
+}
+
+#dragTitle {
+  margin: 6% 0%;
+}
+
+/* common css=============> */
+
+.smallFont {
+  font-size: 0.7em;
+}
+
+.bolder {
+  font-weight: bolder;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.mediumFont {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.noTextTransform {
+  text-transform: none;
+}
+
+/* common css finished=======> */
+
+/* Second box css */
+
+#secBox {
+  width: 92%;
+  margin: auto;
+  height: 200px;
+}
+
+/* css for Slider  */
+#sliderTitle {
+  width: 92%;
+  margin: auto;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-top: 7%;
+}
+.margin {
+  margin: auto;
+  width: 100%;
+}
+
+#sliderContainer {
+  width: 92%;
+  margin: auto;
+}
+#sliderContainer i {
+  border: none;
+  background: transparent;
+  font-size: 50px;
+}
+#sliderContainer button {
+  margin-top: -47%;
+}
+
+#carouselExampleControls {
+  height: fit-content;
+  width: 100%;
+}
+main img {
+  height: 25%;
+}
+#prevButton {
+  margin-left: -150px;
+}
+#nextButton {
+  margin-right: -140px;
+}
+button {
+  border: none;
+}
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.cards > div {
+  width: 23%;
+  height: 100%;
+}
+.cards img {
+  width: 100%;
+}
+.cards p {
+  letter-spacing: 1px;
+}
+
+/* slider box end */
+
+#relatedCategories {
+  width: 92%;
+  margin: auto;
+  display: flex;
+  justify-content: start;
+  font-size: 14px;
+  margin: 3% auto;
+}
+#relatedCategories p,
+a {
+  margin-right: 10px;
+}
+#relatedCategories a {
+  font-size: 12px;
+  color: #000;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+}
+
+/* add to cart box top slide css */
+
+#cartDiv2 {
+  display: none;
+  border: 1px solid black;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  position: fixed;
+  font-family: "Lineto Brown Sub", "Lineto Brown Light Sub", Verdana, sans-serif;
+  transition: 1s;
+}
+#cartDiv2 p,
+strong {
+  text-transform: none;
+}
+
+#leftImgBox {
+  width: 23%;
+  margin-bottom: 5%;
+}
+
+#cartDiv2 > div:nth-child(1) {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: right;
+}
+
+#topDiv {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#leftDrag {
+  width: 40%;
+  height: 100%;
+
+  /* text-align: center; */
+}
+.note {
+  height: 2%;
+  width: 15%;
+  background: #37bf8c;
+  text-align: center;
+  border-radius: 0px 19px 18px 0px;
+}
+#leftBox3 {
+  display: flex;
+  gap: 10px;
+  margin-bottom: -2%;
+}
+
+#rightDrag {
+  width: 40%;
+}
+
+#rightP1 {
+  margin: 3% 0%;
+}
+
+#summaryDiv {
+  display: flex;
+  justify-content: space-between;
+}
+#summaryDiv p {
+  line-height: 40%;
+}
+
+#dragBtn {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+#dragBtn > div {
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48%;
+  height: 50px;
+}
+#dragBtn > div:nth-child(1) a {
+  color: black;
+}
+
+#dragBtn > div:nth-child(2) {
+  background: #000000;
+}
+
+#dragBtn > div:nth-child(2) a {
+  color: white;
+  font-weight: bold;
+}
+
+#dragBtn a {
+  text-decoration: none;
+}
+
+#bottomDiv {
+  width: 100%;
+  border: 2px solid gray;
+  margin: 1% 0% 0% 0%;
+}
+
+#sliderTitle2 {
+  width: 85%;
+  margin: auto;
+  margin-top: 0.5%;
+}
+#sliderContainer2 {
+  width: 85%;
+  margin: auto;
+}
+
+.cards2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.cards2 > div {
+  width: 23%;
+  height: 100%;
+}
+.cards2 img {
+  width: 100%;
+}
+.cards2 p {
+  letter-spacing: 1px;
+}
+
+/* navbar special */
+#navbarDiv #accDetails {
+  border: 1px solid grey;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  width: 260px;
+  height: 30px;
+  width: 13%;
+  background-color: white;
+  z-index: 11;
+  top: 108px;
+  margin-left: 78%;
+  transition: 0.3s;
+  padding-right: 10px;
+  font-size: 11px;
+  padding: 1%;
+  box-sizing: border-box;
+}
+#navbarDiv #cartDetails {
+  border: 1px solid grey;
+  position: absolute;
+  /* display: none; */
+  flex-direction: column;
+  width: 350px;
+  height: 180px;
+  width: 22%;
+  max-height: 180px;
+  background-color: white;
+  z-index: 11;
+  top: 108px;
+  margin-left: 75%;
+  transition: 0.3s;
+  padding-right: 10px;
+  font-size: 12px;
+  padding: 2%;
+  box-sizing: border-box;
+}
+#gotoCart p {
+  padding-bottom: 20px;
+}

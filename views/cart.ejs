@@ -1,0 +1,247 @@
+<%- include('header',{title:"CB2 cart",stylesheet:"stylesheet/cart.css"}) -%>
+
+<body onload="allProduct('<%= JSON.stringify(cart) %>')">
+    <div id="navbarDiv"></div>
+    
+               <div id="cartLength">
+               <h1 class="page-title">CART: <span class="item-count" id="cartCount">(0 item)</span></h1>
+                </div>
+    
+    
+                <div id="zeroCartContainer" style="margin-bottom: 350px;">
+                            <!-- zero design -->
+                            <div id="zeroContainer">
+                                <div id="zeroProducts">
+                                    <div id="zeroLeftContent">
+                                        <p>You have not selected any items to purchase.If you'd like to purchase an item, 
+                                            enter a quantity and click the Add to Cart button on the item's product page.</p>
+                                    </div>
+                                    <div id="imageContainer">
+                                    <div id="zeroCardImage">
+                                        <img src="https://cb2.scene7.com/is/image/CB2/cb2_Checkout_cbcc_20190826-d?wid=160&fmt=png-alpha" alt="">
+                                    </div>
+                                        <div id="zeroCardSideContent">
+                                            <h3>EARN $15.00 BACK</h3>
+                                            <div >
+                                                <p id="zeroText">in reward dollars* on this purchase and 10% back in reward dollars on
+                                                     purchases at CB2 everyday with a CB2 credit card. <span>Learn more</span> or 
+                                                     <span>Apply now for the CB2 credit card 
+                                                    See if you pre-qualify</span></p>
+                                            </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                                <div id="zeroHeader">
+                                    <h3>MOST POPULAR ITEMS</h3>
+                                </div>
+                                      
+                                <div id="carouselExampleControlsZero" class="carousel slide carouselDiv" data-interval="false">
+                       
+                                    <div class="carousel-item active">
+                                        <div class="d-block w-100">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/ClocheWithMatchesHolSHF20/$web_LineItem$&wid=249&hei=249/200901172019/cloche-with-matches.jpg" alt="First slide">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/FlorenceBrassNGlassVaseSHF18/$web_LineItem$&wid=249&hei=249/190905023239/florence-brass-and-glass-vase.jpg" alt="First slide">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/AcrylicPaperTowelHolderSHF17/$web_LineItem$&wid=249&hei=249/190905022246/acrylic-paper-towel-holder.jpg" alt="First slide">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/BlackRubberCoatedSoapPumpSHS20/$web_LineItem$&wid=249&hei=249/200211105908/rubber-coated-soap-pump.jpg" alt="First slide">
+                                        </div>
+                                      
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="d-block w-100">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/BoldMixedOrnamentsS6SHSF21/$web_LineItem$&wid=249&hei=249/210824132030/bold-3-opaque-ball-ornaments-set-of-6.jpg" alt="First slide">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/BuchananStackingDOFClearSHF20/$web_LineItem$&wid=249&hei=249/200629151944/buchanan-clear-stacking-double-old-fashioned-glass.jpg" alt="First slide">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/CantinaGlassMug10ozROF16/$web_LineItem$&wid=249&hei=249/190905021641/cantina-glass-mug.jpg" alt="First slide">
+                                            <img src="https://cb2.scene7.com/is/image/CB2/MarlaGlsFnlTreeTopperHolSHF21/$web_LineItem$&wid=249&hei=249/210823173029/marla-white-glass-finial-tree-topper.jpg" alt="First slide">
+                                        </div>
+                                    </div>
+                                  
+                                  <a class="carousel-control-prev" href="#carouselExampleControlsZero" role="button" data-slide="prev">
+                                      <button class="carousel-control-prev-icon" aria-hidden="true"></button>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="carousel-control-next" href="#carouselExampleControlsZero" role="button" data-slide="next">
+                                      <button class="carousel-control-next-icon" aria-hidden="true"></button>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </div>
+                    
+                            </div>
+                        </div>          
+                    
+         
+        <!-- cart non zero page -->
+                <div id="cartContainer">
+    
+            
+    <!-- left side design -->
+                <div id="leftCartContainer" style="width:63vw">
+                <div id="cardImage">
+                    <img src="https://cb2.scene7.com/is/image/CB2/cb2_Checkout_cbcc_20190826-d?wid=160&fmt=png-alpha" alt="">
+                     
+                    <div id="cardSideContent">
+                        <h3>EARN $15.00 BACK</h3>
+                        <div >
+                            <p id="text">in reward dollars* on this purchase and 10% back in reward dollars on
+                                 purchases at CB2 everyday with a CB2 credit card. <span>Learn more</span> or 
+                                 <span>Apply now <br> for the CB2 credit card 
+                                See if you pre-qualify</span></p>
+                        </div>
+                    </div>
+                </div>
+               
+                <div id="shipFreeDiv">
+                    <p>All items in your cart marked Ships Free will ship FREE</p>
+                </div>
+    
+                <div id="shopRunner">
+                    <img src="https://content.shoprunner.com/assets/pik_images/v4/_sr_logo.svg" alt="">
+                    <p>Get free 2-day shipping & returns on eligible items ($49 minimum) or 3% merchandise discount on furniture & oversized items. <br><i class="far fa-question-circle"></i></p>
+                    <!-- <button class="sign">SIGN UP FREE</button> -->
+                    <!-- <span class="sign" style="text-decoration: none;"> | </span>  -->
+                    <!-- <button class="sign">SIGN IN </button> -->
+                </div>
+    
+                <!-- //cart product div -->
+    
+                <div id="cartProducts"></div>
+    
+            </div>
+    
+    
+            <!-- right side design -->
+            <div id="rightCartContainer">
+                <div id="cartSummaryheader">
+                    <img src="https://cdn-icons.flaticon.com/png/512/2889/premium/2889676.png?token=exp=1639666456~hmac=cf731eea12ba6f49df21347b117c3aee" alt="">
+                    <h4>CART SUMMARY</h4>
+                </div>
+                <div id="priceDetail">
+                <div id="merchandise" class="priceDetailItem">
+                    <p class="priceReason">Merchandise</p>
+                    <p class="priceValue" id="merchandiseValue">$300.00</p>
+    
+                </div>
+                <div id="shipping" class="priceDetailItem">
+                    <p class="priceReason">Est. Shipping & Handling:<i class="far fa-question-circle"></i></p>
+                    <p class="priceValue" id="shippingValue">$300.00</p>
+    
+                </div>
+                <div id="tax" class="priceDetailItem">
+                    <p class="priceReason" style="color:green">Dicount<i class="far fa-question-circle"></i></p>
+                    <p class="priceValue" id="taxValue">$300.00</p>
+    
+                </div>
+                <p id="estimated">Estimated for <i class="fas fa-angle-down"></i></p>
+            </div>
+    
+            <div id="totalEst" class="priceDetailItem">
+                <p class="priceReason">Est. Order Total:</i></p>
+                <p class="priceValue" id="totalEstValue">$300.00</p>
+    
+            </div>
+            
+            <div id="promo">
+                <h4 id="notice">Apply a Promotion Code</h4>
+                <p id="noted">Remove any spaces or dashes before hitting apply.</p>
+    
+                <div style="display: flex;justify-content: space-between;">
+                    <input type="text" id="promoCode">
+                    <button id="applyButton">APPLY</butt>
+                </div>
+                
+            </div>
+    
+            <div id="checkOutDiv">
+                <button id="checkOutButton">CHECKOUT NOW</button>
+    
+                <p id="term">
+                    
+                    By continuing to Checkout, you are agreeing to our <span>Terms of Use</span>
+                      and <span>Privacy Policy</span> .
+                </p>
+            </div>
+            <hr>
+            <div id="lastDiv">
+                <p id="or">Or use other checkout methods:</p>
+               <button id="paypalButton"><img id="paypalLogo" src="landingImages/payapl.png" alt=""></button>
+            </div>
+            
+    
+            </div> 
+    
+        </div>
+    
+        <!-- Data added dynamically -->
+        <div id="cartProductContainer">
+    
+    
+    
+    
+    
+            
+        </div>
+    
+            <!-- carousel design -->
+            <div id="carouselExampleControls" class="carousel slide" data-interval="false">
+       
+                <div class="carousel-item active">
+                    <div class="d-block w-100">
+                        <img src="https://cb2.scene7.com/is/image/CB2/ClocheWithMatchesHolSHF20/$web_LineItem$&wid=249&hei=249/200901172019/cloche-with-matches.jpg" alt="First slide">
+                        <img src="https://cb2.scene7.com/is/image/CB2/FlorenceBrassNGlassVaseSHF18/$web_LineItem$&wid=249&hei=249/190905023239/florence-brass-and-glass-vase.jpg" alt="First slide">
+                        <img src="https://cb2.scene7.com/is/image/CB2/AcrylicPaperTowelHolderSHF17/$web_LineItem$&wid=249&hei=249/190905022246/acrylic-paper-towel-holder.jpg" alt="First slide">
+                        <img src="https://cb2.scene7.com/is/image/CB2/BlackRubberCoatedSoapPumpSHS20/$web_LineItem$&wid=249&hei=249/200211105908/rubber-coated-soap-pump.jpg" alt="First slide">
+                    </div>
+                  
+                </div>
+                <div class="carousel-item">
+                    <div class="d-block w-100">
+                        <img src="https://cb2.scene7.com/is/image/CB2/BoldMixedOrnamentsS6SHSF21/$web_LineItem$&wid=249&hei=249/210824132030/bold-3-opaque-ball-ornaments-set-of-6.jpg" alt="First slide">
+                        <img src="https://cb2.scene7.com/is/image/CB2/BuchananStackingDOFClearSHF20/$web_LineItem$&wid=249&hei=249/200629151944/buchanan-clear-stacking-double-old-fashioned-glass.jpg" alt="First slide">
+                        <img src="https://cb2.scene7.com/is/image/CB2/CantinaGlassMug10ozROF16/$web_LineItem$&wid=249&hei=249/190905021641/cantina-glass-mug.jpg" alt="First slide">
+                        <img src="https://cb2.scene7.com/is/image/CB2/MarlaGlsFnlTreeTopperHolSHF21/$web_LineItem$&wid=249&hei=249/210823173029/marla-white-glass-finial-tree-topper.jpg" alt="First slide">
+                    </div>
+                </div>
+              
+              <a class="carousel-control-prev normalButton1" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <button class="carousel-control-prev-icon" aria-hidden="true"></button>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next normalButton2" href="#carouselExampleControls" role="button" data-slide="next">
+                  <button class="carousel-control-next-icon" aria-hidden="true"></button>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+    
+    <div id="footerDiv"></div>
+    
+    
+    </body>
+    </html>
+
+    <script type="module">
+
+        //import cart middle & cart right
+import cartMiddle from "./components/cartMiddle.js";
+
+        // import footer & append 
+        import footer from "./components/footer.js";
+        let footerDiv = document.getElementById("footerDiv");
+        footerDiv.innerHTML = footer();
+        
+        //navbar Import section start 
+        
+        import navbar from "./components/navbarImport.js";
+        let navbarDiv = document.getElementById("navbarDiv");
+        navbarDiv.innerHTML = navbar();
+        
+        var script = document.createElement('script');         
+        script.src = "navbar.js";    
+         document.head.appendChild(script)
+        
+        // navbar import section end
+        
+        
+        </script>
+      
+    
+    <script src="javascript/cart.js"></script>
