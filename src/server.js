@@ -93,23 +93,6 @@ app.get("/store", async (req, res) => {
   }
 });
 
-
-app.get("/login", async (req, res) => {
-  try {
-    res.render("login");
-  } catch (e) {
-    res.status(500).send(e.message);
-  }
-});
-
-app.get("/signup", async (req, res) => {
-  try {
-    res.render("signup");
-  } catch (e) {
-    res.status(500).send(e.message);
-  }
-});
-
 app.get("/newpage", async (req, res) => {
   try {
     res.render("newPage");
