@@ -57,6 +57,24 @@ app.get("/products", async(req,res)=>{
     }
 })
 
+app.get("/payment", async(req,res)=>{
+    try{
+       res.render("payment")
+    }catch(e){
+        res.status(500).send(e.message)
+    }
+});
+
+
+app.get("/paymentsuccess", async(req,res)=>{
+    try{
+       res.render("paymentsuccess");
+    }catch(e){
+        res.status(500).send(e.message)
+    }
+});
+
+
 
 
 
