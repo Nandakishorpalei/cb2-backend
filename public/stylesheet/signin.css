@@ -25,7 +25,7 @@ h2{
     letter-spacing: 2px;
     font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
 }
-p{
+#createAccount{
     margin: 0 0 20px 0;
     padding: 0 0 12px;
     font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
@@ -130,6 +130,9 @@ hr{
 button:hover{
   opacity:0.8;
 }
+#navbarDiv #accDetails {
+    padding-left:20px;
+  }
 @media screen and (max-width: 1300px) {
    
 }

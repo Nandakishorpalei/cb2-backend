@@ -347,3 +347,6 @@
   #footerDiv{
     bottom:0;
   }
+  #navbarDiv #accDetails {
+    padding-left:20px;
+  }

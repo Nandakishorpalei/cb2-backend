@@ -503,3 +503,7 @@ width:100px;
       border-radius: 50%;
       background: white;
 }
+
+#navbarDiv #accDetails {
+    padding-left:20px;
+  }

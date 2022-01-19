@@ -6,7 +6,7 @@
         <h2>create an account</h2>
 
         <div id="context">
-           <p>Create an account now and your information will be on file to save you time, next time. Create an account quickly through Google.</p>
+           <p id="createAccount">Create an account now and your information will be on file to save you time, next time. Create an account quickly through Google.</p>
            <a href="/auth/google/"><button id="googleButton"><img id="googleIcon" src="landingImages/googleIcon.png" alt=""><p>CREATE USING GOOGLE</p></button></a>
         </div>
 
@@ -50,7 +50,7 @@ let navbarDiv = document.getElementById("navbarDiv");
 navbarDiv.innerHTML = navbar();
 
 var script = document.createElement('script');         
-script.src = "navbar.js";    
+script.src = "javascript/navbar.js";  
  document.head.appendChild(script)
 
 </script>

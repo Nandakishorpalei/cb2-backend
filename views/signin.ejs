@@ -25,7 +25,7 @@
 
         <a href="/auth/google/"><button id="googleButton"><img id="googleIcon" src="landingImages/googleIcon.png" alt=""><p>SIGN IN WITH GOOGLE</p></button></a>
         <div id="belowSubmit">
-            <p>By signing in, you are agreeing to our Terms of Use and Privacy Policy.</p>
+            <p id="createAccount">By signing in, you are agreeing to our Terms of Use and Privacy Policy.</p>
         </div>
     </div>
 
@@ -65,7 +65,7 @@ let navbarDiv = document.getElementById("navbarDiv");
 navbarDiv.innerHTML = navbar();
 
 var script = document.createElement('script');         
-script.src = "navbar.js";    
+script.src = "javascript/navbar.js";   
  document.head.appendChild(script)
 
 // navbar import section end

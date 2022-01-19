@@ -526,22 +526,7 @@ strong {
 
 /* navbar special */
 #navbarDiv #accDetails {
-  border: 1px solid grey;
-  position: absolute;
-  display: none;
-  flex-direction: column;
-  width: 260px;
-  height: 30px;
-  width: 13%;
-  background-color: white;
-  z-index: 11;
-  top: 108px;
-  margin-left: 78%;
-  transition: 0.3s;
-  padding-right: 10px;
-  font-size: 11px;
-  padding: 1%;
-  box-sizing: border-box;
+  padding-left:20px;
 }
 #navbarDiv #cartDetails {
   border: 1px solid grey;

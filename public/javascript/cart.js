@@ -21,7 +21,7 @@ function cartMiddle(){
 
 
 // cartData globally declared
-let cartData;
+
 
 // cart page display setting
 let zeroContainer = document.getElementById("zeroCartContainer");
