@@ -94,21 +94,36 @@ app.get("/store", async (req, res) => {
 });
 
 
-app.get("/login", async (req, res) => {
-  try {
-    res.render("login");
-  } catch (e) {
-    res.status(500).send(e.message);
-  }
+
+app.get("/products", async(req,res)=>{
+    try{
+       const products = await Product.find().lean().exec();
+       res.render("products",{products:products})
+    }catch(e){
+        res.status(500).send(e.message)
+    }
+})
+
+app.get("/payment", async(req,res)=>{
+    try{
+       res.render("payment")
+    }catch(e){
+        res.status(500).send(e.message)
+    }
 });
 
-app.get("/signup", async (req, res) => {
-  try {
-    res.render("signup");
-  } catch (e) {
-    res.status(500).send(e.message);
-  }
+
+app.get("/paymentsuccess", async(req,res)=>{
+    try{
+       res.render("paymentsuccess");
+    }catch(e){
+        res.status(500).send(e.message)
+    }
 });
+
+
+
+
 
 app.get("/newpage", async (req, res) => {
   try {
