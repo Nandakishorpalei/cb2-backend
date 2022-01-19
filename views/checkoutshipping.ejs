@@ -1,0 +1,158 @@
+<%- include('header',{title:"CB2 wishlist",stylesheet:"stylesheet/checkoutshipping.css"}) -%>
+
+<body>
+      <div id="main_shipping">
+
+           <form id="main_shipping_left">
+               <div class="shipping_cb2logo">
+                   <h1>CB2</h1>
+               </div>
+               <div class="shipping_cb2logo_check"><i class="fas fa-lock" style="padding-right: 8px;"></i>Checkout</div>
+               <br>
+               <br>
+               <div id="shipping_left_number"><div class="span1">1</div>-----------------------------------<div>2</div>-----------------------------------<div>3</div></div>
+               <div id="shipping_left_tag">
+                   <div >Shipping and Gifts Option</div>
+                   <div>Payment and Billing</div>
+                   <div>Review and Place Order</div>
+               </div>
+
+               <div id="shipping_shipto">
+                   <div>Ship To</div>
+                   <div><a href="#">Ship To Multiple Addresses</a></div>
+               </div>
+
+               <div class="shipping_name">
+                   <p>First name   <span>required</span></p>
+                   <p>Last name   <span>required</span></p>
+               </div>
+
+               <div class="shipping_input_name">
+                   <input id="shipping_input_name_first" type="text" required minlength="2" maxlength="15" size="13">
+                   <input id="shipping_input_name_last" type="text" required minlength="2" maxlength="15" size="13">
+               </div>
+
+               <div id="shipping_street">
+                <p>Street Address <span>  required</span></p>
+                <input id="shipping_street_address" type="text" required minlength="5" maxlength="25" size="20">
+                <a href="#">Add apt,suite or other</a>
+               </div>
+
+               <div class="shipping_name" style="margin-top:5px;">
+                <p>Zip Code   <span>required</span></p>
+                <p>City   <span>required</span></p>
+            </div>
+
+            <div class="shipping_input_name">
+                <input id="shipping_input_name_zip" type="tel" pattern="[0-9]{6}" required>
+                <input id="shipping_input_name_city" type="text" required minlength="2" maxlength="15" size="13">
+            </div>
+
+            <div id="shipping_selectform">
+                <p>State <span>required</span></p>
+                <select name="state" required>
+                    <option value="">Please Select</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chandigarh (UT)">Chandigarh (UT)</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="West Bengal">West Bengal</option>
+                </select>
+            </div>
+
+            <div id="shipping_phoneno">
+             <p>Phone Number <span>required</span></p>
+             <input id="shipping_phoneno_phone"  type="tel" pattern="[0-9]{10}" required>
+            
+            </div>
+
+            <div id="shipping_checkbox">
+                <input type="checkbox"> <span>use as billing address</span>
+            </div>
+
+            <div id="shipping_button_next">
+                <input type="submit" value="Next"/>
+            </div>
+
+            <p id="tolearnmore">To learn more about how we use your information, read our <a href="#">Privacy Policy.</a></p>
+
+            <div id="shipping_safeandsecure" >
+                <i class="fas fa-unlock-alt"></i>
+                <p>Secure Checkout Shopping is always <a href="#">safe and secure</a></p>
+            </div>
+
+            <hr>
+
+            <!-- made for bottom -->
+
+            <div id="shipping_bottom_page">
+                <div>
+                    <p>©2021 CB2</p>
+                   <p>Privacy Policy</p>
+                      <p>Terms of Use</p> 
+                       <p>Site Index</p>
+                </div>
+                <div>
+                    <p>Stay in Touch</p>
+                    <p> contact us.</p>
+                   <p>800.606.6255 </p> 
+                    <p> Co-Browse</p>
+                </div>
+            </div>
+
+
+           </form>
+
+           <div id="main_shipping_right">
+               <div id="shipping_right_total">
+                <div id="main_shipping_right_only">
+                 <div>
+                     <p>Order Summary</p>
+                     <p class="Sipping_Merchandice">Merchandise:</p>
+                     <p class="Sipping_Merchandice">Shipping & Handling :</p>
+                     <p class="Shipping_Discount">Shipping Discount :</p>
+                     <p class="Sipping_Merchandice" style="color:green">Discount:</p>
+                 </div>
+                 <div id="Shipping_Href_Cart">
+                     <a href="#">Edit Cart</a>
+                     <p id="Sipping_Merchandice_price" class="Sipping_Merchandice">$149.00</p>
+                     <p class="Sipping_Merchandice">$21.95</p>
+                     <p class="Shipping_Discount">-$21.95</p>
+                     <p class="Sipping_Merchandice" id="discount">$10.80</p>
+                 </div>
+             </div>
+
+             <hr>
+             <div id="Shipping_Order_last">
+             <p>Order Total:</p>
+             <p id="Shipping_Order_last_total">$159.00</p>
+            </div>
+
+           </div>
+
+
+        </div>
+      
+      </div>
+    </body>
+</html>
+
+<script src="../javascript/checkoutshipping.js">
+
+</script>
