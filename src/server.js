@@ -51,7 +51,13 @@ app.get("/signup", async(req,res)=>{
     }
 });
 
-
+app.get("/newpage", async(req,res)=>{
+    try{
+       res.render("newPage")
+    }catch(e){
+        res.status(500).send(e.message)
+    }
+});
 
 
 
