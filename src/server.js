@@ -3,10 +3,6 @@ const express = require('express');
 const ejs = require('ejs');
 const passport = require("./config/passport");
 
-const express = require("express");
-const ejs = require("ejs");
-
-
 const app = express();
 
 app.set("view engine", "ejs");
