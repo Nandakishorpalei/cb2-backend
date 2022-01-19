@@ -18,11 +18,15 @@
   },
   "homepage": "https://github.com/Nandakishorpalei/cb2-backend#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^14.2.0",
     "ejs": "^3.1.6",
     "express": "^4.17.2",
     "find-config": "^1.0.0",
     "gitignore": "^0.7.0",
-    "mongoose": "^6.1.7"
+    "mongoose": "^6.1.7",
+    "passport": "^0.5.2",
+    "passport-google-oauth2": "^0.2.0",
+    "uuid": "^8.3.2"
   }
 }

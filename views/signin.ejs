@@ -1,4 +1,4 @@
-<%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/login.css"})-%>
+<%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/signin.css"})-%>
 
 
 <body>
@@ -7,11 +7,11 @@
     <div id="signinContainerLeft">
         <h2>SIGN IN</h2>
 
-        <form id="inputDiv">
-            <label for="firstName">Username <span>required</span></label><br>
-            <input type="text" id="username" required><br>
+        <form id="inputDiv" action="/signin" method="POST">
+            <label for="firstName">Email <span>required</span></label><br>
+            <input type="email" name="email" value=""  id="email" required><br>
             <label for="password"> Password <span>required</span></label><br>
-            <input type="password" id="password" required><br>
+            <input type="password" name="password" value="" id="password" required><br>
             <div id="checkboxDiv">
                 <input type="checkbox" name="Remember" id="remember" >
                 <span style="margin:16px 0 0 5px;">Remember me</span>
@@ -21,8 +21,9 @@
         </form>
 
         <span style="margin:5% 0 0 48%;font-size:18px;">or</span>
+        
 
-        <button id="googleButton"><img id="googleIcon" src="landingImages/google_image.png" alt=""><p>SIGN IN WITH GOOGLE</p> </button>
+        <a href="/auth/google/"><button id="googleButton"><img id="googleIcon" src="landingImages/googleIcon.png" alt=""><p>SIGN IN WITH GOOGLE</p></button></a>
         <div id="belowSubmit">
             <p>By signing in, you are agreeing to our Terms of Use and Privacy Policy.</p>
         </div>

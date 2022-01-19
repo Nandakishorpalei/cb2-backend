@@ -1,5 +1,6 @@
 const express = require('express');
 const ejs = require('ejs');
+const passport = require("./config/passport");
 
 const app = express();
 
@@ -21,6 +22,41 @@ app.use("/cart",cartController);
 const productDescriptionController = require('./controller/productDescriptionController');
 app.use("/productDescription",productDescriptionController);
 
+const signupController = require('./controller/signupController');
+app.use("/signup", signupController);
+
+const signinController = require('./controller/signinController');
+app.use("/signin", signinController);
+
+//google authentication
+
+app.use(passport.initialize());
+var details ;
+passport.serializeUser(function(user, done){
+    done(null, user);
+    details = user;
+  });
+  
+  passport.deserializeUser(function(user, done){
+      done(null, user);
+  });
+
+
+app.get('/auth/google',
+  passport.authenticate('google', { scope:
+      [ 'email', 'profile' ] }
+));
+
+app.get( '/auth/google/callback',
+    passport.authenticate( 'google', {
+        successRedirect: '/',
+        failureRedirect: '/signup'
+}));
+
+
+
+
+
 app.get("/", async(req,res)=>{
     try{
        res.render("home")
@@ -37,22 +73,7 @@ app.get("/store", async(req,res)=>{
     }
 })
 
-app.get("/login", async(req,res)=>{
-    try{
-       res.render("login")
-    }catch(e){
-        res.status(500).send(e.message)
-    }
-});
 
-
-app.get("/signup", async(req,res)=>{
-    try{
-       res.render("signup")
-    }catch(e){
-        res.status(500).send(e.message)
-    }
-});
 
 app.get("/newpage", async(req,res)=>{
     try{
