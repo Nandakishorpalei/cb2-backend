@@ -165,12 +165,12 @@ body {
     width: 200px;
     background-color: white;
     z-index: 11;
-    top: 108px;
+    top: 114px;
     margin-left: 78%;
     transition: 0.3s;
     padding-right: 10px;
     font-size: 11px;
-    padding: 10;
+    padding: 1%;
     box-sizing: border-box;
   }
   #accDetails p:nth-child(1) {
@@ -200,7 +200,7 @@ body {
     max-height: 80%;
     background-color: white;
     z-index: 11;
-    top: 108px;
+    top: 114px;
     margin-left: 75%;
     transition: 0.3s;
     padding-right: 10px;
@@ -212,7 +212,11 @@ body {
   #cartDetails div {
     width: 100%;
     height: 45%;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
   }
+
   #itemDiv p {
     font-weight: 600;
     font-size: 14px;
@@ -229,9 +233,11 @@ body {
     text-decoration: none;
   }
   #gotoCart p {
-    margin-top: 34px;
     color: white;
     font-size: 16px;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
   }
   
   #sidebar ::-webkit-scrollbar {
