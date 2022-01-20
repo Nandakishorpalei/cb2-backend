@@ -1,7 +1,8 @@
-
+require('dotenv').config({ path: require('find-config')('.env') });
 const express = require('express');
 const ejs = require('ejs');
 const passport = require("./config/passport");
+const Razorpay = require('razorpay');
 
 const app = express();
 
@@ -122,9 +123,6 @@ app.get("/paymentsuccess", async(req,res)=>{
 });
 
 
-
-
-
 app.get("/newpage", async (req, res) => {
   try {
     res.render("newPage");
@@ -133,4 +131,7 @@ app.get("/newpage", async (req, res) => {
   }
 });
 
+
+
+ 
 module.exports = app;
