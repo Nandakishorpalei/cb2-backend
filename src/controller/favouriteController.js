@@ -1,22 +1,22 @@
 const express = require('express');
 const router = express.Router();
-
-const Wishlist = require('../models/favouriteModel');
+ 
+const Favourite = require('../models/favouriteModel');
 
 router.get("", async (req, res) => {
     try{
-      const wishlist = await Wishlist.find().lean().exec();
+      const wishlist = await Favourite.find().populate("productId").lean().exec();
   
-      res.render("favourites",{wishlist})
+      res.render("favourites",{wishlist});
    }catch(e){
-       res.status(500).send(e.message)
+       res.status(500).send(e.message);  
    }
   })
   
 
   router.post("", async (req, res) => {
     try {
-      const product = await Wishlist.create(req.body);
+      const product = await Favourite.create(req.body);
   
       return res.status(201).send(product);
     } catch (err) {

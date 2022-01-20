@@ -1,28 +1,11 @@
-// // import footer & append
-// import footer from "./components/footer.js";
-// let footerDiv = document.getElementById("footerDiv");
-// footerDiv.innerHTML = footer();
-
-// // add below line in head section for footer style
-
-// //navbar Import section start
-
-// import navbar from "./components/navbarImport.js";
-// let navbarDiv = document.getElementById("navbarDiv");
-// navbarDiv.innerHTML = navbar();
-
-// var script = document.createElement("script");
-// script.src = "navbar.js";
-// document.head.appendChild(script);
-
 let sampleData;
 
 
 function allProduct(items){
    
   sampleData = JSON.parse(items);
-  //console.log(sampleData)
-  //cartDataSetting(sampleData); 
+  console.log('sampleData:', sampleData)
+
   appendData(sampleData);
 }
 
@@ -55,14 +38,14 @@ let rightBox = document.getElementById("rightBoxContent");
 let body = document.querySelector("body");
 
 const appendData = (sampleData) => {
-  console.log(sampleData[0])
-  const img1 = sampleData[0].img1;
-  const img2 = sampleData[0].img2;
-  const img3 = sampleData[0].img3; 
-  const img4 = sampleData[0].img4;
-  const name = sampleData[0].name; 
-  const catagory = sampleData[0].catagory;
-  const price = sampleData[0].price; 
+  console.log(sampleData)
+  const img1 = sampleData.img1;
+  const img2 = sampleData.img2;
+  const img3 = sampleData.img3; 
+  const img4 = sampleData.img4;
+  const name = sampleData.name; 
+  const catagory = sampleData.catagory;
+  const price = sampleData.price; 
   console.log("catagory:", catagory);
   console.log("name:", name);
   // for leftBox section

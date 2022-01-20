@@ -13,9 +13,11 @@ function allProduct(items){
  function  Display_Favourite_product(data) {
 
     document.getElementById("Favorite_products").innerHTML = null;
-     data.forEach(function(item,index){
-            
-            let boss_div = document.createElement("div");
+     data.forEach(function(element,index){
+  
+  let item = element.productId;   
+
+  let boss_div = document.createElement("div");
   boss_div.id = "Favorite_products_div";
 
   let boss_div1 = document.createElement("div");

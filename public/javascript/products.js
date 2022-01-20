@@ -246,8 +246,8 @@ function displayItem(productData){
         var div = document.createElement("div");
 
         function addtoSelected(){
-            localStorage.setItem("selectedData",JSON.stringify(item)); 
-            window.location.href="productDescription.html";
+            document.getElementById("productDetailsId").value = item._id;
+            document.getElementById("productDetails").submit();
          }
 
         var image = document.createElement("img");
@@ -276,15 +276,16 @@ function displayItem(productData){
         alert("Product Added to Wishlist");
         setTimeout(function(){
             heart.innerHTML='<i class="far fa-heart"></i>';  
-        },2000)
-        
-        let wishlistItems = JSON.parse(localStorage.getItem("cbWishlistItem")) || [];
-         let product = item;
-        
-        wishlistItems.push(product);
+        },2000);
 
-        localStorage.setItem("cbWishlistItem",JSON.stringify(wishlistItems));
-        })
+        let product = item;
+       document.getElementById("id").value = product._id;
+       document.getElementById("productId").submit();
+        console.log(product._id)
+        });
+
+
+
 
         var category = document.createElement("p");
         category.setAttribute("id","productCategory");

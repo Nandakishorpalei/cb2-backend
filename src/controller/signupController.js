@@ -21,7 +21,7 @@ router.post("",async(req,res)=>{
 
         user = await User.create(req.body);
 
-    res.render("signin")
+    res.redirect("/signin")
 
     }catch(e){
        return res.status(500).send(e.message)

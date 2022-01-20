@@ -5,9 +5,11 @@ const ProductDescription = require('../models/productDescriptionModel');
 
 router.get("", async (req, res) => {
   try{
-    const products = await ProductDescription.find().lean().exec();
+    const products = await ProductDescription.find().populate("productId").lean().exec();
+ 
+   const newProduct = products[0].productId;
 
-    res.render("productDescription",{products:products})
+    res.render("productDescription",{products:newProduct})
  }catch(e){
      res.status(500).send(e.message)
  }
