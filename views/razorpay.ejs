@@ -1,0 +1,168 @@
+<%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/payment.css"})-%>
+
+<body>
+<div >
+  <button type="submit" class="input-box-content razorpay-conitnue" id="rzp-button1">continue</button>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+  <script>
+    axios.post("/order").then((info)=>{
+      console.log(info)
+      
+      var options = {
+    "key": "rzp_test_OCFkLvsuMn0Hgf", // Enter the Key ID generated from the Dashboard
+
+    "name": "CB2 Clone",
+    "description": "Test Transaction",
+    "image": "https://example.com/your_logohttps://images-na.ssl-images-amazon.com/images/I/51uPO%2BnKRFL._SL1000_.jpg",
+    "order_id": info.data.id, 
+    "callback_url": "http://localhost:3000/razorpaysuccess",
+    "theme":{
+      "color":"#3399cc" 
+    }
+      
+    };
+    var rzp1 = new Razorpay(options);
+document.getElementById('rzp-button1').onclick = function(e){
+    rzp1.open();
+    e.preventDefault();
+}
+    })
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+<script>
+    
+    app.get("/razorpay",(req,res)=>{
+
+User.findOne({}, function(err, result) {
+    if (err){
+      console.log(err)
+    } else{
+    res.render("razorpay");
+  }
+  });
+
+
+});
+
+
+
+const razorpay=new Razorpay({
+  key_id:process.env.RAZORPAY_ID,
+  key_secret:process.env.RAZORPAY_SECRET
+  })
+  
+  app.post("/order",(req,res)=>{
+  const options = {
+      amount:50000 ,  // amount in the smallest currency unit
+      currency: "INR",
+  
+    };
+    razorpay.orders.create(options, function(err, order) {
+        order_id_var=order.id;
+      // console.log(order);
+      res.json(order)
+    });
+  })
+  app.get("/razorpaysuccess",(req,res)=>{
+  if (req.isAuthenticated()){
+    User.findOne({}, function(err, result) {
+        if (err){
+          console.log(err)
+        } else{
+          res.render("razorpaysuccess",{buyername:buyerName,buyeraddress:buyerAddress,buyertown:buyerTown,buyerpin:buyerPin,buyeremail:buyerEmail,buyerphone:buyerContact,buyerstate:buyerState,product:productData[Id]})
+      }
+      });
+    }
+    else{
+        res.redirect("/login");
+    }
+  
+  })
+  app.post("/razorpaysuccess",(req,res)=>{
+    res.send("Thank you")
+  // const order=new Order({
+  // user:orderUser,
+  // productid:productData[Id].id,
+  // date:new Date().toLocaleDateString('en-US')
+  // })
+  // order.save();
+  // res.render("razorpaysuccess",{
+  //   buyername:buyerName,
+  //   buyeraddress:buyerAddress,
+  //   buyertown:buyerTown,
+  //   buyerpin:buyerPin,
+  //   buyeremail:buyerEmail,
+  //   buyerphone:buyerContact,
+  //   buyerstate:buyerState,
+  //   product:productData[Id]
+  //   })
+  // razorpay.payments.fetch(req.body.razorpay_payment_id).then((paymentDocument)=>{
+  // buyerEmail=(paymentDocument.email);
+  // buyerContact=(paymentDocument.contact);
+  // console.log(paymentDocument);  
+  
+  // const orderforus=new Orderforus({
+  //   orderTime:new Date(),
+  //   buyername:buyerName,
+  //   buyeraddress:buyerAddress,
+  //   buyertown:buyerTown,
+  //   buyerpin:buyerPin,
+  //   buyeremail:buyerEmail,
+  //   buyerphone:buyerContact,
+  //   buyerstate:buyerState,
+  //   product:Id
+  // })
+  // orderforus.save();
+  
+  // // mail Section
+  // var today = new Date();
+  // today.setDate(today.getDate() + 10);
+  // var deliveryDate=today.toLocaleDateString('en-US');
+  
+  // var transporter= nodeMailer.createTransport({
+  //   service:'gmail',
+  //   auth:{
+  //     user:'lncollection.ltd@gmail.com',
+  //     pass:process.env.EMAILPASSWORD
+  //   }
+  // });
+   
+  // var mailOptions={
+  //   from:'lncollection.ltd@gmail.com',
+  //   to: buyerEmail,
+  //   subject:'order successful',
+  //   html:"<h3>Thanks to Shop with us 😊</h3><h4>You have ordered </h4>"+productData[Id].name+"<h4>  of amount ₹</h4>"+productData[Id].price +
+  //   "<span><h4>It will be reach you by</h4></span>"+deliveryDate + 
+     
+  //   "<h3>Contact details:</h3>" 
+  //    +buyerName+"<br>"
+  //    +buyerContact+
+  //    "<h3>Hope you enjoyed </h3>"
+  // };
+  
+  // // html: "'<h3> Thanks to Shop with us 😊</h3><br><h4>You have ordered </h4>'+productData[Id].name+ '<h4>of amount ₹</h4>' +productData[Id].price+'<br> <h4>It will be reach you by</h4>'+deliveryDate+'<h3>Hope you enjoyed </h3>' " 
+  
+  // transporter.sendMail(mailOptions,(err,info)=>{
+  //   if(err){
+  //     console.log(err);
+  //   }
+  //   else{
+  //     console.log('Email sent: ' + info.response);
+  //   }
+  // });
+  
+  // }) 
+  })
+</script>

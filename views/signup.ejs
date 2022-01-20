@@ -6,21 +6,21 @@
         <h2>create an account</h2>
 
         <div id="context">
-           <p>Create an account now and your information will be on file to save you time, next time. Create an account quickly through Google.</p>
-           <button id="googleButton"><img id="googleIcon" src="landingImages/google_image.png" alt=""><p>CREATE USING GOOGLE</p> </button>
+           <p id="createAccount">Create an account now and your information will be on file to save you time, next time. Create an account quickly through Google.</p>
+           <a id="googleLink" href="/auth/google/"><button id="googleButton"><img id="googleIcon" src="landingImages/googleIcon.png" alt=""><p>CREATE USING GOOGLE</p></button></a>
         </div>
 
-        <form id="inputDiv">
+        <form id="inputDiv" action="/signup" method="post">
             <label for="fullName">Full Name <span>required</span></label><br>
-            <input type="text" id="fullName" required><br>
-            <label for="username">Username <span>required</span></label><br>
-            <input type="text" id="username" required><br>
-            <label for="phone">Phone Number <span>required</span></label><br>
-            <input type="tel" pattern="[0-9]{10}" id="phone" required><br>
+            <input type="text" name="fullName" value="" id="fullName" required><br>
             <label for="email">Email Address <span>required</span></label><br>
-            <input type="email" id="email" required><br>
+            <input type="email" name="email" value="" id="email" required><br>
             <label for="password">Create Password <span>required</span></label><br>
-            <input type="password" id="password" required><br>
+            <input type="password" name="password" value="" id="password" required><br>
+            <label for="username">Username <span>required</span></label><br>
+            <input type="text" name="username" value="" id="username" required><br>
+            <label for="phone">Phone Number <span>required</span></label><br>
+            <input type="tel" name="phone" value="" pattern="[0-9]{10}" id="phone" required><br>
             <input id="submitButton" type="submit" value="CREATE ACCOUNT">
         </form>
         <div id="belowSubmit">
@@ -50,7 +50,7 @@ let navbarDiv = document.getElementById("navbarDiv");
 navbarDiv.innerHTML = navbar();
 
 var script = document.createElement('script');         
-script.src = "navbar.js";    
+script.src = "javascript/navbar.js";  
  document.head.appendChild(script)
 
 </script>

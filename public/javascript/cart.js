@@ -21,7 +21,7 @@ function cartMiddle(){
 
 
 // cartData globally declared
-let cartData;
+
 
 // cart page display setting
 let zeroContainer = document.getElementById("zeroCartContainer");
@@ -77,7 +77,7 @@ finally{
 // show cart products
 
 let finalValue = 0;
-let merchandisePrice = 0;
+let merchandisePrice = 120;
 
 async function displayCartProducts(products){
 
@@ -145,13 +145,22 @@ products.forEach((element,index) => {
     update.textContent = "update";
     update.setAttribute("id","update");
     update.textContent="update";
-
+    
     //count update 
     let itemQuantity = +quantity.value;
     quantity.onchange = updateCount;
 
     function updateCount(){
         itemQuantity = quantity.value;
+    
+    }
+
+    update.onclick = updateDatabase;
+
+    function updateDatabase(){
+    document.getElementById("productUpdateId").value = products[index]._id;
+    document.getElementById("productCount").value = itemQuantity;
+    document.getElementById("cartItemupdate").submit();
     }
 
      totalItemValue = element.total;
@@ -162,7 +171,7 @@ products.forEach((element,index) => {
    
     merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
     if(products.length != 0){
-    totalEstValue.textContent = `$${(finalValue + 120 ).toFixed(2)}`;
+    totalEstValue.textContent = `$${(finalValue + 120).toFixed(2)}`;
 }
     update.addEventListener("click",function(){
 
@@ -272,25 +281,9 @@ products.forEach((element,index) => {
     cross.append(crossImage,crossContent);
 
     cross.addEventListener("click",function(){
-        cartData.splice(index,1);
-        localStorage.setItem("cbCartItem",JSON.stringify(cartData));
-
-        if(cartData.length == 0){
-        
-            zeroContainer.style.display="flex";
-            cartContainer.style.display="none";
-            cartCarousel.style.display="none";
-            rightContainer.style.display="none";
-        } 
-        else{
-            zeroContainer.style.display="none";
-            cartContainer.style.display="flex";
-            cartCarousel.style.display="block";
-            rightContainer.style.display="block";
-        }
-      finalValue = 0;
-
-        displayCartProducts(cartData);
+        console.log("currently clicked",products[index]);
+         document.getElementById("productDeleteId").value = products[index]._id;
+        document.getElementById("cartItemDelete").submit();
     })
 
     let download = document.createElement("div");
@@ -336,7 +329,7 @@ document.getElementById("applyButton").addEventListener("click",function(){
 
    if(inputPromo == "Masai30"){
 
-    let updatedValue = (finalValue * 70 )/100;
+    let updatedValue = ((finalValue * 70 )/100) + 120;
 
     document.getElementById("totalEstValue").textContent = `$${updatedValue.toFixed(2)}`;
     alert("Promo code applied successfully");
@@ -352,13 +345,13 @@ document.getElementById("applyButton").addEventListener("click",function(){
     }
     localStorage.setItem("cartValue",JSON.stringify(totalCost));
     couponApplied = true;
+    window.location.href = "cart";
    }else{
     alert("Invalid Promo code");
    }
 })
 
 document.getElementById("checkOutButton").addEventListener("click",function(){
-    window.location.href = "checkoutshipping.html";
 
     if(!couponApplied){
         let totalCost = {
@@ -368,6 +361,14 @@ document.getElementById("checkOutButton").addEventListener("click",function(){
         }
         
         localStorage.setItem("cartValue",JSON.stringify(totalCost));
+        const dataFromLocalStorage = JSON.parse(localStorage.getItem("cartValue"));
+            console.log('dataFromLocalStorage:', dataFromLocalStorage);
+
+            document.getElementById("totalMerchandisePrice").value = dataFromLocalStorage.merchandisePrice;
+            document.getElementById("discountPrice").value = dataFromLocalStorage.discount;
+            document.getElementById("totalPrice").value = dataFromLocalStorage.price;
+
+            document.getElementById("cartItemSend").submit();
             
         }
     

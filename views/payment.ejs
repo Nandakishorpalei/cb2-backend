@@ -1,0 +1,139 @@
+<%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/payment.css"})-%>
+
+
+<body onload="savedaddress('<%= JSON.stringify(paymentPageData) %>')">
+    <div id="payMain">
+        <div id="payLeft">
+            <div class="shipping_cb2logo">
+                <h1>CB2</h1>
+            </div>
+            <div class="shipping_cb2logo_check"><i class="fas fa-lock"></i>Checkout</div>
+            <br>
+            <br>
+
+            <div id="shipping_left_number"><div>1</div>---------------------------------------<div class="span1">2</div>---------------------------------------<div>3</div></div>
+            <div id="shipping_left_tag">
+                <div>Shipping and Gifts Options</div>
+                <div>Payment and Billing</div>
+                <div>Review and Place Order</div>
+            </div>
+
+            <div id="Checkout_payement_under">
+                <h2>Rewards</h2>
+                <p>For validation purposes you must use your Crate and Barrel or CB2</p>
+                <p>credit card to redeem Rewards Dollars. Multiple Rewards Dollars can be</p>
+                <p>applied per transaction.</p>
+                <br>
+                <h2>Billing Address</h2>
+                <div id="Checkout_payement_address">
+                    <h3 id="userName">Yatharth</h3>
+                    <p id="city">123 hahas lane</p>
+                    <p id="zip">232guuw</p>
+                    <p id="address">djasbdisabid</p>
+                    <a href="checkoutshipping.html">Edit</a>
+                </div>
+                <br>
+                <div id="placeOrderDiv">
+                    <div id="card_details1">
+                        <p>Payment</p>
+                        <p><input type="radio">Razorpay</p>
+                    </div>
+                <div id="Checkout_payement_Button" >
+                    <button type="submit" class="input-box-content razorpay-conitnue" id="Checkout_Button">Place Order</button>
+                </div>
+
+            </div>
+            </div>
+
+            <!-- bottom checkout -->
+
+               <p id="tolearnmore">To learn more about how we use your information, read our <a href="#">Privacy Policy.</a></p>
+   
+               <div id="shipping_safeandsecure">
+                   <i class="fas fa-unlock-alt"></i>
+                   <p>Secure Checkout Shopping is always <a href="#">safe and secure</a></p>
+               </div>
+   
+               <hr>
+   
+               <!-- made for bottom -->
+   
+               <div id="shipping_bottom_page">
+                   <div>
+                       <p>©2021 CB2</p>
+                      <p>Privacy Policy</p>
+                         <p>Terms of Use</p> 
+                          <p>Site Index</p>
+                   </div>
+                   <div>
+                       <p>Stay in Touch</p>
+                       <p> contact us.</p>
+                      <p>800.606.6255 </p> 
+                       <p> Co-Browse</p>
+                   </div>
+               </div>
+        </div>
+
+        <div id="payRight">
+            <div id="shipping_right_total">
+                <div id="main_shipping_right_only">
+                 <div>
+                     <p>Order Summary</p>
+                     <p class="Sipping_Merchandice">Merchandise:</p>
+                     <p class="Sipping_Merchandice">Shipping & Handling :</p>
+                     <p class="Shipping_Discount">Shipping Discount :</p>
+                     <p class="Sipping_Merchandice" style="color:green">Discount:</p>
+                 </div>
+                 <div id="Shipping_Href_Cart">
+                     <a href="#">Edit Cart</a>
+                     <p id="Sipping_Merchandice_price" class="Sipping_Merchandice">$149.00</p>
+                     <p class="Sipping_Merchandice">$21.95</p>
+                     <p class="Shipping_Discount">-$21.95</p>
+                     <p class="Sipping_Merchandice" id="discount">$10.80</p>
+                 </div>
+            </div>
+
+             <hr>
+            <div id="Shipping_Order_last">
+             <p>Order Total:</p>
+             <p id="Shipping_Order_last_total">$159.00</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div >
+        <button type="submit" class="input-box-content razorpay-conitnue" id="rzp-button1">continue</button>
+      </div> -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+      
+      
+        <script>
+          axios.post("/order").then((info)=>{
+            console.log(info)
+            
+            var options = {
+          "key": "rzp_test_o2Ali4pzYWDsvw", // Enter the Key ID generated from the Dashboard
+      
+          "name": "CB2 Clone",
+          "description": "Test Transaction",
+          "image": "landingImages/cb2.jpg",
+          "order_id": info.data.id, 
+          "callback_url": "http://localhost:3456/paymentsuccess",
+          "theme":{
+            "color":"#3399cc" 
+          }
+            
+          };
+          var rzp1 = new Razorpay(options);
+      document.getElementById('Checkout_Button').onclick = function(e){
+          rzp1.open();
+          e.preventDefault();
+      }
+          })
+        </script>
+
+</body>
+</html>
+<script src="javascript/payment.js"></script>

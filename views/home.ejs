@@ -103,17 +103,7 @@
     document.getElementById("landingContainer").addEventListener("click",authenticateCheck);
     
     async function authenticateCheck(){
-    let authenticate =await JSON.parse(localStorage.getItem("authenticate")) || [];
-    let userAuthenticated = authenticate.authenticated;
-     console.log(authenticate.authenticated)
-    
-    if(userAuthenticated){
-        window.location.href="newpage.html" ;
-    }
-    else{
-    alert("unauthorize user");
-    window.location.href="signup.html";
-    }
+        window.location.href="newPage" ;
     }
     
     
@@ -128,7 +118,7 @@
     navbarDiv.innerHTML = navbar();
     
     var script = document.createElement('script');         
-    script.src = "navbar.js";    
+    script.src = "javascript/navbar.js";    
      document.head.appendChild(script);
     
      import footer from "./components/footer.js";

@@ -211,6 +211,26 @@
                 <span class="sr-only">Next</span>
               </a>
             </div>
+
+            <!-- data send to backend Node -->
+
+            <form id="cartItemDelete" action="/cart/delete" method="POST" style="display: none;">
+                <input type="text" name="id" value=""  id="productDeleteId"><br>  
+                <input id="submitButton" type="submit" value="SIGN IN">
+            </form>
+
+            <form id="cartItemupdate" action="/cart/update" method="POST" style="display: none;">
+                <input type="text" name="id" value=""  id="productUpdateId"><br> 
+                <input type="number" name="productCount" value=""  id="productCount"><br> 
+                <input id="submitButton" type="submit" value="SIGN IN">
+            </form>
+
+            <form id="cartItemSend" action="/cart/datasend" method="POST" style="display: none;">
+                <input type="number" name="merchandisePrice" value=""  id="totalMerchandisePrice"><br>  
+                <input type="number" name="discount" value=""  id="discountPrice"><br>
+                <input type="number" name="totalPrice" value=""  id="totalPrice"><br>
+                <input id="submitButton" type="submit" value="SIGN IN">
+            </form>
     
     <div id="footerDiv"></div>
     
@@ -221,7 +241,7 @@
     <script type="module">
 
         //import cart middle & cart right
-import cartMiddle from "./components/cartMiddle.js";
+        import cartMiddle from "./components/cartMiddle.js";
 
         // import footer & append 
         import footer from "./components/footer.js";
@@ -235,9 +255,9 @@ import cartMiddle from "./components/cartMiddle.js";
         navbarDiv.innerHTML = navbar();
         
         var script = document.createElement('script');         
-        script.src = "navbar.js";    
+        script.src = "javascript/navbar.js";   
          document.head.appendChild(script)
-        
+         
         // navbar import section end
         
         

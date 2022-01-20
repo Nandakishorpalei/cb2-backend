@@ -27,6 +27,25 @@
 
     </div>
 
+
+    <!-- data send to backend node js -->
+
+    <form id="cartItemDelete" action="/favourites/delete" method="POST" style="display: none;">
+        <input type="text" name="id" value=""  id="productDeleteId"><br>  
+        <input id="submitButton" type="submit" value="SIGN IN">
+    </form>
+
+
+    <form action="/favourites/addproducts" method="POST" id="addProductId" style="display: none;" >
+        <input type="number" name="count" value=""  id="countId"><br>
+        <input type="number" name="total" value=""  id="totalId"><br>
+        <input type="text" name="img1" value=""  id="img1Id"><br>
+        <input type="text" name="name" value=""  id="nameId"><br>
+        <input type="text" name="catagory" value=""  id="catagoryId"><br>  
+        <input id="submitButton" type="submit" value="SIGN IN">
+      </form>
+
+
     <!-- footer html starts here----------------------- -->
 
 
@@ -50,7 +69,7 @@
     navbarDiv.innerHTML = navbar();
     
     var script = document.createElement('script');         
-    script.src = "navbar.js";    
+    script.src = "javascript/navbar.js"; 
      document.head.appendChild(script)
     
     // navbar import section end

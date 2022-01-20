@@ -15,7 +15,7 @@ h2{
     letter-spacing: 2px;
     font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
 }
-p{
+#createAccount{
     margin: 0 0 20px 0;
     padding: 0 0 12px;
     font-family: "Lineto Brown Sub","Lineto Brown Light Sub",Verdana,sans-serif;
@@ -45,10 +45,11 @@ p{
     opacity:0.8;
 }
 #googleIcon{
-    position:relative;
-    height:20px;
-    width:20px;
-    padding-right:20px;
+    height:40px;
+    margin-top: -10px;
+}
+#googleLink{
+    text-decoration: none;
 }
 #googleButton span{
     margin-top:-15px;

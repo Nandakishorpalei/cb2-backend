@@ -58,7 +58,7 @@ function navbar(){
 
             <div id="options">
                 <span id="locationButton"><a><img id="locationBtn" src="https://cdn-icons-png.flaticon.com/512/1216/1216844.png"></a></span>
-                <span><a href="login.html"><img id="profileBtn" src="https://cdn-icons-png.flaticon.com/512/747/747376.png"></a></span>
+                <span><a href="signin"><img id="profileBtn" src="https://cdn-icons-png.flaticon.com/512/747/747376.png"></a></span>
                 <span id="wishlistButton"><a><img id="wishBtn" src="https://cdn-icons-png.flaticon.com/512/126/126471.png"></a></span>
                 <span id="cartButton"><a>
                     <p id="cartIndicator">0</p>
@@ -90,7 +90,7 @@ function navbar(){
         </div>
     </div>
     <div id="accDetails">
-        <p><a href="login.html">SIGN IN</a></p>
+        <p><a href="signin">SIGN IN</a></p>
         <p>ORDER TRACKING</p>
         <p>SCHEDULE DELIVERY</p>
         <p id="signOut">SIGN OUT</p>
@@ -102,7 +102,7 @@ function navbar(){
                 IN YOUR CART?</p>
         </div>
         <div id="gotoCart">
-            <a href="cart.html">
+            <a href="cart">
                 <p>VIEW CART</p>
             </a>
         </div>
@@ -119,11 +119,11 @@ function navbar(){
              <img src="https://www.stpaulcollection.com/wp-content/uploads/2018/11/st-paul-collection-amenities-cb2.png" alt="">
          </div>
          <div id="wishIconPhone">
-             <span ><a href="favorites.html"><img class="paddingTop" id="wishBtnPhone" src="https://cdn-icons-png.flaticon.com/512/126/126471.png"></a></span>
+             <span ><a href="favourites"><img class="paddingTop" id="wishBtnPhone" src="https://cdn-icons-png.flaticon.com/512/126/126471.png"></a></span>
          </div>
  
          <div id="cartIconPhone">
-             <span ><a href="cart.html">
+             <span ><a href="cart">
                  <p id="cartIndicatorPhone" style="margin-top:5px;">0</p>
                  <img class="paddingTop" id="cartBtnPhone" src="landingImages/cartIcon.png"></a></span>
          </div>

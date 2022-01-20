@@ -1,28 +1,11 @@
-// // import footer & append
-// import footer from "./components/footer.js";
-// let footerDiv = document.getElementById("footerDiv");
-// footerDiv.innerHTML = footer();
-
-// // add below line in head section for footer style
-
-// //navbar Import section start
-
-// import navbar from "./components/navbarImport.js";
-// let navbarDiv = document.getElementById("navbarDiv");
-// navbarDiv.innerHTML = navbar();
-
-// var script = document.createElement("script");
-// script.src = "navbar.js";
-// document.head.appendChild(script);
-
 let sampleData;
 
 
 function allProduct(items){
    
   sampleData = JSON.parse(items);
-  //console.log(sampleData)
-  //cartDataSetting(sampleData); 
+  console.log('sampleData:', sampleData)
+
   appendData(sampleData);
 }
 
@@ -55,14 +38,14 @@ let rightBox = document.getElementById("rightBoxContent");
 let body = document.querySelector("body");
 
 const appendData = (sampleData) => {
-  console.log(sampleData[0])
-  const img1 = sampleData[0].img1;
-  const img2 = sampleData[0].img2;
-  const img3 = sampleData[0].img3; 
-  const img4 = sampleData[0].img4;
-  const name = sampleData[0].name; 
-  const catagory = sampleData[0].catagory;
-  const price = sampleData[0].price; 
+  console.log(sampleData)
+  const img1 = sampleData.img1;
+  const img2 = sampleData.img2;
+  const img3 = sampleData.img3; 
+  const img4 = sampleData.img4;
+  const name = sampleData.name; 
+  const catagory = sampleData.catagory;
+  const price = sampleData.price; 
   console.log("catagory:", catagory);
   console.log("name:", name);
   // for leftBox section
@@ -83,7 +66,7 @@ const appendData = (sampleData) => {
   //     for middleBox section
   let mImg1 = document.createElement("img");
   mImg1.src = img1;
-
+ 
   let mImg2 = document.createElement("img");
   mImg2.src = img2;
 
@@ -198,20 +181,22 @@ function addDragDetail({ price, img1, name, catagory }, count) {
   subTotal2.innerHTML = `<strong>$${valueToShow}</strong>`;
 
   let iconTitle = document.getElementById("iconTitle");
-  iconTitle.innerHTML = `${name}`;
 
-  let productArray = JSON.parse(localStorage.getItem("cbCartItem")) || [];
+  console.log("abhi jo kiya",count)
+  document.getElementById("countId").value = count;
+  document.getElementById("totalId").value = total;
+  document.getElementById("img1Id").value = img1;
+  document.getElementById("nameId").value = name;
+  document.getElementById("catagoryId").value = catagory;
+  
 
-  let desData = {
-    count,
-    total,
-    img1,
-    name,
-    catagory,
-  };
-productArray.push(desData);
-  localStorage.setItem("cbCartItem", JSON.stringify(productArray));
-}
+ }
+
+ 
+
+document.getElementById("checkoutId").addEventListener("click", function (){
+    document.getElementById("addProductId").submit()
+})
 
 // script for dragdown
 
