@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const Cart = require("../models/cartModel")
+
 
 const ProductDescription = require('../models/productDescriptionModel');
 
@@ -20,6 +22,18 @@ router.get("", async (req, res) => {
       const product = await ProductDescription.create(req.body);
   
       return res.status(201).send(product);
+    } catch (err) {
+      return res.status(500).send(err.message);
+    }
+  });
+
+  router.post("/addproducts", async (req, res) => {
+    try {
+      const product = await Cart.create(req.body);
+      
+      // return res.status(201).send(product);
+
+      res.redirect("/cart")
     } catch (err) {
       return res.status(500).send(err.message);
     }

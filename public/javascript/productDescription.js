@@ -181,20 +181,25 @@ function addDragDetail({ price, img1, name, catagory }, count) {
   subTotal2.innerHTML = `<strong>$${valueToShow}</strong>`;
 
   let iconTitle = document.getElementById("iconTitle");
-  iconTitle.innerHTML = `${name}`;
+  //iconTitle.innerHTML = `${name}`;
 
-  let productArray = JSON.parse(localStorage.getItem("cbCartItem")) || [];
+  //let productArray = JSON.parse(localStorage.getItem("cbCartItem")) || [];
+  console.log("abhi jo kiya",count)
+  document.getElementById("countId").value = count;
+  document.getElementById("totalId").value = total;
+  document.getElementById("img1Id").value = img1;
+  document.getElementById("nameId").value = name;
+  document.getElementById("catagoryId").value = catagory;
+  
+// productArray.push(desData);
+//   localStorage.setItem("cbCartItem", JSON.stringify(productArray));
+ }
 
-  let desData = {
-    count,
-    total,
-    img1,
-    name,
-    catagory,
-  };
-productArray.push(desData);
-  localStorage.setItem("cbCartItem", JSON.stringify(productArray));
-}
+ 
+
+document.getElementById("checkoutId").addEventListener("click", function (){
+    document.getElementById("addProductId").submit()
+})
 
 // script for dragdown
 
