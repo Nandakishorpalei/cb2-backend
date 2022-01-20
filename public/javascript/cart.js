@@ -77,7 +77,7 @@ finally{
 // show cart products
 
 let finalValue = 0;
-let merchandisePrice = 0;
+let merchandisePrice = 120;
 
 async function displayCartProducts(products){
 
@@ -162,7 +162,7 @@ products.forEach((element,index) => {
    
     merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
     if(products.length != 0){
-    totalEstValue.textContent = `$${(finalValue + 120 ).toFixed(2)}`;
+    totalEstValue.textContent = `$${(finalValue + 120).toFixed(2)}`;
 }
     update.addEventListener("click",function(){
 
@@ -336,7 +336,7 @@ document.getElementById("applyButton").addEventListener("click",function(){
 
    if(inputPromo == "Masai30"){
 
-    let updatedValue = (finalValue * 70 )/100;
+    let updatedValue = ((finalValue * 70 )/100) + 120;
 
     document.getElementById("totalEstValue").textContent = `$${updatedValue.toFixed(2)}`;
     alert("Promo code applied successfully");
