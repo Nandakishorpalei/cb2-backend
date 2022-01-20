@@ -54,5 +54,16 @@ router.get("", async (req, res) => {
     }
   });
 
+
+  router.post("/datasend",async(req,res)=>{
+    try{
+      const product = await Checkout.create(req.body);
+
+      res.redirect("/checkoutshipping");
+
+    }catch(e){
+      res.status(500).send(e.message);
+    }
+  })
   
   module.exports = router;

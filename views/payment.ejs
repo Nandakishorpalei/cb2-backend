@@ -1,8 +1,7 @@
 <%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/payment.css"})-%>
 
 
-
-<body>
+<body onload="savedaddress('<%= JSON.stringify(paymentPageData) %>')">
     <div id="payMain">
         <div id="payLeft">
             <div class="shipping_cb2logo">
@@ -19,36 +18,6 @@
                 <div>Review and Place Order</div>
             </div>
 
-            <div id="card_details">
-                <div id="card_details1">
-                    <p>Payment</p>
-                    <p><input type="radio">Credit/Debit Card</p>
-                </div>
-                <form id="card_details_form">
-                    <div>
-                        <p>Card Number</p>
-                    <input type="Number" pattern="[0-9]{16}" id="credit_number" required>
-                    </div>
-                    <div>
-                        <p>Expires On</p>
-                        <div id="dropdown">
-                            <select name="" id="expMonth" required></select>
-                            <select name="" id="expYear" required></select>
-                        </div>
-                        
-                    </div>
-                    <div>
-                        <p>Security Code</p>
-                        <input type="Number" id="cvv" required>
-                    </div>
-                    <div>
-                        <input type="submit" value="Save & Apply" id="savecard">
-                    </div>
-                </form>
-            </div>
-
-
-
             <div id="Checkout_payement_under">
                 <h2>Rewards</h2>
                 <p>For validation purposes you must use your Crate and Barrel or CB2</p>
@@ -64,11 +33,17 @@
                     <a href="checkoutshipping.html">Edit</a>
                 </div>
                 <br>
-                <div id="Checkout_payement_Button">
-                    <button id="Checkout_Button">Place Order</button>
+                <div id="placeOrderDiv">
+                    <div id="card_details1">
+                        <p>Payment</p>
+                        <p><input type="radio">Razorpay</p>
+                    </div>
+                <div id="Checkout_payement_Button" >
+                    <button type="submit" class="input-box-content razorpay-conitnue" id="Checkout_Button">Place Order</button>
                 </div>
-            </div>
 
+            </div>
+            </div>
 
             <!-- bottom checkout -->
 
@@ -125,6 +100,40 @@
             </div>
         </div>
     </div>
+
+
+    <!-- <div >
+        <button type="submit" class="input-box-content razorpay-conitnue" id="rzp-button1">continue</button>
+      </div> -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+      
+      
+        <script>
+          axios.post("/order").then((info)=>{
+            console.log(info)
+            
+            var options = {
+          "key": "rzp_test_o2Ali4pzYWDsvw", // Enter the Key ID generated from the Dashboard
+      
+          "name": "CB2 Clone",
+          "description": "Test Transaction",
+          "image": "landingImages/cb2.jpg",
+          "order_id": info.data.id, 
+          "callback_url": "http://localhost:3456/paymentsuccess",
+          "theme":{
+            "color":"#3399cc" 
+          }
+            
+          };
+          var rzp1 = new Razorpay(options);
+      document.getElementById('Checkout_Button').onclick = function(e){
+          rzp1.open();
+          e.preventDefault();
+      }
+          })
+        </script>
+
 </body>
 </html>
 <script src="javascript/payment.js"></script>

@@ -47,7 +47,7 @@ function sidebar(){
         NEW
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="products.html">VIEW ALL</a>
+        <a class="dropdown-item" href="products">VIEW ALL</a>
         <a class="dropdown-item" href="#">DECEMBER ARRIVALS</a>
         <a class="dropdown-item" href="#">BACK IN STOCK</a>
         <a class="dropdown-item" href="#">FURNITURE</a>

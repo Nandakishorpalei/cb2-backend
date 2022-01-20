@@ -43,6 +43,19 @@ document.getElementById('rzp-button1').onclick = function(e){
 
 <script>
     
+    app.get("/razorpay",(req,res)=>{
+
+User.findOne({}, function(err, result) {
+    if (err){
+      console.log(err)
+    } else{
+    res.render("razorpay");
+  }
+  });
+
+
+});
+
 
 
 const razorpay=new Razorpay({
@@ -50,26 +63,9 @@ const razorpay=new Razorpay({
   key_secret:process.env.RAZORPAY_SECRET
   })
   
-  
-  
-  app.get("/razorpay",(req,res)=>{
-
-    User.findOne({}, function(err, result) {
-        if (err){
-          console.log(err)
-        } else{
-        res.render("razorpay");
-      }
-      });
-  
-  
-  });
-  
-  
-  
   app.post("/order",(req,res)=>{
   const options = {
-      amount:productData[Id].price+'00' ,  // amount in the smallest currency unit
+      amount:50000 ,  // amount in the smallest currency unit
       currency: "INR",
   
     };

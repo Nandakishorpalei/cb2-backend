@@ -87,6 +87,7 @@ body{
 #Checkout_payement_under{
     width: 70%;
     padding-left: 25%;
+    margin-top:50px;
 }
 
 #Checkout_payement_under h2{
@@ -118,7 +119,7 @@ body{
     background-color: black;
     color: white;
     height: 40px;
-    width: 50%;
+    width:150%;
     font-size: 16px;
     margin-left:50%;
     
@@ -471,6 +472,7 @@ form input{
   font-weight:300;
   margin-bottom: 2%;
   margin-left: 5%;
+  margin-top:50px;
 }
 #tolearnmore a{
   color:rgb(34, 34, 34);
@@ -571,4 +573,12 @@ form input{
     color:white;
     border:1px solid white;
     padding:6px 13px;
+}
+
+
+#placeOrderDiv{
+    display: flex;
+    justify-content: space-between;
+    margin-left:-20px;
+    width:87%;
 }

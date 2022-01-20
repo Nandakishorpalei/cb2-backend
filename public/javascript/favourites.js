@@ -49,7 +49,7 @@ function allProduct(items){
  btn1.innerText = "REMOVE" ;
  btn1.id = "button_remove" ;
  btn1.addEventListener("click",function(){
-
+    alert("hello")
    remove_data(index,data)
  })
 
@@ -59,20 +59,8 @@ function allProduct(items){
  let btn2 = document.createElement("button");
   btn2.innerText = "ADD TO CART";
   btn2.id = "button_addtocart";
-   btn2.addEventListener("click" , ()=>{
-    let productArray = JSON.parse(localStorage.getItem("cbCartItem")) || [];
- let data = {
-  count:1,
-  total:item.price,
-  img1:item.img1,
-  name:item.name,
-  catagory:item.catagory,
- }
-
-
- productArray.push(data);
-       localStorage.setItem("cbCartItem" , JSON.stringify(productArray));
-       window.location.href="cart.html";
+   btn2.addEventListener("click" , function(){
+    addToCart(item);
    })
 
   let a2 = document.createElement("a");
@@ -93,9 +81,21 @@ function allProduct(items){
     
  }
 
- function remove_data(index,data){
-   data.splice(index,1);
-   console.log(index,data);
-   Display_Favourite_product(data)
-  localStorage.setItem('cbWishlistItem', JSON.stringify(data));
+ function remove_data(index){
+  document.getElementById("productDeleteId").value = data[index]._id;
+  document.getElementById("cartItemDelete").submit();
+}
+
+function addToCart(item){
+  alert("add to cart")
+ console.log("item now",item);
+  document.getElementById("countId").value = 1;
+  document.getElementById("totalId").value = item.price;
+  document.getElementById("img1Id").value = item.img1;
+  document.getElementById("nameId").value = item.name;
+  document.getElementById("catagoryId").value = item.catagory;
+  
+    document.getElementById("addProductId").submit()
+
+   
 }

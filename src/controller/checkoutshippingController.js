@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const Checkout = require("../models/checkoutshippingModel");
+const ShippingAddress = require("../models/shippingModel");
 
 router.get("", async (req, res) => {
   try {
@@ -13,11 +14,12 @@ router.get("", async (req, res) => {
   }
 });
 
-router.post("", async (req, res) => {
-  try {
-    const product = await Cart.create(req.body);
 
-    return res.status(201).send(product);
+router.post("/address", async (req, res) => {
+  try {
+    const address = await ShippingAddress.create(req.body);
+
+   res.redirect("/payment")
   } catch (err) {
     return res.status(500).send(err.message);
   }

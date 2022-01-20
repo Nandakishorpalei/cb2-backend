@@ -345,21 +345,30 @@ document.getElementById("applyButton").addEventListener("click",function(){
     }
     localStorage.setItem("cartValue",JSON.stringify(totalCost));
     couponApplied = true;
+    window.location.href = "cart";
    }else{
     alert("Invalid Promo code");
    }
 })
 
 document.getElementById("checkOutButton").addEventListener("click",function(){
-    window.location.href = "checkoutshipping";
 
     if(!couponApplied){
         let totalCost = {
             price:finalValue,
+            discount:0,
             merchandisePrice:finalValue
         }
         
         localStorage.setItem("cartValue",JSON.stringify(totalCost));
+        const dataFromLocalStorage = JSON.parse(localStorage.getItem("cartValue"));
+            console.log('dataFromLocalStorage:', dataFromLocalStorage);
+
+            document.getElementById("totalMerchandisePrice").value = dataFromLocalStorage.merchandisePrice;
+            document.getElementById("discountPrice").value = dataFromLocalStorage.discount;
+            document.getElementById("totalPrice").value = dataFromLocalStorage.price;
+
+            document.getElementById("cartItemSend").submit();
             
         }
     

@@ -104,17 +104,7 @@ let newPageButton = document.getElementById("newPageButton");
 locationButton.addEventListener("click",authenticateCheckLocation);
 
 async function authenticateCheckLocation(){
-let authenticate =await JSON.parse(localStorage.getItem("authenticate")) || [];
-let userAuthenticated = authenticate.authenticated;
- console.log(authenticate.authenticated)
-
-if(userAuthenticated){
-    window.location.href="storelocation.html" ;
-}
-else{
-alert("unauthorize user");
-window.location.href="login.html";
-}
+    window.location.href="/store" ;
 }
 
 
@@ -122,17 +112,7 @@ window.location.href="login.html";
 wishlistButton.addEventListener("click",authenticateCheckWishlist);
 
 async function authenticateCheckWishlist(){
-let authenticate =await JSON.parse(localStorage.getItem("authenticate")) || [];
-let userAuthenticated = authenticate.authenticated;
- console.log(authenticate.authenticated)
-
-if(userAuthenticated){
-    window.location.href="favorites.html" ;
-}
-else{
-alert("unauthorize user");
-window.location.href="login.html";
-}
+    window.location.href="/favourites" ;
 }
 
 //cart page
@@ -140,33 +120,15 @@ cartButton.addEventListener("click",authenticateCheckCart);
 
 async function authenticateCheckCart(){
 let authenticate =await JSON.parse(localStorage.getItem("authenticate")) || [];
-let userAuthenticated = authenticate.authenticated;
- console.log(authenticate.authenticated)
+    window.location.href="/cart" ;
 
-if(userAuthenticated){
-    window.location.href="cart.html" ;
-}
-else{
-alert("unauthorize user");
-window.location.href="login.html";
-}
 }
 
 //newpage newPageButton
 newPageButton.addEventListener("click",authenticateCheckNewpage);
 
 async function authenticateCheckNewpage(){
-let authenticate =await JSON.parse(localStorage.getItem("authenticate")) || [];
-let userAuthenticated = authenticate.authenticated;
- console.log(authenticate.authenticated)
-
-if(userAuthenticated){
-    window.location.href="newpage.html" ;
-}
-else{
-alert("unauthorize user");
-window.location.href="login.html";
-}
+    window.location.href="/newpage" ;
 }
 
 
@@ -174,11 +136,7 @@ window.location.href="login.html";
 cartBtn.addEventListener("mouseover",authenticateCheckonHover);
 
 async function authenticateCheckonHover(){
-  let authenticate =await JSON.parse(localStorage.getItem("authenticate")) || [];
-  let userAuthenticated = authenticate.authenticated;
-   console.log(authenticate.authenticated)
-  
-  if(userAuthenticated){
+
 
 //cart button functionality
 let cartBtn = document.getElementById("cartBtn");
@@ -201,17 +159,17 @@ cartDetails.addEventListener("mouseleave", () =>{
   cartDetails.style.display = "none";
   cartBtn.style.borderBottom = "none";
 })
-  }
+  
 }
 
 document.getElementById("signOut").addEventListener("click",function(){
   localStorage.removeItem("authenticate");
-  window.location.href="index.html";
+  window.location.href="/";
 })
 
 
 document.getElementById("homeLogo").addEventListener("click",function(){
-  window.location.href="index.html";
+  window.location.href="/";
 });
 
 

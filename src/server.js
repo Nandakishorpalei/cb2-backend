@@ -31,6 +31,15 @@ app.use("/signup", signupController);
 const signinController = require('./controller/signinController');
 app.use("/signin", signinController);
 
+const checkoutshippingController = require("./controller/checkoutshippingController");
+app.use("/checkoutshipping", checkoutshippingController);
+
+const paymentController = require("./controller/paymentController");
+app.use("/payment", paymentController);
+
+const paymentSuccessController = require("./controller/paymentSuccessController");
+app.use("/paymentsuccess",paymentSuccessController);
+
 //google authentication
 
 app.use(passport.initialize());
@@ -75,52 +84,19 @@ app.get("/store", async(req,res)=>{
         res.status(500).send(e.message)
     }
 })
-const checkoutshippingController = require("./controller/checkoutshippingController");
-app.use("/checkoutshipping", checkoutshippingController);
-
-app.get("/", async (req, res) => {
-  try {
-    res.render("home");
-  } catch (e) {
-    res.status(500).send(e.message);
-  }
-});
-
-app.get("/store", async (req, res) => {
-  try {
-    res.render("storelocation");
-  } catch (e) {
-    res.status(500).send(e.message);
-  }
-});
 
 
 
-app.get("/products", async(req,res)=>{
-    try{
-       const products = await Product.find().lean().exec();
-       res.render("products",{products:products})
-    }catch(e){
-        res.status(500).send(e.message)
-    }
-})
 
-app.get("/payment", async(req,res)=>{
-    try{
-       res.render("payment")
-    }catch(e){
-        res.status(500).send(e.message)
-    }
-});
+// app.get("/products", async(req,res)=>{
+//     try{
+//        const products = await Product.find().lean().exec();
+//        res.render("products",{products:products})
+//     }catch(e){
+//         res.status(500).send(e.message)
+//     }
+// })
 
-
-app.get("/paymentsuccess", async(req,res)=>{
-    try{
-       res.render("paymentsuccess");
-    }catch(e){
-        res.status(500).send(e.message)
-    }
-});
 
 
 app.get("/newpage", async (req, res) => {
@@ -133,5 +109,22 @@ app.get("/newpage", async (req, res) => {
 
 
 
+const razorpay=new Razorpay({
+  key_id:process.env.RAZORPAY_ID,
+  key_secret:process.env.RAZORPAY_SECRET
+  })
+  
+  app.post("/order",(req,res)=>{
+  const options = {
+      amount:50000 ,  // amount in the smallest currency unit
+      currency: "INR",
+  
+    };
+    razorpay.orders.create(options, function(err, order) {
+        order_id_var=order.id;
+      res.json(order)
+    });
+  })
+ 
  
 module.exports = app;

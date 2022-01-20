@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
  
 const Favourite = require('../models/favouriteModel');
+const Cart = require("../models/cartModel")
 
 router.get("", async (req, res) => {
     try{
@@ -23,5 +24,30 @@ router.get("", async (req, res) => {
       return res.status(500).send(err.message);
     }
   });
+
+
+  router.post("/delete", async (req, res) => {
+    try {
+      const id = req.body.id;
+      console.log('id:', id)
+      const product = await Favourite.findByIdAndDelete(id);
+  
+      return res.redirect("/favourites")
+    } catch (err) {
+      return res.status(500).send(err.message);
+    }
+  });
+
+  router.post("/addproducts", async (req, res) => {
+    try {
+      console.log(req.body)
+      const product = await Cart.create(req.body);
+
+      res.redirect("/cart");
+    } catch (err) {
+      return res.status(500).send(err.message);
+    }
+  });
+
   
   module.exports = router;

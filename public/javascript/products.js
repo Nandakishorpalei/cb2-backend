@@ -283,7 +283,7 @@ function displayItem(productData){
        document.getElementById("productId").submit();
         console.log(product._id)
         });
-
+ 
 
 
 

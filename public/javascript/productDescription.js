@@ -181,9 +181,7 @@ function addDragDetail({ price, img1, name, catagory }, count) {
   subTotal2.innerHTML = `<strong>$${valueToShow}</strong>`;
 
   let iconTitle = document.getElementById("iconTitle");
-  //iconTitle.innerHTML = `${name}`;
 
-  //let productArray = JSON.parse(localStorage.getItem("cbCartItem")) || [];
   console.log("abhi jo kiya",count)
   document.getElementById("countId").value = count;
   document.getElementById("totalId").value = total;
@@ -191,8 +189,7 @@ function addDragDetail({ price, img1, name, catagory }, count) {
   document.getElementById("nameId").value = name;
   document.getElementById("catagoryId").value = catagory;
   
-// productArray.push(desData);
-//   localStorage.setItem("cbCartItem", JSON.stringify(productArray));
+
  }
 
  
