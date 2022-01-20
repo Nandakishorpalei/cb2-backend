@@ -66,7 +66,7 @@ const appendData = (sampleData) => {
   //     for middleBox section
   let mImg1 = document.createElement("img");
   mImg1.src = img1;
-
+ 
   let mImg2 = document.createElement("img");
   mImg2.src = img2;
 

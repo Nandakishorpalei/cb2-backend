@@ -145,13 +145,22 @@ products.forEach((element,index) => {
     update.textContent = "update";
     update.setAttribute("id","update");
     update.textContent="update";
-
+    
     //count update 
     let itemQuantity = +quantity.value;
     quantity.onchange = updateCount;
 
     function updateCount(){
         itemQuantity = quantity.value;
+    
+    }
+
+    update.onclick = updateDatabase;
+
+    function updateDatabase(){
+    document.getElementById("productUpdateId").value = products[index]._id;
+    document.getElementById("productCount").value = itemQuantity;
+    document.getElementById("cartItemupdate").submit();
     }
 
      totalItemValue = element.total;
@@ -272,25 +281,9 @@ products.forEach((element,index) => {
     cross.append(crossImage,crossContent);
 
     cross.addEventListener("click",function(){
-        cartData.splice(index,1);
-        localStorage.setItem("cbCartItem",JSON.stringify(cartData));
-
-        if(cartData.length == 0){
-        
-            zeroContainer.style.display="flex";
-            cartContainer.style.display="none";
-            cartCarousel.style.display="none";
-            rightContainer.style.display="none";
-        } 
-        else{
-            zeroContainer.style.display="none";
-            cartContainer.style.display="flex";
-            cartCarousel.style.display="block";
-            rightContainer.style.display="block";
-        }
-      finalValue = 0;
-
-        displayCartProducts(cartData);
+        console.log("currently clicked",products[index]);
+         document.getElementById("productDeleteId").value = products[index]._id;
+        document.getElementById("cartItemDelete").submit();
     })
 
     let download = document.createElement("div");
@@ -358,12 +351,11 @@ document.getElementById("applyButton").addEventListener("click",function(){
 })
 
 document.getElementById("checkOutButton").addEventListener("click",function(){
-    window.location.href = "checkoutshipping.html";
+    window.location.href = "checkoutshipping";
 
     if(!couponApplied){
         let totalCost = {
             price:finalValue,
-            discount:0,
             merchandisePrice:finalValue
         }
         

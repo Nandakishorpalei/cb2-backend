@@ -25,7 +25,7 @@ router.get("", async (req, res) => {
     } catch (err) {
       return res.status(500).send(err.message);
     }
-  });
+  }); 
 
   router.post("/addproducts", async (req, res) => {
     try {
@@ -33,7 +33,7 @@ router.get("", async (req, res) => {
       
       // return res.status(201).send(product);
 
-      res.redirect("/cart")
+      res.redirect("/cart");
     } catch (err) {
       return res.status(500).send(err.message);
     }
