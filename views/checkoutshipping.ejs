@@ -1,9 +1,9 @@
 <%- include('header',{title:"CB2 wishlist",stylesheet:"stylesheet/checkoutshipping.css"}) -%>
 
-<body>
+<body onload="allProduct('<%= JSON.stringify(cart) %>')">
       <div id="main_shipping">
 
-           <form id="main_shipping_left">
+           <form action="/checkoutshipping/address" method="POST" id="main_shipping_left">
                <div class="shipping_cb2logo">
                    <h1>CB2</h1>
                </div>
@@ -28,29 +28,29 @@
                </div>
 
                <div class="shipping_input_name">
-                   <input id="shipping_input_name_first" type="text" required minlength="2" maxlength="15" size="13">
-                   <input id="shipping_input_name_last" type="text" required minlength="2" maxlength="15" size="13">
+                   <input name="firstName" value="" id="shipping_input_name_first" type="text" required minlength="2" maxlength="15" size="13">
+                   <input name="lastName" value="" id="shipping_input_name_last" type="text" required minlength="2" maxlength="15" size="13">
                </div>
 
                <div id="shipping_street">
                 <p>Street Address <span>  required</span></p>
-                <input id="shipping_street_address" type="text" required minlength="5" maxlength="25" size="20">
+                <input name="street" value="" id="shipping_street_address" type="text" required minlength="5" maxlength="25" size="20">
                 <a href="#">Add apt,suite or other</a>
                </div>
 
                <div class="shipping_name" style="margin-top:5px;">
                 <p>Zip Code   <span>required</span></p>
                 <p>City   <span>required</span></p>
-            </div>
+            </div> 
 
             <div class="shipping_input_name">
-                <input id="shipping_input_name_zip" type="tel" pattern="[0-9]{6}" required>
-                <input id="shipping_input_name_city" type="text" required minlength="2" maxlength="15" size="13">
+                <input name="zipcode" value="" id="shipping_input_name_zip" type="tel" pattern="[0-9]{6}" required>
+                <input name="city" value="" id="shipping_input_name_city" type="text" required minlength="2" maxlength="15" size="13">
             </div>
 
             <div id="shipping_selectform">
                 <p>State <span>required</span></p>
-                <select name="state" required>
+                <select name="state" value="" id="addressState" required>
                     <option value="">Please Select</option>
                     <option value="Andhra Pradesh">Andhra Pradesh</option>
                     <option value="Arunachal Pradesh">Arunachal Pradesh</option>
@@ -78,7 +78,7 @@
 
             <div id="shipping_phoneno">
              <p>Phone Number <span>required</span></p>
-             <input id="shipping_phoneno_phone"  type="tel" pattern="[0-9]{10}" required>
+             <input name="phone" value="" id="shipping_phoneno_phone"  type="tel" pattern="[0-9]{10}" required>
             
             </div>
 
@@ -152,7 +152,4 @@
       </div>
     </body>
 </html>
-
-<script src="../javascript/checkoutshipping.js">
-
-</script>
+<script src="javascript/checkoutshipping.js"></script>
