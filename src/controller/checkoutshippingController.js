@@ -20,7 +20,7 @@ router.get("", async (req, res) => {
 
 router.post("/address", async (req, res) => {
   try {
-
+    
     const user = req.user;
     console.log('user:', user)
     const currentUser = user._id;

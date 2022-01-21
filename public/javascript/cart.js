@@ -229,12 +229,6 @@ products.forEach((element,index) => {
 
         displayCartProducts(productsArray)
 
-
-        // merchandiseValue.textContent = `$${finalValue.toFixed(2)}`;
-        // document.getElementById("price").textContent = `$${((totalItemValue*itemQuantity).toFixed(2))}`;
-        // if(products.length != 0){
-        // totalEstValue.textContent = `$${(finalValue+ 153 ).toFixed(2)}`;
-        // }
     })
 
 
@@ -348,16 +342,7 @@ document.getElementById("applyButton").addEventListener("click",function(){
     }
     localStorage.setItem("cartValue",JSON.stringify(totalCost));
     couponApplied = true;
-    // let merchandiseValue = document.getElementById("merchandiseValue");
-    // let taxValues = document.getElementById("taxValue");
-    // let totalEstValue = document.getElementById("totalEstValue");
-    
-    // const newData = JSON.parse( localStorage.getItem("cartValue"));
-    // merchandiseValue.textContent = `$${newData.merchandiseValue.toFixed(2)}`;
-    // taxValues.textContent = `$${newData.discount.toFixed(2)}`;
-    // totalEstValue.textContent = `$${newData.price.toFixed(2)}`;
 
-    // window.location.href = "cart";
    }else{
     alert("Invalid Promo code");
    }

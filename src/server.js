@@ -3,8 +3,6 @@ const express = require('express');
 const ejs = require('ejs');
 const passport = require("./config/passport");
 const Razorpay = require('razorpay');
-// const authenticate = require("./middleware/authenticate");
-const Token = require("./models/tokenModel");
 const User = require("./models/userModel");
 
 const app = express();
@@ -22,23 +20,6 @@ app.use("/signup", signupController);
 
 var router = require('./controller/signinController');
 app.use("/signin", router);
-
-
-// async function saveToken(token,user){
-//   try{
-
-//    const userId = user._id;
-//    tokenCreated =  await User.findByIdAndUpdate((userId),{
-//     token:token
-//     },{new:true});
-
-   
-//    return findToken(userId);
-//   }catch(e){
-//     console.log(e.message);
-//   }
-// }
-
 
 app.use(passport.initialize());
 var currentUser ;
@@ -138,9 +119,6 @@ app.get("/store",authenticate, async(req,res)=>{
     }
 })
 
-
-
-
 app.get("/newpage",authenticate, async (req, res) => {
   try {
     console.log("console from new page",req.user);
@@ -149,9 +127,6 @@ app.get("/newpage",authenticate, async (req, res) => {
     res.status(500).send(e.message);
   }
 });
-
-
-
 
  
  
