@@ -15,6 +15,14 @@
 - **[Click here to run the app on heroku](https://cb2-clone.herokuapp.com/)**
 
 ---
+
+## Read about our journey on Medium: 🙌
+- **[Click here to run the app on heroku](---
+
+## Deploy Link: 🙌
+- **[Medium Article](https://cb2-clone.herokuapp.com/)**)**
+
+---
 ## Our Team Members ❤️
 
 - **[Nanda Kishore Palei](https://github.com/Nandakishorpalei)**
