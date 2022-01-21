@@ -24,11 +24,7 @@ let address = document.getElementById("address");
     let total = document.getElementById("Shipping_Order_last_total");
     let discount = document.getElementById("discount");
 
-    put.textContent = userPaymentDetails.merchandisePrice;
-    total.textContent = userPaymentDetails.totalPrice;
-    discount.textContent = userPaymentDetails.discount;
+    put.textContent = `$${userPaymentDetails.merchandisePrice}`;
+    total.textContent = `$${userPaymentDetails.totalPrice}`;
+    discount.textContent = `$${userPaymentDetails.discount}`;
 }
-
-
-
-

@@ -22,19 +22,20 @@ function cartMiddle(){
 
 // cartData globally declared
 
-
 // cart page display setting
 let zeroContainer = document.getElementById("zeroCartContainer");
 let cartContainer = document.getElementById("cartContainer");
 let cartCarousel = document.getElementById("carouselExampleControls");
 let rightContainer = document.getElementById("rightCartContainer");
 
-let user;
+// let user;
 function allProduct(items){
     const dataObj = JSON.parse(items);
     console.log('dataObj:', dataObj)
-    data = dataObj.cart;
-    user = dataObj.userId;
+    let data = dataObj.cart;
+    let user = dataObj.userId;
+    document.getElementById("cartIndicator").textContent = data.length;
+    localStorage.setItem("cartItemLength",JSON.stringify(data.length));
     console.log(data,user);
     cartDataSetting(data); 
 }
@@ -329,7 +330,7 @@ document.getElementById("applyButton").addEventListener("click",function(){
     let updatedValue = ((finalValue * 70 )/100) + 120;
 
     document.getElementById("totalEstValue").textContent = `$${updatedValue.toFixed(2)}`;
-    alert("Promo code applied successfully");
+
 
 
     let taxValue = document.getElementById("taxValue");
@@ -349,14 +350,12 @@ document.getElementById("applyButton").addEventListener("click",function(){
 })
 
 document.getElementById("checkOutButton").addEventListener("click",function(){
-alert("clicked")
-
+    
     if(!couponApplied){
         let totalCost = {
             price:finalValue + 120,
             discount:0,
-            merchandisePrice:finalValue,
-            userId:user
+            merchandisePrice:finalValue
         }
         localStorage.setItem("cartValue",JSON.stringify(totalCost));
     } 
@@ -370,6 +369,4 @@ alert("clicked")
 
             document.getElementById("cartItemSend").submit();
             
-        
-    
 })

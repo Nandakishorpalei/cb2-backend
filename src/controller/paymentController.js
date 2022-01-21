@@ -41,7 +41,7 @@ const razorpay=new Razorpay({
       const totalPrice = checkoutPrice[0].totalPrice;
     const options = {
         amount: totalPrice * 100 ,  // amount in the smallest currency unit
-        currency: "INR",
+        currency: "USD",
     
       };
       razorpay.orders.create(options, function(err, order) {

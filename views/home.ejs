@@ -1,7 +1,7 @@
 <%- include('header',{title:"Modern Furniture Store & Unique Home Decor Online", stylesheet:"stylesheet/home.css"})-%>
 
 
-<body>
+<body onload="setName('<%= JSON.stringify(data) %>')">
     <div id="navbarDiv"></div>
     <div id="landingContainer">
         <div id="bodySection">
@@ -121,11 +121,7 @@
     
     
     </script>
-    
-    <script>
+
+<script src="javascript/home.js">
   
-        function setName(userName){
-            userName = JSON.parse(userName);
-            console.log('userName:', userName)
-        }
-    </script>
+</script>

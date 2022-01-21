@@ -4,6 +4,7 @@ var GoogleStrategy = require( 'passport-google-oauth2' ).Strategy;
 const User = require('../models/userModel');
 const { v4: uuidv4 } = require('uuid');
 const jwt = require('jsonwebtoken');
+const Cart = require("../models/cartModel");
 
 if (typeof localStorage === "undefined" || localStorage === null) {
   const LocalStorage = require('node-localstorage').LocalStorage;
@@ -46,8 +47,14 @@ passport.use(new GoogleStrategy({
    
 
 
+
      newToken(user);
 
+     localStorage.setItem("userName",user.username);
+
+     const cartLength = await Cart.find({userId: user._id}).countDocuments().lean().exec();
+
+     localStorage.setItem("cartCount",cartLength);
 
       return done(null, {user,token});
     

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
+const Cart = require("../models/cartModel");
 
 const jwt = require('jsonwebtoken');
 
@@ -27,7 +28,7 @@ router.get("", async(req,res)=>{
     try{
        res.render("signin")
     }catch(e){
-        res.status(500).send(e.message)
+        res.status(500).send(e.message);
     }
 });
 
@@ -51,6 +52,12 @@ router.post("",async(req,res)=>{
         console.log('token:', token);
 
         localStorage.setItem("signinToken", token);
+
+        localStorage.setItem("userName",user.username);
+        
+        const cartLength = await Cart.find({userId: user._id}).countDocuments().lean().exec();
+
+        localStorage.setItem("cartCount",cartLength);
 
     res.redirect("/")
 

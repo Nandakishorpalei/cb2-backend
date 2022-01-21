@@ -13,6 +13,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+if (typeof localStorage === "undefined" || localStorage === null) {
+  const LocalStorage = require('node-localstorage').LocalStorage;
+  localStorage = new LocalStorage('./scratch');
+}
 // authentication start
 
 const signupController = require('./controller/signupController');
@@ -67,6 +71,7 @@ async function authenticate(req,res, next){
     console.log("it is matched unbelievable");
     let currentUser = await User.findById(userId);
     req.user = currentUser; 
+
     next();
   }else{
     res.redirect("/signin")
@@ -109,7 +114,22 @@ app.use("/paymentsuccess",authenticate, paymentSuccessController);
 
 app.get("/", async(req,res)=>{
     try{
-       res.render("home");
+      const newUser = localStorage.getItem("userName");
+      const currentUser = newUser || "Not found";
+
+      const length = localStorage.getItem("cartCount") || 0;
+      console.log('length:', length)
+
+
+      console.log("console from new page",req.user);
+
+      const data = {
+        currentUser:currentUser,
+        cartLength: length
+      }
+
+      res.render("home",{data});
+
     }catch(e){
         res.status(500).send(e.message)
     }
@@ -125,7 +145,7 @@ app.get("/store",authenticate, async(req,res)=>{
 
 app.get("/newpage",authenticate, async (req, res) => {
   try {
-    console.log("console from new page",req.user);
+
     res.render("newPage");
   } catch (e) { 
     res.status(500).send(e.message);
@@ -134,6 +154,7 @@ app.get("/newpage",authenticate, async (req, res) => {
 
 app.post("/signout",async(req,res)=>{
   localStorage.removeItem("myToken");
+  localStorage.removeItem("userName");
   res.redirect("/");
 })
  

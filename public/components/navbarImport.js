@@ -90,7 +90,8 @@ function navbar(){
         </div>
     </div>
     <div id="accDetails">
-        <p><a href="signin">SIGN IN</a></p>
+        <p id="signInId"><a href="signin">SIGN IN</a></p>
+        <p id="currentuser">ORDER TRACKING</p>
         <p>ORDER TRACKING</p>
         <p>SCHEDULE DELIVERY</p>
         <p id="signOut">SIGN OUT</p>

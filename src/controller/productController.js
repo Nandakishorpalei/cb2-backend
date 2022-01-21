@@ -3,14 +3,25 @@ const router = express.Router();
 
 const Product = require('../models/productModel');
 const Favourite = require("../models/favouriteModel");
-const ProductDetail = require('../models/productDescriptionModel')
+const ProductDetail = require('../models/productDescriptionModel');
+const Cart = require("../models/cartModel");
+
 
 router.get("", async (req, res) => {
   try{
-    
+
+    const user = req.user;
+
     const products = await Product.find().lean().exec();
 
-    res.render("products",{products:products})
+    const cartLength = await Cart.find({userId: user._id}).countDocuments().lean().exec();
+
+    const data = {
+      products:products,
+      cartLength:cartLength
+    }
+
+    res.render("products",{data})
  }catch(e){
      res.status(500).send(e.message)
  }

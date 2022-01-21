@@ -91,7 +91,6 @@ router.get("", async (req, res) => {
     }
 
 
-
       res.redirect("/checkoutshipping");
 
     }catch(e){

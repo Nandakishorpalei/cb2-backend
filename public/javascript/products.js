@@ -6,8 +6,11 @@ let productData;
 
 
 function allProduct(items){
-   
-    productData = JSON.parse(items);
+   items = JSON.parse(items);
+    productData = items.products;
+    const cartLength = items.cartLength;
+    document.getElementById("cartIndicator").textContent = cartLength;
+    localStorage.setItem("cartItemLength",JSON.stringify(cartLength));
     console.log(productData)
     displayItem(productData);
 }

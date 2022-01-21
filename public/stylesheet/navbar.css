@@ -52,6 +52,9 @@ body {
     display: flex;
     margin-left: 5%;
   }
+  #currentuser{
+    display:none;
+  }
   
   #searchbox input {
     border: 0;

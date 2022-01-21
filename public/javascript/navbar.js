@@ -190,13 +190,24 @@ menuBtnPhone.addEventListener("click", () => {
 
 
 //navbar cart item count
-let cartData = JSON.parse(localStorage.getItem("cbCartItem")) || [];
-console.log('cartData:', cartData)
-
-let cartItemCount = cartData.length;
-
-document.getElementById("cartIndicator").textContent= cartItemCount;
 
 document.getElementById("signOut").addEventListener("click",function(){
+  localStorage.removeItem("currentUserName");
+  localStorage.removeItem("cartItemLength");
+  document.getElementById("cartIndicator").textContent = "0" ;
+  document.getElementById("currentuser").style.display = "none";
+document.getElementById("signInId").style.display = "block";
   document.getElementById("logoutDiv").submit();
 })
+
+const userNameIs = JSON.parse(localStorage.getItem("currentUserName"));
+console.log('userNameIs:', userNameIs);
+
+const cartItemLength = JSON.parse(localStorage.getItem("cartItemLength"));
+document.getElementById("cartIndicator").textContent = cartItemLength;
+
+if(userNameIs !== null){
+  document.getElementById("currentuser").style.display = "block";
+document.getElementById("signInId").style.display = "none";
+document.getElementById("currentuser").textContent = userNameIs;
+}

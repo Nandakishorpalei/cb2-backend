@@ -6,7 +6,6 @@ function allProduct(items){
     Display_Favourite_product(data); 
 }
 
-
 //  display_favourite_product(data);
 
 

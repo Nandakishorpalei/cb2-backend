@@ -33,7 +33,6 @@ router.get("", async (req, res) => {
        const user = req.user;
        const body = req.body;
     
-
       const product = await Cart.create({
       userId: user._id,
       count:body.count,
