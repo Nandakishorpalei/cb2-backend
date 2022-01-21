@@ -6,9 +6,11 @@ const Checkout = require("../models/checkoutshippingModel");
 
 router.get("",async(req,res)=>{
     try{
-        
-        const add = await ShippingAddress.find().lean().exec();
-        const payDetails = await Checkout.find().lean().exec();
+        const user = req.user;
+        const currentuser = user._id;
+
+        const add = await ShippingAddress.find({userId:currentuser}).lean().exec();
+        const payDetails = await Checkout.find({userId:currentuser}).lean().exec();
 
         const address = add[0];
         const paymentDetails = payDetails[0];
