@@ -54,6 +54,9 @@ async function authenticate(req,res, next){
 
 
   let findToken = localStorage.getItem("myToken");
+  if(findToken === null){
+    res.redirect("/signin")
+  }else{
   let userId = findToken.split(" ")[1];
 
   if(!googleToken){
@@ -68,6 +71,7 @@ async function authenticate(req,res, next){
   }else{
     res.redirect("/signin")
   }
+}
 }catch(e){
   res.status(500).send(e.message);
 }
@@ -128,6 +132,10 @@ app.get("/newpage",authenticate, async (req, res) => {
   }
 });
 
+app.post("/signout",async(req,res)=>{
+  localStorage.removeItem("myToken");
+  res.redirect("/");
+})
  
  
 module.exports = app;

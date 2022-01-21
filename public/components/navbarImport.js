@@ -158,6 +158,11 @@ function navbar(){
  
  
  </div>
+  
+ <form id="logoutDiv" action="/signout" method="POST" style="display:none">
+            <label for="firstName">Email <span>required</span></label><br>
+            <input type="email" name="email" value="logout"  id="email" required><br>
+        </form>
 
     
 </body>    

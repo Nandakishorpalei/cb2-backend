@@ -196,3 +196,7 @@ console.log('cartData:', cartData)
 let cartItemCount = cartData.length;
 
 document.getElementById("cartIndicator").textContent= cartItemCount;
+
+document.getElementById("signOut").addEventListener("click",function(){
+  document.getElementById("logoutDiv").submit();
+})
