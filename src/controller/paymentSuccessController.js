@@ -7,27 +7,18 @@ const ShippingAddress = require("../models/shippingModel");
 
 router.post("",async(req,res)=>{
     try{
-       const cart = await Cart.find().countDocuments().lean().exec();
-       const checkout = await Checkout.find().countDocuments().lean().exec();
-       const shippingAddress = await ShippingAddress.find().countDocuments().lean().exec();
 
-       if(shippingAddress != 0){
-       ShippingAddress.remove({},()=>{
-            console.log("ShippingAddress collection removed");
-        })
-       }
+        const user = req.user;
+        const currentUser = user._id;
 
-       if(cart != 0){
-      Cart.remove({},()=>{
-            console.log("Cart collection removed")
-        });
-       }
 
-       if(checkout != 0){
-        Checkout.remove({},()=>{
-            console.log("Checkout collection removed");
-        })
-       }
+    //    const cart = await Cart.find().countDocuments().lean().exec();
+    //    const checkout = await Checkout.find().countDocuments().lean().exec();
+    //    const shippingAddress = await ShippingAddress.find().countDocuments().lean().exec();
+
+       ShippingAddress.deleteMany({userId:currentUser}).lean().exec();
+       Cart.deleteMany({userId:currentUser}).lean().exec();
+       Checkout.deleteMany({userId:currentUser}).lean().exec();
   
         res.render("paymentsuccess");
     }catch(e){

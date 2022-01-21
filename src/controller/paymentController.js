@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Razorpay = require("razorpay");
 
 const ShippingAddress = require('../models/shippingModel');
 const Checkout = require("../models/checkoutshippingModel");
@@ -25,5 +26,28 @@ router.get("",async(req,res)=>{
         res.status(500).send(e.message);
     }
 })
+
+const razorpay=new Razorpay({
+    key_id:process.env.RAZORPAY_ID,
+    key_secret:process.env.RAZORPAY_SECRET
+    })
+    
+   router.post("/order",async(req,res)=>{
+
+        const user = req.user;
+        const currentuser = user._id;
+
+      const checkoutPrice = await Checkout.find({userId:currentuser}).lean().exec();
+      const totalPrice = checkoutPrice[0].totalPrice;
+    const options = {
+        amount: totalPrice * 100 ,  // amount in the smallest currency unit
+        currency: "INR",
+    
+      };
+      razorpay.orders.create(options, function(err, order) {
+          order_id_var=order.id;
+        res.json(order)
+      });
+    })
 
 module.exports = router;
