@@ -17,10 +17,7 @@
 ---
 
 ## Read about our journey on Medium: 🙌
-- **[Click here to run the app on heroku](---
-
-## Deploy Link: 🙌
-- **[Medium Article](https://cb2-clone.herokuapp.com/)**)**
+- **[Medium Article](https://medium.com/@codertarun328/cb2-clone-with-backend-masai-school-32eeca406080)**
 
 ---
 ## Our Team Members ❤️
