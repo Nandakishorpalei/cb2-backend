@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const shippingAdressSchema = new mongoose.Schema({
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"user",
+        required:true
+    },
     firstName:{type:String,required:true},
     lastName :  {type:String,required:true},
     street:  {type:String,required:true},

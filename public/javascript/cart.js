@@ -29,10 +29,13 @@ let cartContainer = document.getElementById("cartContainer");
 let cartCarousel = document.getElementById("carouselExampleControls");
 let rightContainer = document.getElementById("rightCartContainer");
 
+let user;
 function allProduct(items){
-   
-    data = JSON.parse(items);
-    console.log(data)
+    const dataObj = JSON.parse(items);
+    console.log('dataObj:', dataObj)
+    data = dataObj.cart;
+    user = dataObj.userId;
+    console.log(data,user);
     cartDataSetting(data); 
 }
 
@@ -345,22 +348,34 @@ document.getElementById("applyButton").addEventListener("click",function(){
     }
     localStorage.setItem("cartValue",JSON.stringify(totalCost));
     couponApplied = true;
-    window.location.href = "cart";
+    // let merchandiseValue = document.getElementById("merchandiseValue");
+    // let taxValues = document.getElementById("taxValue");
+    // let totalEstValue = document.getElementById("totalEstValue");
+    
+    // const newData = JSON.parse( localStorage.getItem("cartValue"));
+    // merchandiseValue.textContent = `$${newData.merchandiseValue.toFixed(2)}`;
+    // taxValues.textContent = `$${newData.discount.toFixed(2)}`;
+    // totalEstValue.textContent = `$${newData.price.toFixed(2)}`;
+
+    // window.location.href = "cart";
    }else{
     alert("Invalid Promo code");
    }
 })
 
 document.getElementById("checkOutButton").addEventListener("click",function(){
+alert("clicked")
 
     if(!couponApplied){
         let totalCost = {
-            price:finalValue,
+            price:finalValue + 120,
             discount:0,
-            merchandisePrice:finalValue
+            merchandisePrice:finalValue,
+            userId:user
         }
-        
         localStorage.setItem("cartValue",JSON.stringify(totalCost));
+    } 
+        
         const dataFromLocalStorage = JSON.parse(localStorage.getItem("cartValue"));
             console.log('dataFromLocalStorage:', dataFromLocalStorage);
 
@@ -370,6 +385,6 @@ document.getElementById("checkOutButton").addEventListener("click",function(){
 
             document.getElementById("cartItemSend").submit();
             
-        }
+        
     
 })

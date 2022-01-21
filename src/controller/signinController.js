@@ -2,6 +2,27 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/userModel');
 
+const jwt = require('jsonwebtoken');
+
+if (typeof localStorage === "undefined" || localStorage === null) {
+    const LocalStorage = require('node-localstorage').LocalStorage;
+    localStorage = new LocalStorage('./scratch');
+  }
+  let token;
+  
+  
+  const newToken = (user) =>{
+    localStorage.removeItem("myToken");
+    token =  jwt.sign({ user: user }, 'thisissecret', { expiresIn: 60 * 60 }); 
+    // console.log('token create: ', token)
+    localStorage.setItem("myToken",`${token} ${user._id}`);
+    return;
+  }
+
+
+
+let user;
+
 router.get("", async(req,res)=>{
     try{
        res.render("signin")
@@ -12,7 +33,7 @@ router.get("", async(req,res)=>{
 
 router.post("",async(req,res)=>{
     try{
-        let user = await User.findOne({email: req.body.email});
+        user = await User.findOne({email: req.body.email});
 
         if(!user){
             return res.status(401).send("Either Email or Password is incorrect!");
@@ -24,7 +45,14 @@ router.post("",async(req,res)=>{
             return res.status(401).send("Either Email or Password is incorrect!");
         }
 
-    
+        newToken(user);
+
+        token = `${token} ${user._id}`;
+        console.log('token:', token);
+
+        localStorage.setItem("signinToken", token);
+
+    res.redirect("/")
 
 
     }catch(e){

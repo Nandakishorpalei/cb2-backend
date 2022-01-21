@@ -29,11 +29,21 @@ router.get("", async (req, res) => {
 
   router.post("/addproducts", async (req, res) => {
     try {
-      const product = await Cart.create(req.body);
-      
-      // return res.status(201).send(product);
+   
+       const user = req.user;
+       const body = req.body;
+    
 
-      res.redirect("/cart");
+      const product = await Cart.create({
+      userId: user._id,
+      count:body.count,
+      total:body.total,
+      img1: body.img1,
+      name: body.name,
+      catagory:body.catagory,
+      });
+
+      return res.redirect("/cart");
     } catch (err) {
       return res.status(500).send(err.message);
     }

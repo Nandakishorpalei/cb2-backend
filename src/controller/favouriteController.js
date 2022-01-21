@@ -6,7 +6,9 @@ const Cart = require("../models/cartModel")
 
 router.get("", async (req, res) => {
     try{
-      const wishlist = await Favourite.find().populate("productId").lean().exec();
+      const user = req.user;
+      const currentUser = user._id;
+      const wishlist = await Favourite.find({userId:currentUser}).populate("productId").lean().exec();
   
       res.render("favourites",{wishlist});
    }catch(e){
@@ -17,7 +19,13 @@ router.get("", async (req, res) => {
 
   router.post("", async (req, res) => {
     try {
-      const product = await Favourite.create(req.body);
+      const user = req.user;
+      const currentUser = user._id;
+
+      const product = await Favourite.create({
+        userId:currentUser,
+        productId:productId
+      });
   
       return res.status(201).send(product);
     } catch (err) {
@@ -40,8 +48,18 @@ router.get("", async (req, res) => {
 
   router.post("/addproducts", async (req, res) => {
     try {
-      console.log(req.body)
-      const product = await Cart.create(req.body);
+      const user = req.user;
+       const body = req.body;
+    
+
+      const product = await Cart.create({
+      userId: user._id,
+      count:body.count,
+      total:body.total,
+      img1: body.img1,
+      name: body.name,
+      catagory:body.catagory,
+      });
 
       res.redirect("/cart");
     } catch (err) {

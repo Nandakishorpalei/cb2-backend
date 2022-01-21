@@ -6,9 +6,19 @@ const Checkout = require("../models/checkoutshippingModel");
 
 router.get("", async (req, res) => {
     try{
-      const cart = await Cart.find().lean().exec();
+      const currentUser = req.user;
+      const userId = currentUser._id;
+      console.log('userId:', userId)
+
+      const cart = await Cart.find({userId:userId}).lean().exec();
+      console.log('cart:', cart)
+
+      const cartObj = {       
+        userId : userId,
+        cart:cart
+      }
   
-      res.render("cart",{cart})
+      res.render("cart",{cartObj})
    }catch(e){
        res.status(500).send(e.message)
    }
@@ -57,7 +67,30 @@ router.get("", async (req, res) => {
 
   router.post("/datasend",async(req,res)=>{
     try{
-      const product = await Checkout.create(req.body);
+      
+    const user = req.user;
+    const currentUser = user._id;
+     const body = req.body;
+    const prevPayment = await Checkout.find({userId:currentUser}).lean().exec();
+
+    if(prevPayment.length != 0){
+      const payment = await Checkout.findByIdAndUpdate(prevPayment[0]._id,{
+        userId:user._id,
+        merchandisePrice:body.merchandisePrice,
+        discount:body.discount,
+        totalPrice:body.totalPrice,
+      },{new:true})
+    }else{
+      const payment = await Checkout.create({
+        userId:user._id,
+        merchandisePrice:body.merchandisePrice,
+        discount:body.discount,
+        totalPrice:body.totalPrice,
+       });
+    
+    }
+
+
 
       res.redirect("/checkoutshipping");
 

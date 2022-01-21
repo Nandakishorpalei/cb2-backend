@@ -93,12 +93,6 @@
 </body>
 </html>
 <script type="module">
-
-    //authenticate
-    // let user={
-    //             authenticated:false
-    //         }
-    //       localStorage.setItem("authenticate",JSON.stringify(user));
     
     document.getElementById("landingContainer").addEventListener("click",authenticateCheck);
     
@@ -128,3 +122,10 @@
     
     </script>
     
+    <script>
+  
+        function setName(userName){
+            userName = JSON.parse(userName);
+            console.log('userName:', userName)
+        }
+    </script>

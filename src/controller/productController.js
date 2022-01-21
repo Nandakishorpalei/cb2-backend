@@ -28,7 +28,13 @@ router.get("", async (req, res) => {
 
   router.post("/wishlist", async (req, res) => {
     try {
-      const product = await Favourite.create(req.body);
+      const user = req.user;
+      const currentUser = user._id;
+
+      const product = await Favourite.create({
+        userId:currentUser,
+        productId:req.body.productId
+      });
   
       res.redirect('/products');
     } catch (err) {
