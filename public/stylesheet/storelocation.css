@@ -346,51 +346,9 @@
 }
 
 /* navbar special */
-#discountBar {
-    height: 36px;
-    background-color: #222222;
-    color: white;
-    justify-content: center;
-    display: flex;
-    box-sizing: border-box;
-    padding-left: 3%;
-    padding-right: 3%;
-    align-items: top;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  #discountBar p{
-     margin-top:-14px;
-     padding-bottom:4px;
-  }
 
 
-
-  #accDetails  p{
-      line-height: 38px;
-  }
-  #navbarDiv #cartDetails {
-    border: 1px solid grey;
-    position: absolute;
-    /* display: none; */
-    flex-direction: column;
-    width: 350px;
-    height: 24%;
-    width: 22%;
-    max-height: 24%;
-    z-index: 11;
-    top: 108px;
-    margin-left: 75%;
-    transition: 0.3s;
-    padding-right: 10px;
-    font-size: 12px;
-    padding: 2%;
-    box-sizing: border-box;
-  }
- #gotoCart p {
-  padding-bottom: 40px;
-  }
- 
+  
 
 @media screen and (max-width: 768px) {
    #Main_Footer{
