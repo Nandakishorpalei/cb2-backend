@@ -13,7 +13,8 @@ router.get("", async (req, res) => {
 
     res.render("checkoutshipping", { cart });
   } catch (e) {
-    res.status(500).send(e.message);
+    const error = e.message;
+    return res.status(500).render("serverError",{error});
   }
 });
 
@@ -58,8 +59,9 @@ router.post("/address", async (req, res) => {
   
 
    res.redirect("/payment")
-  } catch (err) {
-    return res.status(500).send(err.message);
+  } catch (e) {
+    const error = e.message;
+    return res.status(500).render("serverError",{error});
   }
 });
 

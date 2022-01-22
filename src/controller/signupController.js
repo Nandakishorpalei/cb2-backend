@@ -6,7 +6,8 @@ router.get("", async(req,res)=>{
     try{
        res.render("signup")
     }catch(e){
-        res.status(500).send(e.message)
+        const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
 });
 
@@ -24,7 +25,8 @@ router.post("",async(req,res)=>{
     res.redirect("/signin")
 
     }catch(e){
-       return res.status(500).send(e.message)
+        const error = e.message;
+        return res.status(500).render("serverError",{error});
     }
 });
 

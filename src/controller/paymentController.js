@@ -23,7 +23,8 @@ router.get("",async(req,res)=>{
         res.render("payment",{ paymentPageData });
 
     }catch(e){
-        res.status(500).send(e.message);
+      const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
 })
 
@@ -33,7 +34,7 @@ const razorpay=new Razorpay({
     })
     
    router.post("/order",async(req,res)=>{
-
+   try{
         const user = req.user;
         const currentuser = user._id;
 
@@ -48,6 +49,11 @@ const razorpay=new Razorpay({
           order_id_var=order.id;
         res.json(order)
       });
-    })
-
+   
+  }
+  catch(e){
+    const error = e.message;
+      return res.status(500).render("serverError",{error});
+  }
+});
 module.exports = router;

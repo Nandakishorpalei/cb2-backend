@@ -93,18 +93,19 @@ function changeimg(){
        cap.textContent="Thiruvananthapuram";
        desh.textContent="INDIA";
     }
-    if(main==="Madhya Pradesh"){
-         img.src="https://cb2.scene7.com/is/image/CB2/store-location-65-01/$web_store_location_individual_xs$/211216074757/store-location-65-01.jpg";
-       name.textContent=main;
-       cap.textContent="Bhopal";
-       desh.textContent="INDIA";
-    }
+
     if(main==="Maharashtra"){
          img.src="https://cb2.scene7.com/is/image/CB2/store-location-54-01/$web_store_location_individual_xs$/211216074949/store-location-54-01.jpg";
        name.textContent=main;
        cap.textContent="Mumbai";
        desh.textContent="INDIA";
     }
+    if(main==="Odisha"){
+      img.src="https://cb2.scene7.com/is/image/CB2/store-location-65-01/$web_store_location_individual_xs$/211216074757/store-location-65-01.jpg";
+    name.textContent=main;
+    cap.textContent="Bhubaneswar";
+    desh.textContent="INDIA";
+ }
     if(main==="Punjab"){
          img.src="https://cb2.scene7.com/is/image/CB2/store-location-68-01/$web_store_location_individual_xs$/211216074236/store-location-68-01.jpg";
        name.textContent=main;

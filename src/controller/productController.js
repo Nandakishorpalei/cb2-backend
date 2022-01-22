@@ -23,7 +23,8 @@ router.get("", async (req, res) => {
 
     res.render("products",{data})
  }catch(e){
-     res.status(500).send(e.message)
+  const error = e.message;
+  return res.status(500).render("serverError",{error});
  }
 })
 
@@ -33,7 +34,8 @@ router.get("", async (req, res) => {
   
       return res.status(201).send(product);
     } catch (err) {
-      return res.status(500).send(err.message);
+      const error = err.message;
+      return res.status(500).render("serverError",{error});
     }
   });
 
@@ -49,7 +51,8 @@ router.get("", async (req, res) => {
   
       res.redirect('/products');
     } catch (err) {
-      return res.status(500).send(err.message);
+      const error = err.message;
+      return res.status(500).render("serverError",{error});
     }
   });
   
@@ -66,7 +69,8 @@ router.get("", async (req, res) => {
   
       res.redirect('/productDescription');
     } catch (err) {
-      return res.status(500).send(err.message);
+      const error = err.message;
+      return res.status(500).render("serverError",{error});
     }
   });
   

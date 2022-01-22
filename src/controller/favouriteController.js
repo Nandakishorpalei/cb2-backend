@@ -12,7 +12,8 @@ router.get("", async (req, res) => {
   
       res.render("favourites",{wishlist});
    }catch(e){
-       res.status(500).send(e.message);  
+    const error = e.message;
+    return res.status(500).render("serverError",{error});
    }
   })
   
@@ -28,8 +29,9 @@ router.get("", async (req, res) => {
       });
   
       return res.status(201).send(product);
-    } catch (err) {
-      return res.status(500).send(err.message);
+    } catch (e) {
+      const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
   });
 
@@ -41,8 +43,9 @@ router.get("", async (req, res) => {
       const product = await Favourite.findByIdAndDelete(id);
   
       return res.redirect("/favourites")
-    } catch (err) {
-      return res.status(500).send(err.message);
+    } catch (e) {
+      const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
   });
 
@@ -62,8 +65,9 @@ router.get("", async (req, res) => {
       });
 
       res.redirect("/cart");
-    } catch (err) {
-      return res.status(500).send(err.message);
+    } catch (e) {
+      const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
   });
 

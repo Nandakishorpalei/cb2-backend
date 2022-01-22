@@ -506,5 +506,3 @@ else{
     document.getElementById("wholeContainer").style.opacity="1";
     document.getElementById("productContainer").style.opacity="1";
  });
-
-//  document.getElementById("menuicon").style.display="none";

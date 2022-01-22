@@ -69,30 +69,6 @@ wishBtn.addEventListener("mouseleave", () =>{
   wishBtn.style.borderBottom = "none";
 })
 
-
-// //cart button functionality
-// let cartBtn = document.getElementById("cartBtn");
-// let cartDetails = document.getElementById("cartDetails");
-
-// cartBtn.addEventListener("mouseover", () =>{
-//   cartDetails.style.display = "flex";
-//   cartBtn.style.borderBottom = "4px solid black";
-
-//   accDetails.style.display = "none";
-//   profileBtn.style.borderBottom = "none";
-// })
-
-// cartDetails.addEventListener("mouseenter", () =>{
-//   cartDetails.style.display = "flex";
-//   cartBtn.style.borderBottom = "4px solid black";    
-// })
-
-// cartDetails.addEventListener("mouseleave", () =>{
-//   cartDetails.style.display = "none";
-//   cartBtn.style.borderBottom = "none";
-// })
-
-
 //authentication system
 
 let locationButton = document.getElementById("locationButton");
@@ -203,11 +179,51 @@ document.getElementById("signInId").style.display = "block";
 const userNameIs = JSON.parse(localStorage.getItem("currentUserName"));
 console.log('userNameIs:', userNameIs);
 
-const cartItemLength = JSON.parse(localStorage.getItem("cartItemLength"));
+cartItemLength = JSON.parse(localStorage.getItem("cartItemLength"));
 document.getElementById("cartIndicator").textContent = cartItemLength;
 
 if(userNameIs !== null){
   document.getElementById("currentuser").style.display = "block";
 document.getElementById("signInId").style.display = "none";
 document.getElementById("currentuser").textContent = userNameIs;
+}
+
+
+let cartLength = 0;
+function setName(data){
+    data = JSON.parse(data);
+    const currentUser = data.currentUser;
+    
+    console.log('currentUser:', currentUser)
+    if(currentUser != "Not found"){
+    const userName = currentUser.toUpperCase();
+
+    localStorage.setItem("currentUserName",JSON.stringify(userName));
+
+    const userNameIs = JSON.parse(localStorage.getItem("currentUserName"));
+  
+    console.log('userNameIs:', userNameIs);
+
+    if(userNameIs !== null){
+    document.getElementById("currentuser").style.display = "block";
+    document.getElementById("signInId").style.display = "none";
+    document.getElementById("currentuser").textContent = userNameIs;
+    }
+
+
+
+    cartLength = data.cartLength;
+    console.log('cartLength:', cartLength)
+
+    const cartItemLength = JSON.parse(localStorage.getItem("cartItemLength"));
+    console.log('cartItemLength:', cartItemLength)
+    if(cartItemLength === null){
+    localStorage.setItem("cartItemLength",JSON.stringify(cartLength));
+
+    document.getElementById("cartIndicator").textContent = cartLength;
+  }
+
+
+
+}
 }

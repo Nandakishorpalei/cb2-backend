@@ -14,7 +14,7 @@ if (typeof localStorage === "undefined" || localStorage === null) {
   
   const newToken = (user) =>{
     localStorage.removeItem("myToken");
-    token =  jwt.sign({ user: user }, 'thisissecret', { expiresIn: 60 * 60 }); 
+    token =  jwt.sign({ user: user }, 'thisissecret'); 
     // console.log('token create: ', token)
     localStorage.setItem("myToken",`${token} ${user._id}`);
     return;
@@ -28,7 +28,8 @@ router.get("", async(req,res)=>{
     try{
        res.render("signin")
     }catch(e){
-        res.status(500).send(e.message);
+        const error = e.message;
+        return res.status(500).render("serverError",{error});
     }
 });
 
@@ -63,7 +64,8 @@ router.post("",async(req,res)=>{
 
 
     }catch(e){
-        res.status(500).send(e.message)
+        const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
 }
 );

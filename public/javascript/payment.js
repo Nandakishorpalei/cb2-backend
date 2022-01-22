@@ -18,7 +18,7 @@ let address = document.getElementById("address");
     userName.textContent = `${userAddress.firstName} ${userAddress.lastName}`;
     zipCode.textContent =  userAddress.zipcode;
     address.textContent = userAddress.street;
-    cityName.textContent =  userAddress.cityName;
+    cityName.textContent =  userAddress.city;
 
     let put = document.getElementById("Sipping_Merchandice_price");
     let total = document.getElementById("Shipping_Order_last_total");

@@ -1,0 +1,47 @@
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  overflow:hidden;
+  background-color: #f4f6ff;
+}
+
+.container{
+  width:100vw;
+  height:80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  text-align: center;
+}
+.four{
+    font-weight: bold;
+    font-size: 300px;
+}
+
+.loading {
+    -webkit-animation: rotation 4s infinite linear;
+}
+img{
+    height:250px;
+}
+.wrong-para{
+    text-align: center;
+    font-size: 50px;
+}
+
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}

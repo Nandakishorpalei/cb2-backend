@@ -17,7 +17,8 @@ router.post("",async(req,res)=>{
   
         res.render("paymentsuccess");
     }catch(e){
-        res.status(500).send(e.message);
+        const error = e.message;
+        return res.status(500).render("serverError",{error});
     }
 });
 

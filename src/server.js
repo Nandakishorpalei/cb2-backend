@@ -78,7 +78,8 @@ async function authenticate(req,res, next){
   }
 }
 }catch(e){
-  res.status(500).send(e.message);
+  const error = e.message;
+  return res.status(500).render("serverError",{error});
 }
 }
 
@@ -131,7 +132,8 @@ app.get("/", async(req,res)=>{
       res.render("home",{data});
 
     }catch(e){
-        res.status(500).send(e.message)
+      const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
 })
 
@@ -139,7 +141,8 @@ app.get("/store",authenticate, async(req,res)=>{
     try{
        res.render("storelocation")
     }catch(e){
-        res.status(500).send(e.message)
+      const error = e.message;
+      return res.status(500).render("serverError",{error});
     }
 })
 
@@ -148,14 +151,30 @@ app.get("/newpage",authenticate, async (req, res) => {
 
     res.render("newPage");
   } catch (e) { 
-    res.status(500).send(e.message);
+    const error = e.message;
+  return res.status(500).render("serverError",{error});
   }
 });
 
 app.post("/signout",async(req,res)=>{
-  localStorage.removeItem("myToken");
-  localStorage.removeItem("userName");
-  res.redirect("/");
+  try{
+    localStorage.removeItem("myToken");
+    localStorage.removeItem("userName");
+    res.redirect("/");
+  }catch(e){
+    const error = e.message;
+  return res.status(500).render("serverError",{error});
+  }
+});
+
+app.get('*',async(req, res)=>{
+  try{
+    res.render("pagenotfound");
+
+  }catch(e){
+    const error = e.message;
+  return res.status(500).render("serverError",{error});
+  }
 })
  
  
