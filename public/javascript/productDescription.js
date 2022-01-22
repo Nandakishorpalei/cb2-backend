@@ -1,11 +1,12 @@
 let sampleData;
 
 
+
 function allProduct(items){
    
   sampleData = JSON.parse(items);
   console.log('sampleData:', sampleData)
-
+  document.title = `${sampleData.name} | CB2`;
   appendData(sampleData);
 }
 
