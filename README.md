@@ -54,7 +54,7 @@
 - `mongoDB`
 - `Google Authentication API`
 
-![Top Langs]([![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nandakishorpalei&theme=tokyonight)])
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nandakishorpalei&hide=html&theme=tokyonight)
 ---
 
 ---
