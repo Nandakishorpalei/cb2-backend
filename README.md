@@ -12,7 +12,7 @@
 ---
 
 ## Deploy Link: 🙌
-- **[Click here to run the app on heroku](https://cb2-clone.herokuapp.com/)**
+- **[Click here to run the app](https://cb2-clone.herokuapp.com/)**
 
 ---
 
@@ -54,7 +54,7 @@
 - `mongoDB`
 - `Google Authentication API`
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nandakishorpalei&hide=ejs,shell&theme=tokyonight)
+![Top Langs]([![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nandakishorpalei&theme=tokyonight)])
 ---
 
 ---
