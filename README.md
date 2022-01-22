@@ -45,11 +45,14 @@
 
 ---
 ### Tech Stack Used 🔧
-- `HTML`
+- `EJS`
 - `CSS`
 - `JavaScript`
+- `Node.js`
+- `Express.js`
 - `Bootstrap`
-- `Masai Authentication API`
+- `mongoDB`
+- `Google Authentication API`
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nandakishorpalei&hide=ejs,shell&theme=tokyonight)
 ---
