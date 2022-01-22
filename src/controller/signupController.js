@@ -17,7 +17,8 @@ router.post("",async(req,res)=>{
         console.log(req.body);
 
         if(user){
-            return res.status(400).send("This Email is already in use");
+            const data = "User already exists!!"
+            return res.status(401).render("userError",{data})
         }
 
         user = await User.create(req.body);

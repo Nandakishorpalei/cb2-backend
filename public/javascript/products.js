@@ -276,7 +276,7 @@ function displayItem(productData){
         heart.setAttribute("id","addToWishlist");
         heart.addEventListener("click",function(){
         heart.innerHTML='<i class="fas fa-heart"></i>';
-        alert("Product Added to Wishlist");
+
         setTimeout(function(){
             heart.innerHTML='<i class="far fa-heart"></i>';  
         },2000);

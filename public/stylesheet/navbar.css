@@ -275,6 +275,10 @@ body {
   #phoneNav {
     display: none;
   }
+
+  #accDetails #signOut{
+    margin-top: 15px;
+}
   
   @media screen and (max-width: 400px) {
     #phoneNav {

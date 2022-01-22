@@ -19,7 +19,6 @@
   
 }
 #Favorite_upper_2{
-   
     display: flex;
     width: 40%;
     gap: 10%;
@@ -31,7 +30,6 @@
    text-align:left;
 }
 #Favorite_upper_2>a{
-    margin-top: 3%;
     color:rgb(34, 34, 34);
 }
 

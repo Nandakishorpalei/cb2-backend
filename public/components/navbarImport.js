@@ -58,7 +58,7 @@ function navbar(){
 
             <div id="options">
                 <span id="locationButton"><a><img id="locationBtn" src="https://cdn-icons-png.flaticon.com/512/1216/1216844.png"></a></span>
-                <span><a href="signin"><img id="profileBtn" src="https://cdn-icons-png.flaticon.com/512/747/747376.png"></a></span>
+                <span><a><img id="profileBtn" src="https://cdn-icons-png.flaticon.com/512/747/747376.png"></a></span>
                 <span id="wishlistButton"><a><img id="wishBtn" src="https://cdn-icons-png.flaticon.com/512/126/126471.png"></a></span>
                 <span id="cartButton"><a>
                     <p id="cartIndicator">0</p>

@@ -136,13 +136,13 @@ button:hover{
 #navbarDiv #accDetails {
     padding-left:20px;
   }
-@media screen and (max-width: 1300px) {
-   
-}
 
-@media screen and (min-width: 1000px) and (max-width: 1199px) {
-   
-}
+  #accDetails #signOut{
+      visibility:hidden;
+  }
+
+
+
 
 @media screen and (max-width: 400px) {
     #wholeContainer{

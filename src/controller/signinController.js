@@ -38,13 +38,15 @@ router.post("",async(req,res)=>{
         user = await User.findOne({email: req.body.email});
 
         if(!user){
-            return res.status(401).send("Either Email or Password is incorrect!");
+            const data = "Either Email or Password is incorrect!";
+            return res.status(401).render("userError",{data})
         }
 
         const match = user.checkPassword(req.body.password);
 
         if(!match){
-            return res.status(401).send("Either Email or Password is incorrect!");
+            const data = "Either Email or Password is incorrect!";
+            return res.status(401).render("userError",{data})
         }
 
         newToken(user);
