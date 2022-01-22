@@ -1,5 +1,5 @@
 ---
-# CB2 Clone Front-End Project
+# CB2 Clone Back-End Project
 ---
 
 # Welcome 👋
