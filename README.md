@@ -52,6 +52,7 @@
 - `Express.js`
 - `Bootstrap`
 - `mongoDB`
+-  `mongoose`
 - `Google Authentication API`
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=nandakishorpalei&hide=html&theme=tokyonight)
